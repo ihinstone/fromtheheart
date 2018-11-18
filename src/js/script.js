@@ -84,6 +84,12 @@ $(document).ready(function() {
                     catalogMenu[1].style.display = 'none';
                 }
             });
+            $('[data-menu=services]:first').mouseleave(function() {
+                event.preventDefault();
+                if (servicesMenu[1].style.display == 'flex') {
+                    servicesMenu[1].style.display = 'none';
+                }
+            });
             $('[data-menu=services]:eq(1)').mouseleave(function() {
                 event.preventDefault();
                 if (servicesMenu[1].style.display == 'flex') {
@@ -411,11 +417,16 @@ $(document).ready(function() {
     } catch(e) {}
 
     try {
-        $( ".accordion__item, .delivery__accordion" ).accordion({
+        $( ".delivery__accordion" ).accordion({
             collapsible: true,
             active: false,
             icons: false,
             disabled: true
+        });
+        $( ".accordion__item" ).accordion({
+            collapsible: true,
+            active: false,
+            icons: false,
         });
         $('.delivery__accordion h2.ui-accordion-header').click(function(){
             $(this).next().slideToggle();
