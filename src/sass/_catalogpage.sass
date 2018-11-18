@@ -1,0 +1,222 @@
+.catalogpage
+    padding-top: 70px
+    padding-bottom: 80px
+    &__wrap 
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+    &__title
+        font-size: 21px
+        text-transform: uppercase
+        font-weight: bold
+        margin-bottom: 105px
+    &__nav 
+        display: flex 
+        justify-content: flex-end
+        align-items: center
+        &-item 
+            display: block 
+            margin-right: 10px
+            width: 137px 
+            height: 36px
+            line-height: 34px
+            font-size: 12px
+            text-align: center
+            text-transform: uppercase
+            color: #767676
+            font-weight: 300
+            border: none
+        &-active
+            border: 2px solid #E1C76E
+            color: #000
+            font-weight: 500
+    &__items 
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex-wrap: wrap
+        margin-top: 90px
+        .goods__item 
+            display: block
+            width: 264px
+            margin-bottom: 30px
+            &-photo
+                width: 100%
+            img 
+                width: 100%
+    &__pages
+        padding-top: 70px
+        display: flex 
+        justify-content: space-between
+        align-items: center
+        width: 474px
+        margin: 0 auto
+        text-align: center
+        &-prev, &-next
+            cursor: pointer
+        .firstpage 
+            font-size: 12px
+            letter-spacing: 0.5px
+            margin-right: 10px
+            font-weight: 300
+        .lastpage
+            margin-left: 10px
+            font-size: 12px
+            letter-spacing: 0.5px
+            font-weight: 300
+        &-same 
+            width: 240px
+            display: flex 
+            justify-content: space-between
+            align-items: center
+            a 
+                font-size: 18px
+                letter-spacing: 0.5px
+                font-weight: 300
+        &-active 
+            font-size: 22px !important
+    &__sortblock
+        margin-bottom: 35px
+        
+    &__sorttitle
+        display: inline-block
+        font-size: 12px
+        text-transform: uppercase
+        font-weight: bold
+        margin-bottom: 20px
+        &-nm 
+            margin-bottom: 0
+    &__sorttitle + span 
+        margin-left: 15px
+        cursor: pointer
+    &__checkitem
+        margin-bottom: 12px
+        position: relative
+        &-slide
+            margin-left: 20px
+            cursor: pointer
+            font-size: 10px
+            font-weight: 500
+            margin-top: -5px
+        span
+            display: inline-block
+            font-size: 18px
+            font-weight: 300
+            margin-left: 15px
+        img 
+            display: inline-block
+            position: absolute
+            left: 58%
+            top: 15%
+            cursor: pointer
+    &__slidelist 
+        display: none
+        padding-top: 14px
+        &-left  
+            margin-left: 10px
+    &__checkbox
+        position: absolute
+        z-index: -1
+        opacity: 0
+        margin: 10px 0 0 20px
+    &__checkbox + label 
+        position: relative
+        padding: 0 0 0 20px
+        cursor: pointer
+        font-size: 10px
+        font-weight: 500
+        vertical-align: middle
+    &__checkbox + label:before
+        content: ''
+        position: absolute
+        left: 0px
+        top: -1px
+        width: 10px
+        height: 10px
+        display: inline-block 
+        border: 1px solid black
+        transform: rotate(45deg)
+        background-color: #fff
+    &__checkbox:checked + label:before
+        background-color: #E1C76E
+        border: none
+    &__checkbox-sq
+        position: absolute
+        z-index: -1
+        opacity: 0
+        margin: 10px 0 0 20px
+    &__checkbox-sq + label 
+        position: relative
+        padding: 0 0 0 24px
+        cursor: pointer
+        font-size: 10px
+        font-weight: 500
+        vertical-align: bottom
+    &__checkbox-sq + label:before
+        content: ''
+        position: absolute
+        left: 0px
+        width: 16px
+        height: 16px
+        display: inline-block 
+        border: 1px solid black
+        background-color: #fff
+    &__checkbox-sq:checked + label:before
+        background: url('../icons/checkbox.svg') center center no-repeat
+        background-size: cover
+        border: none
+    &__amount 
+        margin-top: 15px
+        label 
+            font-size: 10px
+            font-weight: 500
+            margin-right: 12px
+        input 
+            width: 53px 
+            height: 24px
+            border: 1px solid #E1C76E
+            padding: 5px
+            padding-top: 8px
+            font-size: 10px
+            text-align: center
+            margin-right: 16px
+#slider-range 
+    width: 180px
+    height: 1px
+    border: none
+    background-color: #000
+.ui-widget-header
+    background-color: #E1C76E
+    border: none
+.ui-slider .ui-slider-handle
+    width: 10px
+    height: 10px
+    transform: rotate(45deg)
+    border: none
+    background-color: #E1C76E
+    border-radius: 0px
+.disabled 
+    color: #767676
+    &:before 
+        border-color: #767676 !important
+.giftsearch
+    &__create
+        padding-top: 95px
+        width: 100%
+        height: 328px
+        background: url('../img/create_logo.jpg')
+        line-height: 85px
+        font-size: 24px
+        text-align: center
+        text-transform: uppercase
+        color: #FFFFFF
+        font-weight: bold
+        span
+            font-size: 36px
+    &__text 
+        margin: 100px 0
+        line-height: 20px
+        font-size: 14px
+        letter-spacing: 0.5px
+        font-weight: 300

@@ -1,0 +1,120 @@
+.footer 
+    background-color: #000
+    padding: 50px 0 30px 0
+    color: #fff
+    &__title 
+        font-size: 12px
+        font-weight: 500
+        margin-bottom: 28px
+        letter-spacing: 0.5px
+    &__links 
+        list-style-type: none
+        li 
+            font-size: 12px
+            font-weight: 300
+            margin-bottom: 10px
+            letter-spacing: 0.5px
+    &__numbers 
+        font-weight: bold
+        line-height: 25px
+        font-size: 21px
+        margin-left: 20px
+        margin-bottom: 11px
+    &__contacts 
+        margin-top: 45px
+        text-align: right
+        a 
+            display: block
+            font-weight: bold
+            line-height: 20px
+            font-size: 14px
+            text-align: right
+            letter-spacing: 0.5px
+        .vertline 
+            display: inline-block 
+            margin-right: 10px
+            margin-top: 10px
+            vertical-align: top
+            width: 1px
+            height: 15px
+            background-color: #fff
+            transform: translateY(3px)
+        &-time 
+            display: inline-block
+            vertical-align: top
+            margin-top: 10px
+            font-weight: 100
+    &__addictional
+        line-height: 20px
+        font-size: 12px
+        letter-spacing: 0.5px
+        color: #5A5A5A
+        a 
+            margin-right: 20px
+
+@media (max-width: 1200px)
+    .footer 
+        &__numbers 
+            font-size: 16px
+@media (max-width: 992px)
+    .footer 
+        &__links 
+            li 
+                line-height: 16px
+        &__title 
+            &-last
+                margin-bottom: 16px
+        &__numbers 
+            font-size: 12px
+@media (max-width: 768px)
+    .footer 
+        padding-top: 30px
+        img 
+            display: none
+        &__links 
+            margin-left: 20px
+        &__title 
+            margin-left: 20px
+            line-height: 14px
+            &-last
+                margin-bottom: 28px
+        &__numbers 
+            text-align: center
+            margin-left: 0
+            margin-top: 10px
+        &__contacts
+            text-align: center
+            margin-top: 20px
+            a 
+                text-align: center
+            .vertline 
+                display: none
+@media (max-width: 768px)
+    .footer 
+        &__addictional 
+            margin-left: 35px
+            margin-top: 20px
+        &__links 
+            li 
+                font-size: 12px
+        &__title 
+            margin-left: 20px
+            line-height: 14px
+            &-last
+                margin-bottom: 16px
+@media (width: 768px)
+    .footer 
+        img 
+            display: block
+
+@media (max-width: 451px)
+    .footer
+        &__title 
+            &-last
+                margin-bottom: 15px
+@media (max-width: 451px)
+    .footer 
+        &__links 
+            li 
+                font-size: 8px
+        

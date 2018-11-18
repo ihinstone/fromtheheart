@@ -1,0 +1,99 @@
+.delivery
+    padding: 80px 0 35px 0
+    &__title 
+        line-height: 28px
+        font-size: 21px
+        text-transform: uppercase
+        margin-bottom: 38px
+    &__city 
+        font-size: 14px
+        text-align: center
+        letter-spacing: 0.5px
+        text-transform: uppercase
+        font-weight: bold
+        margin-bottom: 35px
+        margin-top: 80px
+        cursor: pointer
+        &-first
+            margin-top: 0
+        span 
+            margin-left: 30px
+            .rotated
+                transform: rotate(180deg)
+    &__method
+        font-size: 14px
+        font-weight: bold
+        margin-bottom: 15px
+        &-last 
+            margin-top: 15px
+    &__wrap 
+        display: flex 
+        justify-content: space-between
+        align-items: flex-start
+        padding-bottom: 20px 
+        border-bottom: 1px solid #767676
+        margin-bottom: 34px
+    &__region
+        line-height: 20px
+        font-size: 14px
+        font-weight: 300
+        &-moscow 
+            width: 101%
+            margin-bottom: 30px
+        &-tip 
+            display: block
+            font-size: 12px
+            opacity: .7
+        &-tipbig
+            display: block 
+            opacity: .7
+        &-price 
+            font-weight: bold
+    &__price 
+        font-size: 14px 
+        font-weight: bold
+    .ui-accordion .ui-accordion-header
+        padding: 0
+        margin: initial
+        margin-top: 70px
+    .ui-state-default
+        border: none 
+        background-color: #fff
+    .ui-state-active 
+        color: #000
+        span 
+            img
+                transform: rotateX(180deg)
+    .ui-accordion .ui-accordion-content
+        padding: 0
+        padding-top: 35px
+        border: none
+        overflow: hidden
+
+.payment
+    padding: 35px 0 70px 0
+    &__title
+        font-size: 21px
+        text-transform: uppercase
+    &__header
+        margin-top: 35px
+        font-size: 14px 
+        font-weight: bold
+        display: flex 
+        align-items: center
+        min-height: 32px
+        &-last
+            justify-content: flex-end
+        div 
+            padding-top: 8px
+        img 
+            margin-right: 21px
+            vertical-align: middle
+    &__descr 
+        margin-top: 22px
+        font-size: 14px
+        font-weight: 300
+        line-height: 20px
+        &-last
+            text-align: right
+            margin-right: 20px

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Контакты</title>
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="topmenu">
+            <div class="container">
+                <div class="row">
+                    <nav class="topmenu__nav">
+                        <ul>
+                            <li><a href="#">О Нас</a></li>
+                            <li><a href="#">Отзывы</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 menu__item">
+                        <img src="logo/main_logo.svg" alt="концепция">
+                        <div>Корпоративные подарки<br>дизайн и упаковка</div>
+                    </div>
+                    <div class="col-md-2 offset-md-2 menu__item">
+                        <div>Доставка<br> по России и СНГ</div>
+                        <img src="icons/shipped.svg" alt="shipped">
+                    </div>
+                    <div class="col-md-2 menu__item menu__item-tel">
+                        <div class="menu__item-number">СПб <a href="tel:8 (812) 317-00-47">8 (812) 317-00-47</a></div>
+                        <div class="menu__item-number">РФ&nbsp;&nbsp;<a href="tel:8 (800) 000-00-00">8 (800) 000-00-00</a></div>
+                    </div>
+                    <div class="col-md-2 offset-md-1 menu__item"><button class="callme">перезвоните мне</button></div>
+                </div>
+            </div>
+        </div>
+        <div class="navigation">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-8 offset-md-1">
+                        <nav>
+                            <ul>
+                                <li><a class="navigation__item" data-menu="catalog" href="#">каталог</a>
+                                    <div class="tooltip tooltip__submenu" data-menu="catalog">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-triangle">
+                                            <polygon points="0,0 18,0 9,18"/>
+                                        </svg>
+                                        <ul>
+                                            <li><a href="#">Подарочные наборы</a></li>
+                                            <li><a href="#">VIP</a></li>
+                                            <li><a href="#">Комплименты</a></li>
+                                            <li><a href="#">Промо</a></li>
+                                            <li><a href="#">Упаковка</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a class="navigation__item" href="#" data-menu="services">услуги</a>
+                                    <div class="tooltip tooltip__submenu" data-menu="services">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-triangle">
+                                            <polygon points="0,0 18,0 9,18"/>
+                                        </svg>
+                                        <ul>
+                                            <li><a href="#">Нанесение логотипа</a></li>
+                                            <li><a href="#">Разработка</a></li>
+                                            <li><a href="#">Оформление</a></li>
+                                            <li><a href="#">Профессиональные подарки</a></li>
+                                        </ul>
+                                    </div></li>
+                                <li><a class="navigation__item" href="#">кейсы</a></li>
+                                <li><a class="navigation__item" href="#">доставка и оплата</a></li>
+                                <li><a class="navigation__item navigation__item-active" href="#">контакты</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-md-2 offset-md-1">
+                        <div class="navigation__info">
+                            <div class="navigation__search">
+                                <img src="icons/magnifying-glass.svg" alt="search">
+                            </div>
+                            <div class="navigation__cart">
+                                <div class="navigation__cart-badge">
+                                    <img src="icons/shopping-basket.svg" alt="basket">
+                                    <div class="navigation__badge">5</div>
+                                    <div class="tooltip tooltip__cart">
+                                        Ваша корзина пока пуста
+                                    </div>
+                                </div>
+                                <div class="navigation__total">2000</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="address">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <h1>наши адреса</h1>
+                    <div class="address__item address__item-active">
+                        <address>  
+                            <div class="address__city">санкт-петербург</div>
+                            <div class="address__place">
+                                ул. Звенигородская 11, офис 309 <br>
+                                Время работы: Будни с 9:00 до 18:00.
+                            </div>
+                        </address>
+                        <div class="address__line"></div>
+                    </div>
+                    <div class="address__item ">
+                        <address>  
+                            <div class="address__city">москва</div>
+                            <div class="address__place">
+                                Петровский б-р., 13<br>
+                                <span>Только приём звонков</span> в будни с 9:00 до 18:00.
+                            </div>
+                        </address>
+                        <div class="address__line"></div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="address__maps">
+                        <div class="address__maps-item">
+                        </div>
+                        <div class="address__maps-item">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contacts">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="contacts__title">телефоны</div>
+                    <div class="contacts__block">
+                        <a href="tel:+78123170047" class="contacts__block-title">+7 (812) 317-00-47</a>
+                        <div class="contacts__block-subtitle">Санкт-Петербург</div>
+                    </div>
+                    <div class="contacts__block">
+                        <a href="tel:88000000000" class="contacts__block-title">8 (800) 000-00-00</a>
+                        <div class="contacts__block-subtitle">Россия</div>
+                    </div>
+                    <div class="contacts__block">
+                        <a href="tel:+375292171553" class="contacts__block-title">+375 (29) 217-15-53</a>
+                        <div class="contacts__block-subtitle">Беларусь</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contacts__title">почта</div>
+                    <div class="contacts__block">
+                        <div class="contacts__block-title gold"><a href="mailto:zakaz@conception.su">zakaz@conception.su</a></div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contacts__title">мессенджеры</div>
+                    <div class="contacts__block">
+                        <div class="contacts__wrap">
+                            <img src="icons/whatsapp.svg" alt="whatsapp">
+                            <div class="contacts__wrap-pt">
+                                <div class="contacts__block-title">
+                                    <a href="tel:+79650487121">+7 (965) 048-71-21</a>
+                                </div>
+                                <div class="contacts__messengers">WhatsApp / Viber</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contacts__block">
+                        <div class="contacts__wrap">
+                            <img src="icons/skype.svg" alt="skype">
+                            <div class="contacts__wrap-pt">
+                                <div class="contacts__block-title contacts__block-skype">conception__info</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="accordion">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="accordion__item">
+                        <h2>реквизиты
+                            <span>
+                                <img src="icons/controller_contacts.svg" alt="controller">
+                            </span>
+                        </h2>
+                        <div class="accordion__text">
+                                Наименование компании: ИП ЮЖАКОВА Ю.М.
+                                <br><br>Юридический адрес: 194355, Санкт-Петербург, ул. Композиторов, 7-147
+                                <br><br>ИНН: 780225109744
+                                <br><br>Расчетный счет: 40802810303000002292
+                                <br><br>Банк получателя: Ф-л "Северная столица" АО "Райффайзенбанк". 191186, г. Санкт- Петербург, наб. Мойки, д. 36
+                                <br><br>Корреспондентский счет: 30101810100000000723 
+                                <br><br>БИК: 044030723
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1">
+                    <img src="logo/main_logo_w.svg" alt="Концепция">
+                </div>
+                <div class="col-md-2 offset-md-1">
+                    <div class="footer__title">Каталог</div>
+                    <ul class="footer__links">
+                        <li><a href="#">Подарочные наборы</a></li>
+                        <li><a href="#">VIP</a></li>
+                        <li><a href="#">Комплименты</a></li>
+                        <li><a href="#">Промо</a></li>
+                        <li><a href="#">Упаковка</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <div class="footer__title">Услуги</div>
+                    <ul class="footer__links">
+                        <li><a href="#">Нанесение логотипа</a></li>
+                        <li><a href="#">Разработка</a></li>
+                        <li><a href="#">Оформление</a></li>
+                        <li><a href="#">Постоянные подарки</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <div class="footer__title">Другие разделы</div>
+                    <ul class="footer__links">
+                        <li><a href="#">Кейсы</a></li>
+                        <li><a href="#">Доставка и оплата</a></li>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Отзывы</a></li>
+                        <li><a href="#">Контакты</a></li>
+                        <li><a href="#">Вакансии</a></li>
+                        <li><a href="#">Сотрудничество</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="footer__numbers">
+                        С-Петербург <a href="tel:+78123170047">+7 (812) 317-00-47</a>
+                    </div>
+                    <div class="footer__numbers">
+                        Россия <a href="tel:80000000000">8 000 000-00-00</a>
+                    </div>
+                    <div class="footer__numbers">
+                        Беларусь <a href="tel:80000000000">8 000 000-00-00</a>
+                    </div>
+                    <div class="footer__contacts">
+                        <a href="mailto:zakaz@conception.su" class="footer__contacts-mail">zakaz@conception.su</a>
+                        <div class="vertline"></div>
+                        <div class="footer__contacts-time">с 9:00 до 18:00</div>
+                    </div>
+                </div>
+                <div class="footer__addictional">
+                    <a href="#">Политика конфиденциальности</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="overlay">
+        <div class="popup popup__call">
+            <form class="popup__call-form" action="#">
+                <div class="popup__call-phoneblock">
+                    <div class="popup__call-phone">
+                        <input required data-mask="rus" name="Rus" type="text" placeholder="+7 (___) ___ __ __">
+                        <div class="popup__call-wrap">
+                            <div class="popup__call-country">РФ</div>
+                            <svg class="popup__call-svg" width="22" height="13" viewBox="0 0 22 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.2461 2L11.1228 10L1.99951 2" stroke="black" stroke-opacity="0.9" stroke-width="4"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="popup__call-phone popup__call-phone-hidden" style="visibility: hidden">
+                        <input data-mask="bel" name="Belarus" class="secondCountry" type="text" placeholder="+375 (__) ___ __ __">
+                        <div class="popup__call-wrap">
+                            <div class="popup__call-country">Беларусь</div>
+                            <svg class="popup__call-svg" width="22" height="13" viewBox="0 0 22 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.2461 2L11.1228 10L1.99951 2" stroke="black" stroke-opacity="0.9" stroke-width="4"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <button class="button">Перезвоните мне</button>
+            </form>
+            <svg class="close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </div>
+        <div class="popup popup__callthanks">
+            <div class="popup__callthanks-wrap">
+                <img src="icons/ok.svg" alt="ok">
+                <div>Спасибо! Скоро мы Вам перезвоним</div>
+            </div>
+            <svg class="close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </div>
+        <div class="popup popup__order">
+            <div class="popup__order-wrap">
+                <img src="icons/ok.svg" alt="ok">
+                <div>Спасибо за заказ!<br> 
+                    Менеджер свяжется с Вами для обсуждения деталей
+                </div>
+            </div>
+            <svg class="close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </div>
+        <div class="popup popup__search">
+            <div class="popup__search-wrap">
+                <form action="#">
+                    <input type="text" placeholder="Поиск по каталогу">
+                    <button class="popup__search-btn"></button>
+                </form>
+            </div>
+            <svg class="close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/mask.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

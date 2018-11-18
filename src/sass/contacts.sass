@@ -1,0 +1,138 @@
+.address 
+    padding-top: 60px
+    padding-bottom: 40px
+    h1
+        line-height: 20px
+        font-size: 14px
+        letter-spacing: 0.5px
+        text-transform: uppercase
+        margin-bottom: 45px
+    &__item 
+        margin-bottom: 20px 
+        display: flex 
+        justify-content: space-between
+        cursor: pointer
+        &-active 
+            color: #CFAF3E
+            .address__line
+                display: block
+    &__city 
+        font-size: 14px
+        letter-spacing: 0.5px
+        text-transform: uppercase
+        font-weight: bold
+        font-style: normal
+    &__place 
+        font-style: normal
+        font-size: 14px
+        margin-top: 10px
+        line-height: 20px
+        font-weight: 300
+    &__line 
+        display: none
+        margin-right: 55px
+        width: 5px
+        height: 40px 
+        background-color: #CFAF3E
+    &__maps
+        // display: none
+        width: 107%
+        margin-left: -7%
+        height: 360px
+        width: 685px
+        &-item
+            height: 360px
+            width: 685px
+            &:first-child
+                background: url('../img/map_1.jpg')  center center no-repeat
+                background-size: cover
+            &:nth-child(2)
+                display: none
+                background: url('../img/map_2.jpg') center center no-repeat
+                background-size: cover
+.contacts
+    padding: 40px 0 30px 0
+    text-align: center
+    &__title    
+        line-height: 20px
+        font-size: 14px
+        letter-spacing: 0.5px
+        text-transform: uppercase
+        font-weight: bold
+        margin-bottom: 66px
+    &__block
+        margin: 0 auto
+        margin-bottom: 28px
+        width: 180px
+        &-title 
+            font-size: 14px
+            letter-spacing: 0.5px
+            text-transform: uppercase
+            font-weight: bold
+        &-subtitle
+            margin-top: 14px
+            font-size: 14px
+            text-align: center
+            letter-spacing: 0.5px
+            font-weight: 300
+        &-skype 
+            padding-top: 5px
+    &__wrap 
+        display: flex
+        justify-content: flex-start
+        align-items: flex-start
+        &-pt
+            padding-top: 9px
+        img 
+            margin-right: 13px
+            width: 32px
+            height: 32px
+    &__messengers
+        font-size: 12px
+        letter-spacing: 0.5px
+        font-weight: 100
+        color: #767676
+        margin-top: 10px
+        text-align: left
+
+.gold 
+    color: #CFAF3E
+
+.accordion
+    margin-bottom: 55px
+    &__item 
+        background: #ECF0F1
+        width: 100%
+        padding: 18px 13px
+        h2 
+            font-size: 14px
+            letter-spacing: 0.5px
+            text-transform: uppercase
+            font-weight: bold
+            background-color: #ECF0F1
+            border: none
+            padding: 0
+            cursor: pointer
+            span 
+                margin-left: 40px
+                transition: 0.5s all
+    &__text 
+        margin-top: 30px
+        background-color: #ECF0F1
+        border: none 
+        box-shadow: none
+        padding: 0
+        line-height: 20px
+        font-size: 14px
+        letter-spacing: 0.5px
+        font-weight: 300
+
+    .ui-accordion .ui-accordion-header
+        padding: 0
+    .ui-accordion .ui-accordion-content
+        padding: 0
+    .ui-state-active 
+        color: #000
+        span 
+            img
+                transform: rotateX(180deg)
