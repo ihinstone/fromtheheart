@@ -19,8 +19,11 @@
         width: 410px
         height: 630px
         overflow: hidden
+        &-item 
+            object-fit: cover
         img
             width: 100%
+            object-fit: cover
     &__title 
         margin-left: 40px
         margin-top: 20px
@@ -87,6 +90,15 @@
         display: flex 
         justify-content: space-between
         align-items: center
+        .minus 
+            margin: 0
+            margin-right: 8px
+            margin-left: 20px
+            font-size: 15px
+        .plus 
+            margin: 0
+            margin-right: 17px
+            margin-left: 9px
         &-number 
             font-size: 14px
             letter-spacing: 0.5px
@@ -112,6 +124,7 @@
             display: block
             margin: initial
             margin-top: 0
+            font-size: 12px
     &__min 
         margin-left: 40px
         font-size: 12px
@@ -128,20 +141,17 @@
             width: 35%
             height: 75px
             line-height: 78px
-            border: 2px solid #CFAF3E
             border-right: none
             font-size: 16px
             text-align: center
             letter-spacing: 0.5px
             text-transform: uppercase
-            color: #000
+            color: #767676
             cursor: pointer
-            // &:hover
-            //     background-color: #000000
-            //     color: #fff
-            //     border-color: #000
-            &:last-child
-                border-right: 2px solid #CFAF3E
+            font-weight: 500
+        &-active 
+            border-bottom: 1px solid black
+            color: #000
     &__descr 
         margin-top: 50px 
         display: flex 
@@ -163,6 +173,8 @@
             &-nolist 
                 ul 
                     list-style: none
+                    text-align: center
+                    margin-left: -15px
             ul li 
                 margin-bottom: 15px
                 line-height: 20px
@@ -199,3 +211,128 @@
         img 
             width: 180px
             height: 180px
+            object-fit: cover 
+
+@media (max-width: 1200px)
+    .giftset
+        &__form 
+            .button 
+                font-size: 7px
+                line-height: 30px
+                padding: 0 4px
+    .giftinfo
+        padding: 50px 0
+        &__descr 
+            margin-top: 30px
+            &-question 
+                left: 90%
+@media (max-width: 992px)
+    .giftset
+        &__wrap 
+            flex-wrap: wrap
+        &__nav 
+            order: 2 
+            width: 330px
+            margin: 0
+            margin-top: 30px
+        &__preview 
+            height: 500px
+        &__title, &__alert, &__prices, &__total,&__descr, &__min, &__form
+            margin-left: 0
+    .giftinfo
+        &__descr 
+            &-question 
+                display: none
+
+@media (max-width: 768px)
+    .giftset
+        &__title, &__alert
+            text-align: center
+        &__prices 
+            margin: 0 auto
+            margin-top: 30px
+        &__total 
+            text-align: center
+            margin-top: 30px
+        &__form 
+            .button 
+                font-size: 12px
+    .giftinfo 
+        &__descr 
+            min-height: 80px
+            &-item 
+                font-size: 11px
+                ul 
+                    li 
+                        line-height: 14px
+    .previousgifts
+        &__item 
+            img 
+                width: 150px 
+                height: 150px
+@media (width: 768px) 
+    .giftset
+        &__form 
+            .button 
+                font-size: 7px
+                line-height: 30px
+                padding: 0 4px
+@media (max-width: 576px)
+    .giftset
+        &__nav 
+            width: 300px
+            &-item 
+                width: auto
+                img 
+                    width: 63px
+                    height: 63px
+                    margin: 0 auto
+        &__prices 
+            width: 300px
+        &__form 
+            .button 
+                line-height: 12px
+                padding-top: 2px
+                font-size: 8px
+    .giftinfo
+        padding: 30px 0
+        &__nav
+            justify-content: space-between
+            &-item 
+                line-height: 30px
+                height: 30px
+                width: auto
+                font-size: 12px
+        &__descr 
+            &-item 
+                width: 100%
+                ul 
+                    li 
+                        margin-bottom: 8px
+                &-nolist 
+                    ul 
+                        text-align: left
+            &-free, &-pay
+                margin-left: -15px
+                line-height: 20px
+            &-free 
+                margin-bottom: 15px
+
+    .hidetab
+        display: none 
+    .showtab 
+        display: block
+    .samegift 
+        padding-bottom: 20px
+    .previousgifts
+        &__wrap 
+            flex-wrap: wrap
+        &__item 
+            width: 80%
+            margin: 0 auto
+            margin-bottom: 20px
+            img 
+                width: 200px 
+                height: 200px
+                display: block 
+                margin: 0 auto

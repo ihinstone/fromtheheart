@@ -133,6 +133,12 @@ $(document).ready(function() {
             $('.navigation__close').on('click', () => {
                 $('.navigation').removeClass('navigation__active');
             });
+            $('.open__filters').on('click', () => {
+                $('.filter').addClass('filter__active');
+            });
+            $('.filter__close').on('click', () => {
+                $('.filter').removeClass('filter__active');
+            });
         }
 
     
@@ -256,7 +262,17 @@ $(document).ready(function() {
         vertical: true,
         adaptiveHeight: false,
         draggable: false,
-        centerPadding: 0
+        centerPadding: 0,
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                vertical: false,
+                slidesToShow: 4,
+                slidesToScroll: 1
+              }
+            }
+        ]
     });
 
    try {
@@ -356,7 +372,6 @@ $(document).ready(function() {
                 if (e.target == minus) {
                     if (editionCount.value > 0) {
                         editionCount.value = +editionCount.value - 1;
-                        console.log(editionCount.value);
                         totalPrice.innerHTML = parseFloat(itemPrice.innerHTML) * editionCount.value + ' руб';
                         changeTotal();
                     }
@@ -365,7 +380,11 @@ $(document).ready(function() {
                 if ( e.target == plus) {
                     if (editionCount.value > 0) {
                         editionCount.value = +editionCount.value + 1;
-                        console.log(editionCount.value);
+                        totalPrice.innerHTML = parseFloat(itemPrice.innerHTML) * editionCount.value + ' руб';
+                        changeTotal();
+                    }
+                    if (editionCount.value == 0) {
+                        editionCount.value = 1;
                         totalPrice.innerHTML = parseFloat(itemPrice.innerHTML) * editionCount.value + ' руб';
                         changeTotal();
                     }
@@ -389,15 +408,46 @@ $(document).ready(function() {
                 }
             });
         });
+
+
         
     } catch(e){}
+
+    // Count in item page
+    try {
+        let giftSetForm = document.querySelector('.giftset__form');
+        giftSetForm.addEventListener('click', function(e){
+            let plus = document.querySelector('.plus'),
+                minus = document.querySelector('.minus'),
+                editionCount = giftSetForm.querySelector('input');
+            
+            if (e.target == minus) {
+                if (editionCount.value > 0) {
+                    editionCount.value = +editionCount.value - 1;
+                }
+            }
+
+            if ( e.target == plus) {
+                if (editionCount.value > 0) {
+                    editionCount.value = +editionCount.value + 1;
+                }
+                if (editionCount.value == 0) {
+                    editionCount.value = 1;
+                }
+            }
+
+        });
+    } catch(e) {
+
+    }
+
+
 
     //Maps 
     try {
         let addressItem = document.querySelectorAll('.address__item'),
             addressMap = document.querySelectorAll('.address__maps-item');
 
-        // addressMap[1].style.display = 'none';
         addressItem.forEach(function(item, i) {
             item.addEventListener('click', () => {
                 for (let i = 0; i < addressItem.length; i++) {
@@ -457,4 +507,45 @@ $(document).ready(function() {
         $(this).parent().hide();
         $('#triggerForm').slideToggle();
     });
+
+    try {
+        let tab = document.querySelectorAll('.giftinfo__nav-item'),
+            info = document.querySelector('.giftinfo__nav'),
+            tabContent = document.querySelectorAll('.giftinfo__descr-item');
+
+        let hideTabContent = function(a) {
+                for (let i = a; i < tabContent.length; i++) {
+                    tabContent[i].classList.remove('showtab');
+                    tabContent[i].classList.add('hidetab');
+                }
+            };
+         
+        hideTabContent(1);
+        
+        let showTabContent = function(b) {
+                if (tabContent[b].classList.contains('hidetab')) {
+                    tabContent[b].classList.remove('hidetab');
+                    tabContent[b].classList.add('showtab');
+                    for (let i = 0; i < tab.length; i++) {
+                        tab[i].classList.remove('giftinfo__nav-active');
+                    }
+                    tab[b].classList.add('giftinfo__nav-active');
+                }
+            };
+        
+        info.addEventListener('click', function(event) {
+            let target = event.target;
+            if (target && target.classList.contains('giftinfo__nav-item')) {
+                for(let i = 0; i < tab.length; i++) {
+                    if (target == tab[i]) {
+                        hideTabContent(0);
+                        showTabContent(i);
+                        break;
+                    }
+                }
+            }
+    
+        });
+    } catch(e){}
+
 });

@@ -117,164 +117,168 @@
             <div class="row">
                 <div class="col-md-3">
                     <h1 class="catalogpage__title">каталог товаров</h1>
-                    <div class="catalogpage__sortblock">
-                        <div class="catalogpage__sorttitle">сортировать по цене</div>
-                        <div class="catalogpage__checkitem">
-                            <input type="checkbox" class="catalogpage__checkbox" id="checkbox_1">
-                            <label for="checkbox_1">По возрастанию</label>
+                    <button class="open__filters">Открыть фильтры</button>
+                    <div class="filter">
+                        <svg class="filter__close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                        <div class="catalogpage__sortblock">
+                            <div class="catalogpage__sorttitle">сортировать по цене</div>
+                            <div class="catalogpage__checkitem">
+                                <input type="checkbox" class="catalogpage__checkbox" id="checkbox_1">
+                                <label for="checkbox_1">По возрастанию</label>
+                            </div>
+                            <div class="catalogpage__checkitem">
+                                <input type="checkbox" class="catalogpage__checkbox" id="checkbox_2">
+                                <label for="checkbox_2">По убыванию</label>
+                            </div>
                         </div>
-                        <div class="catalogpage__checkitem">
-                            <input type="checkbox" class="catalogpage__checkbox" id="checkbox_2">
-                            <label for="checkbox_2">По убыванию</label>
+                        <div class="catalogpage__sortblock">
+                            <div class="catalogpage__sorttitle">цена</div>
+                            <div id="slider-range"></div>
+                            <div class="catalogpage__amount">
+                                <label for="from">от</label>
+                                <input type="text" id="from">
+                                <label for="to">до</label>
+                                <input type="text" id="to">
+                            </div>
                         </div>
-                    </div>
-                    <div class="catalogpage__sortblock">
-                        <div class="catalogpage__sorttitle">цена</div>
-                        <div id="slider-range"></div>
-                        <div class="catalogpage__amount">
-                            <label for="from">от</label>
-                            <input type="text" id="from">
-                            <label for="to">до</label>
-                            <input type="text" id="to">
-                        </div>
-                    </div>
-                    <div class="catalogpage__sortblock">
-                        <div class="catalogpage__sorttitle">повод</div>
-                        <div class="catalogpage__checkitem">
-                            <input type="checkbox" class="catalogpage__checkbox" id="checkbox_3">
-                            <label for="checkbox_3">Новый год</label>
-                        </div>
-                        <div class="catalogpage__checkitem">
-                            <input type="checkbox" class="catalogpage__checkbox" id="checkbox_4">
-                            <label for="checkbox_4">23 февраля</label>
-                        </div>
-                        <div class="catalogpage__checkitem">
-                            <input type="checkbox" class="catalogpage__checkbox" id="checkbox_5">
-                            <label for="checkbox_5">8 марта</label>
-                        </div>
-                        <div class="catalogpage__checkitem">
-                            <div class="catalogpage__checkitem-slide">
-                                Проф. праздник
-                                <span class="toggle">+</span>
-                                <div class="catalogpage__slidelist  catalogpage__slidelist-left">
-                                    <div class="catalogpage__checkitem">
-                                        <input type="checkbox" class="catalogpage__checkbox" id="checkbox_6">
-                                        <label for="checkbox_6">День Железнодорожника</label>
-                                    </div>
-                                    <div class="catalogpage__checkitem">
-                                        <input type="checkbox" class="catalogpage__checkbox" id="checkbox_7">
-                                        <label for="checkbox_7">День Строителя</label>
-                                    </div>
-                                    <div class="catalogpage__checkitem">
-                                        <input type="checkbox" class="catalogpage__checkbox" id="checkbox_8">
-                                        <label for="checkbox_8">День Юриста</label>
-                                    </div>
-                                    <div class="catalogpage__checkitem">
-                                        <input type="checkbox" class="catalogpage__checkbox" id="checkbox_9">
-                                        <label for="checkbox_9">День Медика</label>
-                                    </div>
-                                    <div class="catalogpage__checkitem">
-                                        <input type="checkbox" class="catalogpage__checkbox" id="checkbox_10">
-                                        <label for="checkbox_10">День Нефтяника</label>
+                        <div class="catalogpage__sortblock">
+                            <div class="catalogpage__sorttitle">повод</div>
+                            <div class="catalogpage__checkitem">
+                                <input type="checkbox" class="catalogpage__checkbox" id="checkbox_3">
+                                <label for="checkbox_3">Новый год</label>
+                            </div>
+                            <div class="catalogpage__checkitem">
+                                <input type="checkbox" class="catalogpage__checkbox" id="checkbox_4">
+                                <label for="checkbox_4">23 февраля</label>
+                            </div>
+                            <div class="catalogpage__checkitem">
+                                <input type="checkbox" class="catalogpage__checkbox" id="checkbox_5">
+                                <label for="checkbox_5">8 марта</label>
+                            </div>
+                            <div class="catalogpage__checkitem">
+                                <div class="catalogpage__checkitem-slide">
+                                    Проф. праздник
+                                    <span class="toggle">+</span>
+                                    <div class="catalogpage__slidelist  catalogpage__slidelist-left">
+                                        <div class="catalogpage__checkitem">
+                                            <input type="checkbox" class="catalogpage__checkbox" id="checkbox_6">
+                                            <label for="checkbox_6">День Железнодорожника</label>
+                                        </div>
+                                        <div class="catalogpage__checkitem">
+                                            <input type="checkbox" class="catalogpage__checkbox" id="checkbox_7">
+                                            <label for="checkbox_7">День Строителя</label>
+                                        </div>
+                                        <div class="catalogpage__checkitem">
+                                            <input type="checkbox" class="catalogpage__checkbox" id="checkbox_8">
+                                            <label for="checkbox_8">День Юриста</label>
+                                        </div>
+                                        <div class="catalogpage__checkitem">
+                                            <input type="checkbox" class="catalogpage__checkbox" id="checkbox_9">
+                                            <label for="checkbox_9">День Медика</label>
+                                        </div>
+                                        <div class="catalogpage__checkitem">
+                                            <input type="checkbox" class="catalogpage__checkbox" id="checkbox_10">
+                                            <label for="checkbox_10">День Нефтяника</label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="catalogpage__checkitem">
-                            <input type="checkbox" class="catalogpage__checkbox" id="checkbox_11">
-                            <label for="checkbox_11">Мероприятие и встреча</label>
-                        </div>
-                        <div class="catalogpage__checkitem">
-                            <input type="checkbox" class="catalogpage__checkbox" id="checkbox_12">
-                            <label for="checkbox_12">День рождения</label>
-                        </div>
-                    </div>
-                    <div class="catalogpage__sortblock">
-                        <div class="catalogpage__sorttitle catalogpage__sorttitle-nm">кому</div>
-                        <span class="toggle">+</span>
-                        <div class="catalogpage__slidelist">
                             <div class="catalogpage__checkitem">
-                                <input type="checkbox" class="catalogpage__checkbox-sq" id="checkbox_13">
-                                <label for="checkbox_13">Мужчине</label>
+                                <input type="checkbox" class="catalogpage__checkbox" id="checkbox_11">
+                                <label for="checkbox_11">Мероприятие и встреча</label>
                             </div>
                             <div class="catalogpage__checkitem">
-                                <input type="checkbox" class="catalogpage__checkbox-sq" id="checkbox_14">
-                                <label for="checkbox_14">Женщине</label>
-                            </div>
-                            <div class="catalogpage__checkitem">
-                                <input type="checkbox" class="catalogpage__checkbox-sq" id="checkbox_15">
-                                <label for="checkbox_15">Универсальные</label>
-                            </div>
-                            <div class="catalogpage__checkitem">
-                                <input type="checkbox" class="catalogpage__checkbox-sq" id="checkbox_16">
-                                <label for="checkbox_16">Детям</label>
+                                <input type="checkbox" class="catalogpage__checkbox" id="checkbox_12">
+                                <label for="checkbox_12">День рождения</label>
                             </div>
                         </div>
-                    </div>
-                    <div class="catalogpage__sortblock">
-                        <div class="catalogpage__sorttitle catalogpage__sorttitle-nm">состав</div>
-                        <span class="toggle">+</span>
-                        <div class="catalogpage__slidelist">
-                            <div class="catalogpage__checkitem">
-                                <input type="checkbox" class="catalogpage__checkbox-sq" id="checkbox_17">
-                                <label for="checkbox_17">Сладости</label>
-                            </div>
-                            <div class="catalogpage__checkitem">
-                                <input type="checkbox" class="catalogpage__checkbox-sq" id="checkbox_18">
-                                <label for="checkbox_18">Чай и кофе</label>
-                            </div>
-                            <div class="catalogpage__checkitem">
-                                <input type="checkbox" class="catalogpage__checkbox-sq" id="checkbox_19">
-                                <label for="checkbox_19">Алкоголь</label>
-                            </div>
-                            <div class="catalogpage__checkitem">
-                                <input type="checkbox" class="catalogpage__checkbox-sq" id="checkbox_20">
-                                <label for="checkbox_20">Сувениры, предметы интерьера и быта</label>
-                            </div>
-                            <div class="catalogpage__checkitem">
-                                <input type="checkbox" class="catalogpage__checkbox-sq" id="checkbox_21">
-                                <label for="checkbox_21">Деликатесы и закуски</label>
-                            </div>
-                            <div class="catalogpage__checkitem">
-                                <input type="checkbox" class="catalogpage__checkbox-sq" id="checkbox_22">
-                                <label for="checkbox_22">Цветы</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="catalogpage__sortblock">
-                        <div class="catalogpage__sorttitle catalogpage__sorttitle-nm">упаковка</div>
-                        <span class="toggle">+</span>
-                        <div class="catalogpage__slidelist">
-                            <div class="catalogpage__checkitem">
-                                <input type="checkbox" class="catalogpage__checkbox-sq" id="checkbox_23">
-                                <label for="checkbox_23">Корзина</label>
-                            </div>
-                            <div class="catalogpage__checkitem">
-                                <input type="checkbox" class="catalogpage__checkbox-sq" id="checkbox_24">
-                                <label for="checkbox_24">Деревянная упаковка</label>
-                            </div>
-                            <div class="catalogpage__checkitem">
-                                <input type="checkbox" class="catalogpage__checkbox-sq" id="checkbox_25">
-                                <label for="checkbox_25">Дизайнерская упаковка</label>
-                                <img class="catalogpage__question" src="icons/info_tooltip.svg" alt="info">
-                                <div class="tooltip tooltip__filter">
-                                    Шляпные коробы, коробы из дизайнерского картона
+                        <div class="catalogpage__sortblock">
+                            <div class="catalogpage__sorttitle catalogpage__sorttitle-nm">кому</div>
+                            <span class="toggle">+</span>
+                            <div class="catalogpage__slidelist">
+                                <div class="catalogpage__checkitem">
+                                    <input type="checkbox" class="catalogpage__checkbox-sq" id="checkbox_13">
+                                    <label for="checkbox_13">Мужчине</label>
+                                </div>
+                                <div class="catalogpage__checkitem">
+                                    <input type="checkbox" class="catalogpage__checkbox-sq" id="checkbox_14">
+                                    <label for="checkbox_14">Женщине</label>
+                                </div>
+                                <div class="catalogpage__checkitem">
+                                    <input type="checkbox" class="catalogpage__checkbox-sq" id="checkbox_15">
+                                    <label for="checkbox_15">Универсальные</label>
+                                </div>
+                                <div class="catalogpage__checkitem">
+                                    <input type="checkbox" class="catalogpage__checkbox-sq" id="checkbox_16">
+                                    <label for="checkbox_16">Детям</label>
                                 </div>
                             </div>
-                            <div class="catalogpage__checkitem">
-                                <input type="checkbox" class="catalogpage__checkbox-sq" id="checkbox_26">
-                                <label for="checkbox_26">Тубус</label>
+                        </div>
+                        <div class="catalogpage__sortblock">
+                            <div class="catalogpage__sorttitle catalogpage__sorttitle-nm">состав</div>
+                            <span class="toggle">+</span>
+                            <div class="catalogpage__slidelist">
+                                <div class="catalogpage__checkitem">
+                                    <input type="checkbox" class="catalogpage__checkbox-sq" id="checkbox_17">
+                                    <label for="checkbox_17">Сладости</label>
+                                </div>
+                                <div class="catalogpage__checkitem">
+                                    <input type="checkbox" class="catalogpage__checkbox-sq" id="checkbox_18">
+                                    <label for="checkbox_18">Чай и кофе</label>
+                                </div>
+                                <div class="catalogpage__checkitem">
+                                    <input type="checkbox" class="catalogpage__checkbox-sq" id="checkbox_19">
+                                    <label for="checkbox_19">Алкоголь</label>
+                                </div>
+                                <div class="catalogpage__checkitem">
+                                    <input type="checkbox" class="catalogpage__checkbox-sq" id="checkbox_20">
+                                    <label for="checkbox_20">Сувениры, предметы интерьера и быта</label>
+                                </div>
+                                <div class="catalogpage__checkitem">
+                                    <input type="checkbox" class="catalogpage__checkbox-sq" id="checkbox_21">
+                                    <label for="checkbox_21">Деликатесы и закуски</label>
+                                </div>
+                                <div class="catalogpage__checkitem">
+                                    <input type="checkbox" class="catalogpage__checkbox-sq" id="checkbox_22">
+                                    <label for="checkbox_22">Цветы</label>
+                                </div>
                             </div>
-                            <div class="catalogpage__checkitem">
-                                <input type="checkbox" class="catalogpage__checkbox-sq" id="checkbox_27">
-                                <label for="checkbox_27">Крафтовый короб</label>
-                            </div>
-                            <div class="catalogpage__checkitem">
-                                <input type="checkbox" class="catalogpage__checkbox-sq" id="checkbox_28">
-                                <label for="checkbox_28">Промо упаковка</label>
-                                <img class="catalogpage__question" src="icons/info_tooltip.svg" alt="info">
-                                <div class="tooltip tooltip__filter">
-                                    Крафтовые пакеты, жестяные баночки и пр.
+                        </div>
+                        <div class="catalogpage__sortblock">
+                            <div class="catalogpage__sorttitle catalogpage__sorttitle-nm">упаковка</div>
+                            <span class="toggle">+</span>
+                            <div class="catalogpage__slidelist">
+                                <div class="catalogpage__checkitem">
+                                    <input type="checkbox" class="catalogpage__checkbox-sq" id="checkbox_23">
+                                    <label for="checkbox_23">Корзина</label>
+                                </div>
+                                <div class="catalogpage__checkitem">
+                                    <input type="checkbox" class="catalogpage__checkbox-sq" id="checkbox_24">
+                                    <label for="checkbox_24">Деревянная упаковка</label>
+                                </div>
+                                <div class="catalogpage__checkitem">
+                                    <input type="checkbox" class="catalogpage__checkbox-sq" id="checkbox_25">
+                                    <label for="checkbox_25">Дизайнерская упаковка</label>
+                                    <img class="catalogpage__question" src="icons/info_tooltip.svg" alt="info">
+                                    <div class="tooltip tooltip__filter">
+                                        Шляпные коробы, коробы из дизайнерского картона
+                                    </div>
+                                </div>
+                                <div class="catalogpage__checkitem">
+                                    <input type="checkbox" class="catalogpage__checkbox-sq" id="checkbox_26">
+                                    <label for="checkbox_26">Тубус</label>
+                                </div>
+                                <div class="catalogpage__checkitem">
+                                    <input type="checkbox" class="catalogpage__checkbox-sq" id="checkbox_27">
+                                    <label for="checkbox_27">Крафтовый короб</label>
+                                </div>
+                                <div class="catalogpage__checkitem">
+                                    <input type="checkbox" class="catalogpage__checkbox-sq" id="checkbox_28">
+                                    <label for="checkbox_28">Промо упаковка</label>
+                                    <img class="catalogpage__question" src="icons/info_tooltip.svg" alt="info">
+                                    <div class="tooltip tooltip__filter">
+                                        Крафтовые пакеты, жестяные баночки и пр.
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -382,10 +386,10 @@
     <div class="giftsearch">
         <div class="container">
             <div class="row">
-                <div class="col-md-9 offset-md-3">
-                    <div class="giftsearch__create">
+                <div class="col-md-12 offset-md-0 col-lg-9 offset-lg-3">
+                    <a href="http://www.fromtheheart.zzz.com.ua/development.html" class="giftsearch__create">
                         Не нашли подходящего подарка?<br> <span>Разработаем для Вас новый!</span> 
-                    </div>
+                    </a>
                     <div class="giftsearch__text">
                         "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
                     </div>
@@ -417,7 +421,7 @@
                         <li><a href="#">Нанесение логотипа</a></li>
                         <li><a href="#">Разработка</a></li>
                         <li><a href="#">Оформление</a></li>
-                        <li><a href="#">Постоянные подарки</a></li>
+                        <li><a href="#">Персональные подарки</a></li>
                     </ul>
                 </div>
                 <div class="col-md-2 col-4">

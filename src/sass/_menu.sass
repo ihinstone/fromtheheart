@@ -12,7 +12,7 @@ header
         font-size: 12px
         font-weight: 500
         &:hover 
-            color: #E1C76E
+            color: #767676
     &__nav ul 
         display: flex
         margin-left: 15px
@@ -277,6 +277,10 @@ header
                 font-size: 10px
     .navigation__info 
         transform: translateX(-20px)
+@media (max-width: 1200px)
+    .tooltip
+        &__item
+            left: 100%
 @media (max-width: 992px)
     .menu 
         &__item 
@@ -323,6 +327,8 @@ header
             z-index: 20!important
 
 @media (max-width: 768px)
+    .breadcrumbs 
+        display: none
     .hamburger
         display: flex
         align-items: center
@@ -429,6 +435,7 @@ header
         right: 0
         transform: translateX(150%)
         transition: 0.5s all
+        box-shadow: -5px -5px 30px rgba(0,0,0,.4)
         &__active 
             transform: translateX(0%)
         &__close 

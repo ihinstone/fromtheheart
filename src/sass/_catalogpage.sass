@@ -5,12 +5,12 @@
         display: flex
         align-items: center
         justify-content: space-between
-
     &__title
         font-size: 21px
         text-transform: uppercase
         font-weight: bold
-        margin-bottom: 105px
+        margin-bottom: 102px
+        margin-top: 3px
     &__nav 
         display: flex 
         justify-content: flex-end
@@ -31,10 +31,10 @@
             border: 2px solid #E1C76E
             color: #000
             font-weight: 500
+            margin-top: -4px
     &__items 
         display: flex
         justify-content: space-between
-        align-items: center
         flex-wrap: wrap
         margin-top: 90px
         .goods__item 
@@ -70,6 +70,7 @@
             display: flex 
             justify-content: space-between
             align-items: center
+            margin: 0 auto
             a 
                 font-size: 18px
                 letter-spacing: 0.5px
@@ -181,6 +182,10 @@
             font-size: 10px
             text-align: center
             margin-right: 16px
+.open__filters  
+    display: none
+.filter__close 
+    display: none
 #slider-range 
     width: 180px
     height: 1px
@@ -202,16 +207,20 @@
         border-color: #767676 !important
 .giftsearch
     &__create
+        display: block
         padding-top: 95px
         width: 100%
         height: 328px
-        background: url('../img/create_logo.jpg')
+        background: url('../img/create_logo.jpg') center center no-repeat
+        background-size: cover
         line-height: 85px
         font-size: 24px
         text-align: center
         text-transform: uppercase
-        color: #FFFFFF
+        color: #FFFFFF!important
         font-weight: bold
+        &:hover
+            color: #fff
         span
             font-size: 36px
     &__text 
@@ -220,3 +229,153 @@
         font-size: 14px
         letter-spacing: 0.5px
         font-weight: 300
+
+@media (max-width: 1200px)
+    .catalogpage
+        margin-top: 0
+        &__items 
+            margin-top: 90px
+        &__checkitem
+            img
+                display: none
+        .goods__item 
+            width: 220px
+            height: auto
+            margin-bottom: 30px
+            &-photo
+                width: 100%
+                height: auto
+            img 
+                width: 100%
+                height: auto
+@media (max-width: 992px)
+    .catalogpage 
+        padding-top: 30px
+        &__title 
+            font-size: 15px
+            margin-top: 11px
+            margin-bottom: 38px
+        &__items 
+            margin-top: 30px
+        &__slidelist-left
+            margin-left: 0
+        &__amount 
+            label 
+                margin-right: 8px
+            input 
+                margin-right: 55px
+                margin-bottom: 7px
+        .goods__item 
+            width: 240px
+        &__pages
+            padding-top: 30px
+    #slider-range
+        width: 150px
+    .giftsearch
+        &__create 
+            padding-top: 80px
+            font-size: 20px
+            line-height: 60px
+            span
+                font-size: 28px
+        &__text 
+            margin: 35px 0
+@media (max-width: 767px)
+    .open__filters  
+        display: inline-block
+        margin-left: 47.5%
+        font-size: 12px
+        line-height: 16px
+        vertical-align: top
+        border: 1px solid black
+        background-color: #fff
+        padding: 6px
+        padding-top: 8px
+        margin-top: -9px
+    .filter 
+        display: block
+        box-shadow: 5px 5px 30px rgba(0,0,0,.4)
+        margin-top: 25px
+        padding: 35px 10px 10px 35px
+        background-color: #fff
+        position: fixed
+        width: 45%
+        height: 100vh
+        z-index: 12
+        top: -25px
+        left: 0
+        transform: translateX(-120%)
+        transition: 0.5s all
+        overflow-y: scroll
+        &__active 
+            transform: translateX(0%)
+        &__close 
+            display: block
+            position: absolute 
+            top: 10px 
+            right: 10px
+            cursor: pointer
+            opacity: .3
+            
+    .catalogpage
+        &__title 
+            margin-top: 0
+            margin-bottom: 20px
+            display: inline-block
+            vertical-align: top
+        &__amount 
+            label 
+                margin-right: 8px
+            input 
+                margin-right: 15px
+                margin-bottom: 7px
+    #slider-range 
+        width: 173px
+@media (max-width: 576px)
+    .filter 
+        width: 70%
+    .open__filters  
+        margin-left: 0
+        right: 15px
+        position: absolute
+        margin-top: -11px
+    .catalogpage
+        padding-bottom: 50px
+        &__amount 
+            label 
+                margin-right: 5px
+            input 
+                margin-right: 7px
+                margin-bottom: 7px
+        &__nav 
+            margin-top: 10px
+            justify-content: space-between
+            &-item 
+                width: auto
+                font-size: 11px
+                height: 26px
+                line-height: 26px
+            &-active 
+                border: none 
+                border-bottom: 2px solid #e1c76e
+                margin-top: 0
+        &__items 
+            .goods__item
+                margin: 0 auto 
+                margin-bottom: 30px
+                width: 267px
+        &__pages
+            width: 100%
+            padding-top: 10px
+            &-same 
+                margin: 0 10px 
+                a 
+                    font-size: 16px
+    .giftsearch 
+        &__create 
+            height: 180px
+            padding-top: 45px
+            font-size: 12px
+            line-height: 46px 
+            span
+                font-size: 16px
