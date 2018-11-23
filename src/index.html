@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Доставка и оплата</title>
+    <title>Отзывы</title>
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -85,7 +84,7 @@
                                         </ul>
                                     </div></li>
                                 <li><a class="navigation__item" href="#">кейсы</a></li>
-                                <li><a class="navigation__item navigation__item-active" href="#">доставка и оплата</a></li>
+                                <li><a class="navigation__item" href="#">доставка и оплата</a></li>
                                 <li><a class="navigation__item" href="#">контакты</a></li>
                             </ul>
                         </nav>
@@ -107,126 +106,83 @@
                             </div>
                         </div>
                     </div>
+                    
                     <form action="#" class="searchfield">
                         <input type="text" placeholder="Поиск по каталогу">
                         <svg class="searchfield__close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
                     </form>
                 </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="breadcrumbs">
+                                <a href="#">Главная</a>
+                                <svg width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.3536 4.35355C16.5488 4.15829 16.5488 3.84171 16.3536 3.64645L13.1716 0.464466C12.9763 0.269204 12.6597 0.269204 12.4645 0.464466C12.2692 0.659728 12.2692 0.976311 12.4645 1.17157L15.2929 4L12.4645 6.82843C12.2692 7.02369 12.2692 7.34027 12.4645 7.53553C12.6597 7.7308 12.9763 7.7308 13.1716 7.53553L16.3536 4.35355ZM0 4.5H16V3.5H0V4.5Z" fill="black"/>
+                                </svg>
+                                <a href="#">Отзывы </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
 
-    <div class="delivery">
+    <div class="feedback">
         <div class="container">
             <div class="row">
-                <div class="col-md-9">
-                    <h1 class="delivery__title">доставка</h1>
-                    
-                    <h2 class="delivery__city delivery__city-first">санкт-петербург</h2>
-                    <div class="delivery__item">
-                        <div class="delivery__method">Курьерской службой</div>
-                        <div class="delivery__wrap">
-                            <div class="delivery__region">
-                                В пределах КАД 
-                                <span class="delivery__region-tip">за искл. Сестрорецка, Кронштадта, Стрельны, Петергофа.</span>
+                <div class="col-12">
+                    <div class="feedback__title">отзывы</div>
+                </div>
+            </div>
+             <div class="row">
+                <div class="col-md-6">
+                    <div class="feedback__item">
+                        <div class="feedback__date">11 мая 2018, 08:29</div>
+                        <div class="feedback__item-header">
+                            <div class="feedback__item-photo">
+                                <img src="img/Ellipse.svg" alt="">
                             </div>
-                            <div class="delivery__price">от 400 руб</div>
-                        </div>
-                        <div class="delivery__wrap">
-                            <div class="delivery__region">
-                                Доставка по Лен. области
+                            <div class="feedback__item-info">
+                                <div class="feedback__item-company">Компания: ООО Ростелеком-Розничные системы. Северо-Запад</div>
+                                <div class="feedback__item-name">Григорий</div>
                             </div>
-                            <div class="delivery__price">от 500 руб</div>
                         </div>
-                        <div class="delivery__wrap">
-                            <div class="delivery__region">
-                                при заказе <span class="delivery__region-price">от 20 000 руб.</span>
-                            </div>
-                            <div class="delivery__price gold">Бесплатно</div>
+                        <div class="feedback__text">
+                            На 8 марта заказывали корпоративные подарки. Менеджер всё вежливо объяснила и помогла выбрать. Остановились на корзинах "Цветы и сласти". красивые букеты, вкусные сладости, везде аккуратные бантики, ленты, наклейки. В корзинах всё умещалось плотно, доехали к нам в целости и сохранности, девушки были в восторге! Рекомендую всем, кому надоели однотипные сувениры и подарки из Китая!
                         </div>
-                        <div class="delivery__method">Самовывоз</div>
-                        <div class="delivery__region">
-                            Вы можете забрать заказ из нашего офиса по адресу: Санкт-Петербург, ул. Звенигородская 11, офис 309
-                            <span class="delivery__region-tip">Необходимо заранее договориться с менеджерами о времени визита.</span>
-                        </div>
+                        <div class="feedback__reply">Ответить</div>
                     </div>
-                    <div class="delivery__accordion">
-
-                        <h2 class="delivery__city">москва
-                            <span>
-                                <img src="icons/controller_contacts.svg" alt="controller">
-                            </span>
-                        </h2>
-                        <div class="delivery__item">
-                            <div class="delivery__method">Транспортными компаниями</div>
-                            <div class="delivery__region delivery__region-moscow">
-                                Доставка осуществляется со склада в Санкт-Петербурге. Стоимость рассчитывается согласно тарифам транспортных компаний.
+                    <div class="feedback__item">
+                        <div class="feedback__date">13 мая 2018, 12:46</div>
+                        <div class="feedback__item-header">
+                            <div class="feedback__item-photo">
+                                <img src="img/Ellipse.svg" alt="">
                             </div>
-                            <div class="delivery__wrap">
-                                <div class="delivery__region">
-                                    При заказе <span class="delivery__region-price">от 30 000 руб</span>
-                                    <span class="delivery__region-tipbig">Подробности уточняйте у менеджеров.</span>
+                            <div class="feedback__item-info">
+                                <div class="feedback__item-name">Юлия</div>
+                            </div>
+                        </div>
+                        <div class="feedback__text">
+                            Заказывала подарки на 23 февраля Руководителям компании. Понравился предлагаемый ассортимент, все стильно и аккуратно упаковано. Сервис хороший. Удачи и процветания!                        
+                        </div>
+                        <div class="feedback__reply">Ответить</div>
+                        <div class="feedback__answer feedback__item">
+                            <div class="feedback__date">13 мая 2018, 12:46</div>
+                            <div class="feedback__item-header">
+                                <div class="feedback__item-photo">
+                                    <img src="img/Ellipse.svg" alt="">
                                 </div>
-                                <div class="delivery__price gold">Бесплатно</div>
+                                <div class="feedback__item-info">
+                                    <div class="feedback__item-name">from the heart</div>
+                                </div>
                             </div>
-                        </div>
-
-
-                        <h2 class="delivery__city">остальная россия и снг
-                            <span>
-                                <img src="icons/controller_contacts.svg" alt="controller">
-                            </span>
-                        </h2>
-                        <div class="delivery__item">
-                            <div class="delivery__method">Транспортными компаниями</div>
-                            <div class="delivery__region">
-                                Доставка осуществляется со склада в Санкт-Петербурге. Стоимость рассчитывается согласно тарифам транспортных компаний.<br>
-                                Вы также можете забрать заказ своей транспортной компанией
-                            </div>
-                            <div class="delivery__method delivery__method-last">Мы сотрудничаем с 5 компаниями, поэтому подберем для Вас отпимальный вариант</div>
+                            <div class="feedback__text">
+                                Заказывала подарки на 23 февраля Руководителям компании. Понравился предлагаемый ассортимент, все стильно и аккуратно упаковано. Сервис хороший. Удачи и процветания!                            </div>
+                            <div class="feedback__reply">Ответить</div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="payment">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h2 class="payment__title">оплата</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="payment__header">
-                        <img src="icons/wallet.svg" alt="wallet">
-                        <div>Наличный расчет</div>
-                    </div>
-                    <div class="payment__descr">
-                        Оплатить заказ можно наличными деньгами<br>
-                            в нашем офисе по адресу Санкт-Петербург,
-                            <br> ул. Звенигородская 11, офис 309.
-                    </div>
-                </div>
-                <div class="col-md-4 offset-md-1">
-                    <div class="payment__header">
-                        <img src="icons/payment-method.svg" alt="payments">
-                        <div>Онлайн</div>
-                    </div>
-                    <div class="payment__descr">
-                        Оплатить заказ можно банковской картой онлайн,<br>
-                            через Яндекс.Деньги и PayPal
-                    </div>
-                </div>
-                <div class="col-md-3 offset-md-0">
-                    <div class="payment__header payment__header-last">
-                        <img src="icons/visa.svg" alt="visa">
-                        <div style="padding-top: 20px">Безналичный расчет</div>
-                    </div>
-                    <div class="payment__descr payment__descr-last">Выставляем счёт на оплату</div>
-                </div>
+                <div class="col-md-6"></div>
             </div>
         </div>
     </div>
@@ -347,7 +303,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/mask.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

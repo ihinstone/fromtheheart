@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Доставка и оплата</title>
+    <title>Поиск</title>
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -85,14 +85,14 @@
                                         </ul>
                                     </div></li>
                                 <li><a class="navigation__item" href="#">кейсы</a></li>
-                                <li><a class="navigation__item navigation__item-active" href="#">доставка и оплата</a></li>
+                                <li><a class="navigation__item" href="#">доставка и оплата</a></li>
                                 <li><a class="navigation__item" href="#">контакты</a></li>
                             </ul>
                         </nav>
                     </div>
                     <div class="col-lg-2 offset-lg-1 col-md-3 offset-md-0 order-sm-1 order-1 order-md-2 order768r">
                         <div class="navigation__info">
-                            <div class="navigation__search">
+                            <div class="navigation__search" data-search='1'>
                                 <img src="icons/magnifying-glass.svg" alt="search">
                             </div>
                             <div class="navigation__cart">
@@ -107,6 +107,7 @@
                             </div>
                         </div>
                     </div>
+                    
                     <form action="#" class="searchfield">
                         <input type="text" placeholder="Поиск по каталогу">
                         <svg class="searchfield__close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
@@ -115,117 +116,80 @@
             </div>
         </div>
     </header>
-
-    <div class="delivery">
+    
+    <div class="searchpage">
         <div class="container">
             <div class="row">
+                <div class="col-md-3">
+                    <h1 class="catalogpage__title">каталог товаров</h1>
+                    <button class="open__filters">Открыть фильтры</button>
+                    <div class="filter">
+                        <svg class="filter__close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                        <div class="catalogpage__sortblock">
+                            <div class="catalogpage__sorttitle">сортировать по цене</div>
+                            <div class="catalogpage__checkitem">
+                                <input type="checkbox" class="catalogpage__checkbox" id="checkbox_1">
+                                <label for="checkbox_1">По возрастанию</label>
+                            </div>
+                            <div class="catalogpage__checkitem">
+                                <input type="checkbox" class="catalogpage__checkbox" id="checkbox_2">
+                                <label for="checkbox_2">По убыванию</label>
+                            </div>
+                        </div>
+                        <div class="catalogpage__sortblock">
+                            <div class="catalogpage__sorttitle">цена</div>
+                            <div id="slider-range"></div>
+                            <div class="catalogpage__amount">
+                                <label for="from">от</label>
+                                <input type="text" id="from">
+                                <label for="to">до</label>
+                                <input type="text" id="to">
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
                 <div class="col-md-9">
-                    <h1 class="delivery__title">доставка</h1>
+                    <div class="catalogpage__nav">
+                       <form action="#" class="searchpage__input">
+                           <input type="text" value="корица">
+                           <img src="icons/magnifying-glass.svg" alt="search">
+                       </form>
+                    </div>
+                    <div class="catalogpage__items searchpage__items">
+                        <a href="#" class="goods__item">
+                            <div class="goods__item-photo">
+                                <img src="img/catalog/catalog_1.jpg" alt="sparkle">
+                            </div>
+                            <div class="goods__item-descr">янтарное лакомство</div>
+                            <div class="goods__item-price">от 9884 руб</div>
+                        </a>
+                    </div>
+                    <div class="searchpage__title">наборы с "корица"</div>
+                    <div class="catalogpage__items searchpage__same">
+                        <a href="#" class="goods__item">
+                            <div class="goods__item-photo">
+                                <img src="img/catalog/catalog_1.jpg" alt="sparkle">
+                            </div>
+                            <div class="goods__item-descr">янтарное лакомство</div>
+                            <div class="goods__item-price">от 9884 руб</div>
+                        </a>
+                        <a href="#" class="goods__item">
+                            <div class="goods__item-photo">
+                                <img src="img/catalog/catalog_1.jpg" alt="sparkle">
+                            </div>
+                            <div class="goods__item-descr">янтарное лакомство</div>
+                            <div class="goods__item-price">от 9884 руб</div>
+                        </a>
+                        <a href="#" class="goods__item">
+                            <div class="goods__item-photo">
+                                <img src="img/catalog/catalog_1.jpg" alt="sparkle">
+                            </div>
+                            <div class="goods__item-descr">янтарное лакомство</div>
+                            <div class="goods__item-price">от 9884 руб</div>
+                        </a>
+                    </div>
                     
-                    <h2 class="delivery__city delivery__city-first">санкт-петербург</h2>
-                    <div class="delivery__item">
-                        <div class="delivery__method">Курьерской службой</div>
-                        <div class="delivery__wrap">
-                            <div class="delivery__region">
-                                В пределах КАД 
-                                <span class="delivery__region-tip">за искл. Сестрорецка, Кронштадта, Стрельны, Петергофа.</span>
-                            </div>
-                            <div class="delivery__price">от 400 руб</div>
-                        </div>
-                        <div class="delivery__wrap">
-                            <div class="delivery__region">
-                                Доставка по Лен. области
-                            </div>
-                            <div class="delivery__price">от 500 руб</div>
-                        </div>
-                        <div class="delivery__wrap">
-                            <div class="delivery__region">
-                                при заказе <span class="delivery__region-price">от 20 000 руб.</span>
-                            </div>
-                            <div class="delivery__price gold">Бесплатно</div>
-                        </div>
-                        <div class="delivery__method">Самовывоз</div>
-                        <div class="delivery__region">
-                            Вы можете забрать заказ из нашего офиса по адресу: Санкт-Петербург, ул. Звенигородская 11, офис 309
-                            <span class="delivery__region-tip">Необходимо заранее договориться с менеджерами о времени визита.</span>
-                        </div>
-                    </div>
-                    <div class="delivery__accordion">
-
-                        <h2 class="delivery__city">москва
-                            <span>
-                                <img src="icons/controller_contacts.svg" alt="controller">
-                            </span>
-                        </h2>
-                        <div class="delivery__item">
-                            <div class="delivery__method">Транспортными компаниями</div>
-                            <div class="delivery__region delivery__region-moscow">
-                                Доставка осуществляется со склада в Санкт-Петербурге. Стоимость рассчитывается согласно тарифам транспортных компаний.
-                            </div>
-                            <div class="delivery__wrap">
-                                <div class="delivery__region">
-                                    При заказе <span class="delivery__region-price">от 30 000 руб</span>
-                                    <span class="delivery__region-tipbig">Подробности уточняйте у менеджеров.</span>
-                                </div>
-                                <div class="delivery__price gold">Бесплатно</div>
-                            </div>
-                        </div>
-
-
-                        <h2 class="delivery__city">остальная россия и снг
-                            <span>
-                                <img src="icons/controller_contacts.svg" alt="controller">
-                            </span>
-                        </h2>
-                        <div class="delivery__item">
-                            <div class="delivery__method">Транспортными компаниями</div>
-                            <div class="delivery__region">
-                                Доставка осуществляется со склада в Санкт-Петербурге. Стоимость рассчитывается согласно тарифам транспортных компаний.<br>
-                                Вы также можете забрать заказ своей транспортной компанией
-                            </div>
-                            <div class="delivery__method delivery__method-last">Мы сотрудничаем с 5 компаниями, поэтому подберем для Вас отпимальный вариант</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="payment">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h2 class="payment__title">оплата</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="payment__header">
-                        <img src="icons/wallet.svg" alt="wallet">
-                        <div>Наличный расчет</div>
-                    </div>
-                    <div class="payment__descr">
-                        Оплатить заказ можно наличными деньгами<br>
-                            в нашем офисе по адресу Санкт-Петербург,
-                            <br> ул. Звенигородская 11, офис 309.
-                    </div>
-                </div>
-                <div class="col-md-4 offset-md-1">
-                    <div class="payment__header">
-                        <img src="icons/payment-method.svg" alt="payments">
-                        <div>Онлайн</div>
-                    </div>
-                    <div class="payment__descr">
-                        Оплатить заказ можно банковской картой онлайн,<br>
-                            через Яндекс.Деньги и PayPal
-                    </div>
-                </div>
-                <div class="col-md-3 offset-md-0">
-                    <div class="payment__header payment__header-last">
-                        <img src="icons/visa.svg" alt="visa">
-                        <div style="padding-top: 20px">Безналичный расчет</div>
-                    </div>
-                    <div class="payment__descr payment__descr-last">Выставляем счёт на оплату</div>
                 </div>
             </div>
         </div>

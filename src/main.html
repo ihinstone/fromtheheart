@@ -53,7 +53,7 @@
         <div class="navigation">
             <svg class="navigation__close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
             <div class="container">
-                <div class="row align-items-center">
+                <div class="row align-items-center relative">
                     <div class="col-md-8 offset-md-1 order-sm-2 order-2 order-md-1 order768l">
                         <nav>
                             <ul>
@@ -106,6 +106,11 @@
                             </div>
                         </div>
                     </div>
+                    
+                    <form action="#" class="searchfield">
+                        <input type="text" placeholder="Поиск по каталогу">
+                        <svg class="searchfield__close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                    </form>
                 </div>
             </div>
         </div>
@@ -378,16 +383,13 @@
                                 
                                 <div class="mainslider__photos">
                                     <div class="mainslider__item-img">
-                                        <img src="img/case.jpg" alt="KNAUF">
+                                        <img src="img/case/case_1_1.jpg" alt="KNAUF">
                                     </div>
                                     <div class="mainslider__item-img">
-                                        <img src="img/case_2.jpg" alt="KNAUF">
+                                        <img src="img/case/case_1_2.jpg" alt="KNAUF">
                                     </div>
                                     <div class="mainslider__item-img">
-                                        <img src="img/case_3.jpg" alt="KNAUF">
-                                    </div>
-                                    <div class="mainslider__item-img">
-                                        <img src="img/case_4.jpg" alt="KNAUF">
+                                        <img src="img/case/case_1_3.jpg" alt="KNAUF">
                                     </div>
                                 </div>
                             </div>
@@ -416,16 +418,13 @@
                                 </div>
                                 <div class="mainslider__photos">
                                     <div class="mainslider__item-img">
-                                        <img src="img/case.jpg" alt="KNAUF">
+                                        <img src="img/case/case_1_1.jpg" alt="KNAUF">
                                     </div>
                                     <div class="mainslider__item-img">
-                                        <img src="img/case_2.jpg" alt="KNAUF">
+                                        <img src="img/case/case_1_2.jpg" alt="KNAUF">
                                     </div>
                                     <div class="mainslider__item-img">
-                                        <img src="img/case_3.jpg" alt="KNAUF">
-                                    </div>
-                                    <div class="mainslider__item-img">
-                                        <img src="img/case_4.jpg" alt="KNAUF">
+                                        <img src="img/case/case_1_3.jpg" alt="KNAUF">
                                     </div>
                                 </div>
                             </div>
@@ -454,7 +453,37 @@
             <div class="row">
                 <div class="col-md-8">
                     <div class="describe__text">
-                            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+                        «Концепция» - компания по разработке и изготовлению корпоративных подарков. У нас Вы найдете варианты подарочных наборов на новый год, 23 февраля, 8 марта, дни рождения, юбилей фирмы и профессиональные праздники (день строителя, нефтяника, работника железных дорог и т.д.) Благодаря собственному производственному цеху и дизайн студии, мы выполняем сложные заказы тиражами от 1 экземпляра до нескольких тысяч
+                        <div class="describe__text-title">Мы предлагаем следующие услуги:</div>
+                        <ul>
+                            <li>Брендирование. Это нанесение логотипа и декорирование наборов в фирменном <span>стиле<br> организации.</span></li>
+                        </ul>
+                    </div>
+                    <div class="describe__text">
+                        <ul>
+                            <li>Разработка подарков. Воплотим любую Вашу идею и обязательно предложим свои. </li>
+                            <li>Дизайнерское оформление. Создание уникального стиля и упаковка ваших подарков и сувениров. </li>
+                            <li>Персональные подарки. Они будут разрабатываться и производиться эксклюзивно для Вашей компании. </li>
+                        </ul>
+                        <div class="describe__text-title">Почему выбирают именно нас? </div>
+                        <ul>
+                            <li>Индивидуальный подход. Вы можете приобретать подходящие варианты из каталога, вносить<br> изменения или составлять оригинальный набор с нуля.                                 </li>
+                            <li>Минимальные сроки. Принимаем заказы любой срочности. </li>
+                            <li>Беремся за любой тираж. Вы можете заказывать подарки от 1 шт. и оптом. </li>
+                            <li>Осуществляем доставку по России и странам СНГ. Привезем подарочные наборы прямиком в ваш <br>офис. </li>
+                            <li>Выгодные предложения и персональные скидки. </li>
+                        </ul>
+
+                        <div class="describe__text-title">Подарок для руководителя</div>
+                        
+                        Выбирать и дарить подарок руководителю, будь то начальник отдела или директор фирмы<br> - ответственная и, порой, сложная задача, с которой сталкивается каждый коллектив. У нас на выбор представлены VIP подарки с элитными напитками, необычными сувенирами и деликатесами. Такого рода<br> презенты отлично подойдут для статусных людей, у которых есть всё. 
+                        <div class="describe__text-title">Подарки сотрудникам организации </div>
+                        
+                        Празднование годовщины предприятия - идеальный повод для вручения персоналу корпоративных<br> подарков с логотипом компании. Праздничные недорогие комплименты послужат хорошим<br> напоминанием значимости каждого сотрудника, а цена не сильно ударит по бюджету. Например, для женщин мы создали сладкие и цветочные корзины. Их сотрудницы запомнят надолго. 
+                        <div class="describe__text-title">Деловые подарки</div>
+                        
+                        Вам не придется долго искать, что вручить компаньонам по бизнесу. У нас есть готовые решения корпоративных подарков клиентам, партнерам, коллегам и поставщикам: вы можете подарить, как гастрономический подарок, так и сувенирную продукцию с лого.
+                    
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-8 offset-sm-2 offset-md-0">

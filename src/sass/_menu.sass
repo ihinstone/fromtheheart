@@ -100,10 +100,7 @@ header
         display: flex 
         justify-content: space-around
         align-items: center
-        // &:hover
-        //     background-color: #E1C76E
-        //     img
-        //         filter: invert(100%)
+        z-index: 20
 
     &__cart 
         min-width: 50px
@@ -138,6 +135,8 @@ header
         line-height: normal
         font-size: 10px
         color: #fff
+.navigation__search-active
+	transform: translateX(90px)
 .tooltip
 	position: absolute 
 	background: #FFFFFF
