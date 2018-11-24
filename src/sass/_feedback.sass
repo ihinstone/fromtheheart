@@ -60,4 +60,38 @@
             width: 275px
         .feedback__date 
             right: -15px
-
+    &__photos 
+        margin-top: 30px
+        display: flex
+        flex-wrap: wrap
+        &-item 
+            display: block
+            width: 75px 
+            height: 75px
+            margin-right: 19px
+            position: relative
+            margin-bottom: 10px
+            transition: 0.5s all
+            img 
+                width: 100%
+                object-fit: cover
+            &:hover 
+                .feedback__photos-hover
+                    opacity: 1
+        &-hover
+            opacity: 0
+            position: absolute 
+            width: 75px 
+            height: 75px
+            left: 0
+            top: 0
+            transition: 0.5s all
+            background-color: rgba(155, 155, 155, 1)
+            img 
+                width: 40%
+                position: absolute
+                left: 50%
+                top: 50%
+                transform: translateX(-50%) translateY(-50%)
+    .button 
+        margin-top: 56px     

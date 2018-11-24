@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,10 @@
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <header>
         <div class="topmenu">
@@ -46,21 +49,26 @@
                         <div class="menu__item-number">СПб <a href="tel:8 (812) 317-00-47">8 (812) 317-00-47</a></div>
                         <div class="menu__item-number">РФ&nbsp;&nbsp;<a href="tel:8 (800) 000-00-00">8 (800) 000-00-00</a></div>
                     </div>
-                    <div class="col-md-2 offset-md-0 col-lg-2 offset-lg-1 col-sm-4 offset-sm-4 col-5 menu__item"><button class="callme">перезвоните мне</button></div>
+                    <div class="col-md-2 offset-md-0 col-lg-2 offset-lg-1 col-sm-4 offset-sm-4 col-5 menu__item"><button
+                            class="callme">перезвоните мне</button></div>
                 </div>
             </div>
         </div>
         <div class="navigation">
-            <svg class="navigation__close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            <svg class="navigation__close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
             <div class="container">
                 <div class="row align-items-center relative">
                     <div class="col-md-8 offset-md-1 order-sm-2 order-2 order-md-1 order768l">
                         <nav>
                             <ul>
-                                <li data-menu="catalog"><a class="navigation__item"  href="#">каталог</a>
+                                <li data-menu="catalog"><a class="navigation__item" href="#">каталог</a>
                                     <div class="tooltip tooltip__submenu" data-menu="catalog">
                                         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-triangle">
-                                            <polygon points="0,0 18,0 9,18"/>
+                                            <polygon points="0,0 18,0 9,18" />
                                         </svg>
                                         <ul>
                                             <li><a href="#">Подарочные наборы</a></li>
@@ -71,10 +79,10 @@
                                         </ul>
                                     </div>
                                 </li>
-                                <li data-menu="services"><a class="navigation__item" href="#" >услуги</a>
+                                <li data-menu="services"><a class="navigation__item" href="#">услуги</a>
                                     <div class="tooltip tooltip__submenu" data-menu="services">
                                         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-triangle">
-                                            <polygon points="0,0 18,0 9,18"/>
+                                            <polygon points="0,0 18,0 9,18" />
                                         </svg>
                                         <ul>
                                             <li><a href="#">Нанесение логотипа</a></li>
@@ -82,7 +90,8 @@
                                             <li><a href="#">Оформление</a></li>
                                             <li><a href="#">Профессиональные подарки</a></li>
                                         </ul>
-                                    </div></li>
+                                    </div>
+                                </li>
                                 <li><a class="navigation__item" href="#">кейсы</a></li>
                                 <li><a class="navigation__item" href="#">доставка и оплата</a></li>
                                 <li><a class="navigation__item" href="#">контакты</a></li>
@@ -106,20 +115,26 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <form action="#" class="searchfield">
                         <input type="text" placeholder="Поиск по каталогу">
-                        <svg class="searchfield__close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                        <svg class="searchfield__close" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
                     </form>
                 </div>
                 <div class="row">
                     <div class="col-6">
                         <div class="breadcrumbs">
-                                <a href="#">Главная</a>
-                                <svg width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M16.3536 4.35355C16.5488 4.15829 16.5488 3.84171 16.3536 3.64645L13.1716 0.464466C12.9763 0.269204 12.6597 0.269204 12.4645 0.464466C12.2692 0.659728 12.2692 0.976311 12.4645 1.17157L15.2929 4L12.4645 6.82843C12.2692 7.02369 12.2692 7.34027 12.4645 7.53553C12.6597 7.7308 12.9763 7.7308 13.1716 7.53553L16.3536 4.35355ZM0 4.5H16V3.5H0V4.5Z" fill="black"/>
-                                </svg>
-                                <a href="#">Отзывы </a>
+                            <a href="#">Главная</a>
+                            <svg width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.3536 4.35355C16.5488 4.15829 16.5488 3.84171 16.3536 3.64645L13.1716 0.464466C12.9763 0.269204 12.6597 0.269204 12.4645 0.464466C12.2692 0.659728 12.2692 0.976311 12.4645 1.17157L15.2929 4L12.4645 6.82843C12.2692 7.02369 12.2692 7.34027 12.4645 7.53553C12.6597 7.7308 12.9763 7.7308 13.1716 7.53553L16.3536 4.35355ZM0 4.5H16V3.5H0V4.5Z"
+                                    fill="black" />
+                            </svg>
+                            <a href="#">Отзывы </a>
                         </div>
                     </div>
                 </div>
@@ -143,17 +158,22 @@
                                 <img src="img/Ellipse.svg" alt="">
                             </div>
                             <div class="feedback__item-info">
-                                <div class="feedback__item-company">Компания: ООО Ростелеком-Розничные системы. Северо-Запад</div>
+                                <div class="feedback__item-company">Компания: ООО Ростелеком-Розничные системы.
+                                    Северо-Запад</div>
                                 <div class="feedback__item-name">Григорий</div>
                             </div>
                         </div>
                         <div class="feedback__text">
-                            На 8 марта заказывали корпоративные подарки. Менеджер всё вежливо объяснила и помогла выбрать. Остановились на корзинах "Цветы и сласти". красивые букеты, вкусные сладости, везде аккуратные бантики, ленты, наклейки. В корзинах всё умещалось плотно, доехали к нам в целости и сохранности, девушки были в восторге! Рекомендую всем, кому надоели однотипные сувениры и подарки из Китая!
+                            На 8 марта заказывали корпоративные подарки. Менеджер всё вежливо объяснила и помогла
+                            выбрать. Остановились на корзинах "Цветы и сласти". красивые букеты, вкусные сладости,
+                            везде аккуратные бантики, ленты, наклейки. В корзинах всё умещалось плотно, доехали к нам в
+                            целости и сохранности, девушки были в восторге! Рекомендую всем, кому надоели однотипные
+                            сувениры и подарки из Китая!
                         </div>
                         <div class="feedback__reply">Ответить</div>
                     </div>
                     <div class="feedback__item">
-                        <div class="feedback__date">13 мая 2018, 12:46</div>
+                        <div class="feedback__date">13 марта 2018, 12:46</div>
                         <div class="feedback__item-header">
                             <div class="feedback__item-photo">
                                 <img src="img/Ellipse.svg" alt="">
@@ -163,11 +183,12 @@
                             </div>
                         </div>
                         <div class="feedback__text">
-                            Заказывала подарки на 23 февраля Руководителям компании. Понравился предлагаемый ассортимент, все стильно и аккуратно упаковано. Сервис хороший. Удачи и процветания!                        
+                            Заказывала подарки на 23 февраля Руководителям компании. Понравился предлагаемый
+                            ассортимент, все стильно и аккуратно упаковано. Сервис хороший. Удачи и процветания!
                         </div>
                         <div class="feedback__reply">Ответить</div>
                         <div class="feedback__answer feedback__item">
-                            <div class="feedback__date">13 мая 2018, 12:46</div>
+                            <div class="feedback__date">13 марта 2018, 12:46</div>
                             <div class="feedback__item-header">
                                 <div class="feedback__item-photo">
                                     <img src="img/Ellipse.svg" alt="">
@@ -177,12 +198,156 @@
                                 </div>
                             </div>
                             <div class="feedback__text">
-                                Заказывала подарки на 23 февраля Руководителям компании. Понравился предлагаемый ассортимент, все стильно и аккуратно упаковано. Сервис хороший. Удачи и процветания!                            </div>
+                                Заказывала подарки на 23 февраля Руководителям компании. Понравился предлагаемый
+                                ассортимент, все стильно и аккуратно упаковано. Сервис хороший. Удачи и процветания!
+                            </div>
+                            <div class="feedback__photos">
+                                <a data-fancybox="gallery" href="img/giftset__preview.jpg" class="feedback__photos-item">
+                                    <img src="img/feedback_small.jpg" alt="">
+                                    <div class="feedback__photos-hover">
+                                        <img src="icons/magnifying-glass.svg" alt="search">
+                                    </div>
+                                </a>
+                                <a data-fancybox="gallery" href="img/giftset__preview.jpg" class="feedback__photos-item">
+                                    <img src="img/feedback_small.jpg" alt="">
+                                    <div class="feedback__photos-hover">
+                                        <img src="icons/magnifying-glass.svg" alt="search">
+                                    </div>
+                                </a>
+                            </div>
                             <div class="feedback__reply">Ответить</div>
                         </div>
                     </div>
+                    <div class="feedback__item">
+                        <div class="feedback__date">23 мая 2018, 16:50</div>
+                        <div class="feedback__item-header">
+                            <div class="feedback__item-photo">
+                                <img src="img/Ellipse.svg" alt="">
+                            </div>
+                            <div class="feedback__item-info">
+                                <div class="feedback__item-name">Юлия</div>
+                            </div>
+                        </div>
+                        <div class="feedback__text">
+                            В качестве подарка партнёру выбрали корзину Эстет. Остались очень довольны. Выполнено
+                            стильно, со вкусом. Менеджер Юлия очень вежливая и оперативная. Рекомендую!
+                        </div>
+                        <div class="feedback__reply">Ответить</div>
+                    </div>
                 </div>
-                <div class="col-md-6"></div>
+                <div class="col-md-6">
+                    <div class="feedback__item">
+                        <div class="feedback__date">19 марта 2018, 12:16</div>
+                        <div class="feedback__item-header">
+                            <div class="feedback__item-photo">
+                                <img src="img/Ellipse.svg" alt="">
+                            </div>
+                            <div class="feedback__item-info">
+                                <div class="feedback__item-name">Ирина</div>
+                            </div>
+                        </div>
+                        <div class="feedback__text">
+                            Заказывали корпоративные подарки мальчикам на 23 февраля. Мы в восторге! Доставка была
+                            вовремя, ни одна коробочка не помята, не порвана. Все как на подбор, одинаковые и красивые!
+                            Из каждой коробочки пахло вкусно-вкусно бергамотом, каждый зашедший в наш кабинет удивлялся
+                            "чем же так вкусно пахнет", и желал быстрее увидеть содержимое. "когда уже мы будем подарки
+                            дарить, чтобы мальчики быстрее их открыли и мы тоже увидели содержимое?" - говорили
+                            коллеги-барышни :)
+                            <br><br>
+                            Все отметили, что в этом году у нас были подарки стильные как никогда!
+                            <br><br>
+                            Мы понимаем, что точно не ошиблись с выбором компании, обязательно будем заказывать еще!
+                            Спасибо :)
+                        </div>
+                        <div class="feedback__photos">
+                            <a data-fancybox="gallery" href="img/giftset__preview.jpg" class="feedback__photos-item">
+                                <img src="img/feedback_small.jpg" alt="">
+                                <div class="feedback__photos-hover">
+                                    <img src="icons/magnifying-glass.svg" alt="search">
+                                </div>
+                            </a>
+                            <a data-fancybox="gallery" href="img/goods_2_2.jpg" class="feedback__photos-item">
+                                <img src="img/feedback_small_2.jpg" alt="">
+                                <div class="feedback__photos-hover">
+                                    <img src="icons/magnifying-glass.svg" alt="search">
+                                </div>
+                            </a>
+                            <a data-fancybox="gallery" href="img/giftset__preview.jpg" class="feedback__photos-item">
+                                <img src="img/feedback_small.jpg" alt="">
+                                <div class="feedback__photos-hover">
+                                    <img src="icons/magnifying-glass.svg" alt="search">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="feedback__reply">Ответить</div>
+                    </div>
+                    <div class="feedback__item">
+                        <div class="feedback__date">12 декабря 2017, 16:06</div>
+                        <div class="feedback__item-header">
+                            <div class="feedback__item-photo">
+                                <img src="img/Ellipse.svg" alt="">
+                            </div>
+                            <div class="feedback__item-info">
+                                <div class="feedback__item-name">Светлана</div>
+                            </div>
+                        </div>
+                        <div class="feedback__text">
+                            Спасибо большое команде за скорость выполнения заказа, за понимание и внимательное
+                            отношение к моему пожеланию и исполнению заказа. Все очень красиво, достойно и сделано с
+                            душой. Очень понравилось! Молодцы девочки. Рекомендую и в дальнейшем обязательно буду
+                            обращаться к вам. Удачи вам и процветания.
+                        </div>
+                        <div class="feedback__reply">Ответить</div>
+                    </div>
+                    <div class="feedback__item">
+                        <div class="feedback__date">28 декабря 2015, 16:20</div>
+                        <div class="feedback__item-header">
+                            <div class="feedback__item-photo">
+                                <img src="img/Ellipse.svg" alt="">
+                            </div>
+                            <div class="feedback__item-info">
+                                <div class="feedback__item-name">Александр</div>
+                            </div>
+                        </div>
+                        <div class="feedback__photos">
+                            <a data-fancybox="gallery" href="img/feedback__2.jpg" class="feedback__photos-item">
+                                <img src="img/feedback_small_3.jpg" alt="">
+                                <div class="feedback__photos-hover">
+                                    <img src="icons/magnifying-glass.svg" alt="search">
+                                </div>
+                            </a>
+                            <a data-fancybox="gallery" href="img/feedback__2.jpg" class="feedback__photos-item">
+                                <img src="img/feedback_small_3.jpg" alt="">
+                                <div class="feedback__photos-hover">
+                                    <img src="icons/magnifying-glass.svg" alt="search">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="feedback__reply">Ответить</div>
+                    </div>
+                </div>
+            </div>
+            <div class="button">оставить отзыв</div>
+            <div class="catalogpage__pages">
+                <div class="catalogpage__wrap">
+                    <a href="#" class="firstpage">01</a>
+                    <div class="catalogpage__pages-prev">
+                        <img src="icons/arrowthin_left.svg" alt="prev">
+                    </div>
+                </div>
+                <div class="catalogpage__pages-same">
+                    <a href="#">04</a>
+                    <a href="#">05</a>
+                    <a class="catalogpage__pages-active" href="#">06</a>
+                    <a href="#">07</a>
+                    <a href="#">08</a>
+                </div>
+                <div class="catalogpage__wrap">
+                    <div class="catalogpages__pages-next">
+                        <img src="icons/arrowthin_right.svg" alt="prev">
+                    </div>
+                    <a href="#" class="lastpage">09</a>
+                </div>
             </div>
         </div>
     </div>
@@ -256,7 +421,8 @@
                         <div class="popup__call-wrap">
                             <div class="popup__call-country">РФ</div>
                             <svg class="popup__call-svg" width="22" height="13" viewBox="0 0 22 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M20.2461 2L11.1228 10L1.99951 2" stroke="black" stroke-opacity="0.9" stroke-width="4"/>
+                                <path d="M20.2461 2L11.1228 10L1.99951 2" stroke="black" stroke-opacity="0.9"
+                                    stroke-width="4" />
                             </svg>
                         </div>
                     </div>
@@ -265,30 +431,43 @@
                         <div class="popup__call-wrap">
                             <div class="popup__call-country">Беларусь</div>
                             <svg class="popup__call-svg" width="22" height="13" viewBox="0 0 22 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M20.2461 2L11.1228 10L1.99951 2" stroke="black" stroke-opacity="0.9" stroke-width="4"/>
+                                <path d="M20.2461 2L11.1228 10L1.99951 2" stroke="black" stroke-opacity="0.9"
+                                    stroke-width="4" />
                             </svg>
                         </div>
                     </div>
                 </div>
                 <button class="button">Перезвоните мне</button>
             </form>
-            <svg class="close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            <svg class="close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
         </div>
         <div class="popup popup__callthanks">
             <div class="popup__callthanks-wrap">
                 <img src="icons/ok.svg" alt="ok">
                 <div>Спасибо! Скоро мы Вам перезвоним</div>
             </div>
-            <svg class="close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            <svg class="close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
         </div>
         <div class="popup popup__order">
             <div class="popup__order-wrap">
                 <img src="icons/ok.svg" alt="ok">
-                <div>Спасибо за заказ!<br> 
+                <div>Спасибо за заказ!<br>
                     Менеджер свяжется с Вами для обсуждения деталей
                 </div>
             </div>
-            <svg class="close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            <svg class="close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
         </div>
         <div class="popup popup__search">
             <div class="popup__search-wrap">
@@ -297,12 +476,18 @@
                     <button class="popup__search-btn"></button>
                 </form>
             </div>
-            <svg class="close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            <svg class="close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/mask.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js"></script>
     <script src="js/script.js"></script>
 </body>
+
 </html>
