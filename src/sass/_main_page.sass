@@ -127,6 +127,7 @@
         font-size: 14px
         font-weight: 300
         line-height: 18px
+        border: 1px solid black
 .advantages
     padding: 80px 0 40px 0
     &__item 
@@ -371,6 +372,8 @@
     .describe
         &__text 
             margin-top: 0
+            &:first-child 
+                margin-top: 0
         &__form 
             padding: 30px
             &-title 
@@ -399,6 +402,10 @@
                 img 
                     width: 160px
                     height: 160px
+                &-changed
+                    img 
+                        &:nth-child(2)
+                            display: none
     .catalog
         &__item
             &-descr 
@@ -463,6 +470,15 @@
                 line-height: 22px
                 br 
                     display: none
+@media (width: 992px)
+    .promo
+        &__min 
+            justify-content: space-around
+        &__full
+            display: block 
+            margin: 0 auto
+            margin-top: 20px
+
 @media (max-width: 767px)
     .promo
         &__full
@@ -561,8 +577,10 @@
     .describe
         padding: 35px 0
         &__text 
-            margin-bottom: 35px
+            br 
+                display: none
         &__form 
+            margin-top: 35px
             padding: 20px
             &-title 
                 font-size: 14px
@@ -663,3 +681,7 @@
             flex-wrap: wrap 
     .trust
         margin-bottom: 35px
+    .describe
+        &__text
+            ul 
+                padding-left: 17px
