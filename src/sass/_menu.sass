@@ -12,7 +12,7 @@ header
         font-size: 12px
         font-weight: 500
         &:hover 
-            color: #767676
+            color: #C4C4C4
     &__nav ul 
         display: flex
         margin-left: 15px
@@ -50,6 +50,7 @@ header
             margin-bottom: 3px
             margin-top: 3px
             transform: translateX(20px)
+            font-weight: 500
         &-tel 
             display: flex
             flex-direction: column
@@ -57,8 +58,8 @@ header
             align-items: stretch
         button 
             width: 165px 
-            height: 40px 
-            line-height: 43px
+            height: 33px 
+            line-height: 34px
             border: 1px solid #000000
             text-transform: uppercase
             font-weight: 500
@@ -67,6 +68,9 @@ header
             letter-spacing: 0.4px 
             cursor: pointer
             background-color: #fff
+            &:hover 
+                background-color: #000000
+                color: #fff
 .navigation 
     margin-top: 25px
     ul 
@@ -78,7 +82,7 @@ header
             position: relative
     &__item 
         display: block
-        height: 100%
+        height: 17px
         text-transform: uppercase
         line-height: 25px
         font-size: 14px
@@ -137,6 +141,18 @@ header
         color: #fff
 .navigation__search-active
 	transform: translateX(90px)
+[data-menu="catalog"]
+    &:hover 
+        [data-menu="catalog"]
+            display: flex
+        a::first-child
+            color: #CFAF3E
+[data-menu="services"]
+    &:hover 
+        [data-menu="services"]
+            display: flex
+        a::first-child
+            color: #CFAF3E
 .tooltip
 	position: absolute 
 	background: #FFFFFF
@@ -164,10 +180,12 @@ header
 	&__submenu
         display: none
         align-items: stretch
-        min-width: 230px
+        min-width: 200px
         min-height: 166px
-        top: 37px
-        left: -25px
+        top: 20px
+        padding-top: 5px
+        left: -10px
+        box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.07)
         ul  
             width: 100%
             display: flex 

@@ -95,3 +95,64 @@
                 transform: translateX(-50%) translateY(-50%)
     .button 
         margin-top: 56px     
+    &__form 
+        width: 632px 
+        height: 452px
+        background-color: #fff
+        margin: 0 auto
+        margin-top: 45px
+        padding: 36px
+        &-wrap 
+            display: flex
+            justify-content: space-between 
+            input 
+                width: 258px 
+                border: none
+                border-bottom: 1px solid black
+                padding: 8px 5px 10px 8px
+                font-size: 14px
+        textarea 
+            margin-top: 47px
+            resize: none
+            width: 100%
+            height: 168px
+            padding: 17px 10px 
+            font-size: 14px
+
+        .file_upload
+            display: block
+            position: relative
+            overflow: hidden
+            font-size: 1em
+            height: 2em                 
+            line-height: 2em 
+            width: 112px 
+            height: 90px 
+            background-color: #eeeeee    
+            cursor: pointer  
+            margin-top: 16px   
+        
+        .file_upload .button, .file_upload > mark
+            display: block
+            cursor: pointer              
+        
+        .file_upload span
+            display: flex 
+            flex-direction: column 
+            justify-content: center
+            align-items: center
+            margin: 0 auto
+            height: 100%
+            text-align: center  
+            cursor: pointer         
+        
+        .file_upload > mark
+            background: transparent   
+            padding-left: 1em      
+        .file_upload input[type=file]
+            position: absolute
+            cursor: pointer
+            top: 0
+            opacity: 0   
+            height: 90px   
+        

@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <div class="topmenu">
+        <div id='up' class="topmenu">
             <div class="container">
                 <div class="row">
                     <nav class="topmenu__nav">
@@ -35,7 +35,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 col-sm-7  menu__item">
-                        <img src="logo/main_logo.svg" alt="концепция">
+                        <a href="#">
+                            <img src="logo/main_logo.svg" alt="концепция">
+                        </a>
                         <div>Корпоративные подарки<br>дизайн и упаковка</div>
                     </div>
                     <div class="col-md-3 col-sm-5 offset-md-1 col-xl-2 offset-xl-2 menu__item">
@@ -43,8 +45,8 @@
                         <img src="icons/shipped.svg" alt="shipped">
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-4 col-7 menu__item menu__item-tel">
-                        <div class="menu__item-number">СПб <a href="tel:8 (812) 317-00-47">8 (812) 317-00-47</a></div>
-                        <div class="menu__item-number">РФ&nbsp;&nbsp;<a href="tel:8 (800) 000-00-00">8 (800) 000-00-00</a></div>
+                        <div class="menu__item-number">РФ&nbsp;&nbsp;<a href="tel:8 (800) 000-00-00">+7 (800) 550-47-54</a></div>
+                        <div class="menu__item-number">СПб <a href="tel:8 (812) 317-00-47">+7 (812) 317-00-47</a></div>
                     </div>
                     <div class="col-md-2 offset-md-0 col-lg-2 offset-lg-1 col-sm-4 offset-sm-4 col-5 menu__item"><button class="callme">перезвоните мне</button></div>
                 </div>
@@ -59,9 +61,6 @@
                             <ul>
                                 <li data-menu="catalog"><a class="navigation__item"  href="#">каталог</a>
                                     <div class="tooltip tooltip__submenu" data-menu="catalog">
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-triangle">
-                                            <polygon points="0,0 18,0 9,18"/>
-                                        </svg>
                                         <ul>
                                             <li><a href="#">Подарочные наборы</a></li>
                                             <li><a href="#">VIP</a></li>
@@ -73,9 +72,6 @@
                                 </li>
                                 <li data-menu="services"><a class="navigation__item" href="#" >услуги</a>
                                     <div class="tooltip tooltip__submenu" data-menu="services">
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-triangle">
-                                            <polygon points="0,0 18,0 9,18"/>
-                                        </svg>
                                         <ul>
                                             <li><a href="#">Нанесение логотипа</a></li>
                                             <li><a href="#">Разработка</a></li>
@@ -214,29 +210,8 @@
             </div>
         </div>
     </section>
-    <section class="mainorder">
-        <div class="mainorder__title">
-            Некогда искать подарки?
-            <span>Закажите подбор</span>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-10 offset-md-1">
-                    <form action="#">
-                        <div class="mainorder__info">
-                            <input required type="text" name="name" placeholder="Имя">
-                            <input required type="email" name="email" placeholder="Email">
-                            <input required type="number" name="phone" placeholder="Контактный телефон">
-                        </div>
-                        <textarea name="description" id="mainorderDescription" cols="30" rows="10" placeholder="Опишите, какие подарки Вам нужны. Укажите тираж и примерную стоимость одного подарка."></textarea>
-                    <button data-hover='4' class="button">Заказать</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
     <section class="advantages">
-        <div class="title">Преимущества</div>
+        <div class="title">наши Преимущества</div>
         <div class="container">
             <div class="row">
                 <div class="col-sm-4 col-8 offset-2 offset-sm-0">
@@ -436,7 +411,29 @@
         <a href="#" data-hover='2' class="button">еще кейсы</a>
     </div>
 
-    <div class="title">нам доверяют</div>
+    <section class="mainorder">
+        <div class="mainorder__title">
+            Некогда искать подарки?
+            <span>Закажите подбор</span>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    <form action="#">
+                        <div class="mainorder__info">
+                            <input required type="text" name="name" placeholder="Имя">
+                            <input required type="email" name="email" placeholder="Email">
+                            <input required type="number" name="phone" placeholder="Контактный телефон">
+                        </div>
+                        <textarea name="description" id="mainorderDescription" cols="30" rows="10" placeholder="Опишите, какие подарки Вам нужны. Укажите тираж и примерную стоимость одного подарка."></textarea>
+                    <button data-hover='4' class="button">Заказать</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="title mt80">нам доверяют</div>
     <section class="trust">
         <div class="container">
             <div class="row">
@@ -452,11 +449,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
-                    <div class="describe__text">
+                    <div class="describe__text describe__text-pb50">
                         «Концепция» - компания по разработке и изготовлению корпоративных подарков. У нас Вы найдете варианты подарочных наборов на новый год, 23 февраля, 8 марта, дни рождения, юбилей фирмы и профессиональные праздники (день строителя, нефтяника, работника железных дорог и т.д.) Благодаря собственному производственному цеху и дизайн студии, мы выполняем сложные заказы тиражами от 1 экземпляра до нескольких тысяч
                         <div class="describe__text-title">Мы предлагаем следующие услуги:</div>
                         <ul>
-                            <li>Брендирование. Это нанесение логотипа и декорирование наборов в фирменном <span>стиле<br> организации.</span></li>
+                            <li>Брендирование. Это нанесение логотипа и декорирование наборов в фирменном <span>стиле<br> организации...читать все</span></li>
                         </ul>
                     </div>
                     <div class="describe__text">
@@ -531,20 +528,21 @@
                         <li><a href="#">Доставка и оплата</a></li>
                         <li><a href="#">О нас</a></li>
                         <li><a href="#">Отзывы</a></li>
-                        <li><a href="#">Контакты</a></li>
                         <li><a href="#">Вакансии</a></li>
                         <li><a href="#">Сотрудничество</a></li>
+                        <li><a href="#">Контакты</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4 ">
+					<div class="footer__numbers">
+						<a href="tel:80000000000">8 000 000-00-00</a> Россия 
+					</div>
                     <div class="footer__numbers">
-                        С-Петербург <a href="tel:+78123170047">+7 (812) 317-00-47</a>
+                       <a href="tel:+78123170047">+7 (812) 317-00-47</a> Петербург 
                     </div>
+                    
                     <div class="footer__numbers">
-                        Россия <a href="tel:80000000000">8 000 000-00-00</a>
-                    </div>
-                    <div class="footer__numbers">
-                        Беларусь <a href="tel:80000000000">8 000 000-00-00</a>
+                        <a href="tel:80000000000">+375 (29) 217-15-53</a> Беларусь 
                     </div>
                     <div class="footer__contacts">
                         <a href="mailto:zakaz@conception.su" class="footer__contacts-mail">zakaz@conception.su</a>
@@ -557,7 +555,13 @@
                 </div>
             </div>
         </div>
-    </footer>
+	</footer>
+	
+	<a href="#up" class="up">
+        <svg class="pageup" viewBox="0 0 26 26" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M26 0H0V26H26V0ZM4.6593 17.7519L13.1233 10.33L21.5873 17.7519L22.9059 16.2481L13.7826 8.24813L13.1233 7.67L12.464 8.24813L3.3407 16.2481L4.6593 17.7519Z" fill="black"/>
+        </svg>
+    </a>
 
     <div class="overlay">
         <div class="popup popup__call">

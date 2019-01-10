@@ -29,7 +29,7 @@
                 width: 264px
                 height: 259px
                 object-fit: cover
-                transition: 0.8s all 
+                transition: 0.4s all 
                 
             &-changed
                 img:nth-child(2)
@@ -50,7 +50,6 @@
             margin-top: 04px
             line-height: 20px
             font-size: 14px
-            text-transform: uppercase
             font-weight: bold
 .catalog 
     padding: 80px 0
@@ -129,7 +128,7 @@
         line-height: 18px
         border: 1px solid black
 .advantages
-    padding: 80px 0 40px 0
+    padding: 0px 0 40px 0
     &__item 
         margin-bottom: 40px
         &-title 
@@ -270,11 +269,20 @@
 		font-size: 14px
 		letter-spacing: 0.5px
 		font-weight: 100
-		&:first-child 
-			margin-top: 40px		
+		&-pb50 
+			padding-bottom: 50px
+		
 	&__form 
 		border: 2px solid #E1C76E
 		padding: 45px 30px 30px 30px
+		position: absolute
+		top: 0
+		left: 30px
+		width: 340px
+		&-active 
+			top: initial 
+			bottom: 0
+		
 		&-title 
 			line-height: 30px
 			font-size: 19px
@@ -288,13 +296,13 @@
 			display: block
 			width: 90%
 			margin: 0 auto
-			margin-top: 15px
+			margin-top: 48px
 			font-size: 14px
 		button
 			display: block
 			width: 120px
 			margin: 0 auto
-			margin-top: 30px
+			margin-top: 23px
 			line-height: 20px
 			font-size: 14px
 			letter-spacing: 0.5px
@@ -302,6 +310,8 @@
 			border: none
 			font-weight: bold
 			cursor: pointer
+			&:hover 
+				color: #e1c76e
 .describe__form input 
     font-weight: 100
 .describe__form button 

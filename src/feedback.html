@@ -38,7 +38,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 col-sm-7  menu__item">
-                        <img src="logo/main_logo.svg" alt="концепция">
+                        <a href="#">
+                            <img src="logo/main_logo.svg" alt="концепция">
+                        </a>
                         <div>Корпоративные подарки<br>дизайн и упаковка</div>
                     </div>
                     <div class="col-md-3 col-sm-5 offset-md-1 col-xl-2 offset-xl-2 menu__item">
@@ -328,6 +330,28 @@
                 </div>
             </div>
             <div class="button">оставить отзыв</div>
+            <form action='#' class="feedback__form">
+                <div class="feedback__form-wrap">
+                    <input type="text" placeholder="Имя" required>
+                    <input type="text" placeholder="Компания">
+                </div>
+                <textarea placeholder="Ваш отзыв" name="feed" id="feedtext" cols="30" rows="10"></textarea>
+                <label class="file_upload">
+                    <span>
+                        <svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.8 5.22224H19.313L17.3 3H9.6V6.33333H6.3V9.66667H3V20.7778C3 22 3.99 23 5.20002 23H22.8C24.01 23 25 22 25 20.7778V7.44443C25 6.22224 24.01 5.22224 22.8 5.22224ZM14 19.6667C10.964 19.6667 8.49996 17.1778 8.49996 14.1111C8.49996 11.0444 10.964 8.55557 14 8.55557C17.036 8.55557 19.5 11.0445 19.5 14.1111C19.5 17.1778 17.036 19.6667 14 19.6667Z" fill="#757575"/>
+                        <path d="M2.99999 8H5.00001V5.00001H8V2.99999H5.00001V0H2.99999V2.99999H0V5.00001H2.99999V8Z" fill="#757575"/>
+                        <path d="M14 10C11.7875 10 10 11.7875 10 14C10 16.2125 11.7875 18 14 18C16.2125 18 18 16.2125 18 14C18 11.7875 16.2125 10 14 10Z" fill="#757575"/>
+                        </svg>
+                    </span>
+                    <mark>Файл не выбран</mark>
+                    <input multiple type="file">
+                </label>
+                <div class="feedback__form-right">
+                    <input type="reset" placeholder="Отмена">
+                    <button>опубликовать</button>
+                </div>
+            </form>
             <div class="catalogpage__pages">
                 <div class="catalogpage__wrap">
                     <a href="#" class="firstpage">01</a>
