@@ -5,27 +5,7 @@ $(document).ready(function() {
     });
 
     // Main page slider
-    $('.mainslider__slick').slick({
-        dots: false,
-        infinite: true,
-        speed: 500,
-        fade: true,
-        cssEase: 'linear',
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        draggable: false,
-        swipe: false,
-        prevArrow: `<button type="button" class="slick-prev">
-                        <svg class="arrow__left" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11 19.9956L3 10.8723L11 1.74902" stroke="black" stroke-opacity="0.9" stroke-width="4"/>
-                        </svg>
-                    </button>`,
-        nextArrow: `<button type="button" class="slick-next">
-                        <svg class="arrow__right" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2 1.74902L10 10.8723L2 19.9956" stroke="black" stroke-opacity="0.9" stroke-width="4"/>
-                        </svg>                        
-                    </button>`
-      });
+
     
     $('.mainslider__photos').slick({
         dots: true, 
@@ -34,17 +14,35 @@ $(document).ready(function() {
         slidesToScroll: 1, 
         arrows: false
     });
+    $('.next').on('click', function() {
+        $('.mainslider__photos').slick('slickNext');
+    });
+    $('.prev').on('click', function() {
+        $('.mainslider__photos').slick('slickPrev');
+    });
 
     // SeoText Main
     $('.describe__text').eq(1).hide();
     $('.describe__text:first-child > ul ').css('list-style-type',  'none');
-    $('.describe__text').on('click', () => {
-        $('.describe__form').toggleClass('describe__form-active');
-        $('.describe__text').eq(1).slideToggle('slow');
-        $('.describe__text').eq(0).toggleClass('describe__text-pb50');
-        $('.describe__text > ul > li >span').css('opacity',  '1');
-        $('.describe__text > ul > li >span').html('стиле<br> организации.');
-        $('.describe__text:first-child > ul ').css('list-style-type',  'disc');
+    let opened = false;
+    $('.describe__text').on('click', () => { 
+        if (!opened) {
+            $('.describe__form').toggleClass('describe__form-active');
+            $('.describe__text').eq(1).slideToggle('slow');
+            $('.describe__text').eq(0).toggleClass('describe__text-pb50');
+            $('.describe__text > ul > li >span').css('opacity',  '1');
+            $('.describe__text > ul > li >span').html('стиле<br> организации.');
+            $('.describe__text > ul ').css({'list-style-type':'disc', 'padding-left':'13px'});
+            opened = !opened;
+        } else {
+            $('.describe__form').toggleClass('describe__form-active');
+            $('.describe__text').eq(1).slideToggle('slow');
+            $('.describe__text').eq(0).toggleClass('describe__text-pb50');
+            $('.describe__text > ul > li >span').css('opacity',  '.7');
+            $('.describe__text > ul > li >span').html('стиле<br> организации...читать все');
+            $('.describe__text > ul ').css({'list-style-type':'none', 'padding-left':'0px'});
+            opened = !opened;
+        }
     });
     // $('.describe__text').on('click', () => {
     //     $('.describe__text').eq(1).slideToggle('slow');
@@ -52,15 +50,20 @@ $(document).ready(function() {
     // Search Menu
     let formS = document.querySelector('.searchfield'),
         searchItem = document.querySelector('.navigation__search'),
-        searchClose = document.querySelector('.searchfield__close');
+        searchClose = document.querySelector('.searchfield__close'),
+        searchInput = document.querySelector('.searchfield input');
 
     searchItem.addEventListener('click', ()=> {
         formS.classList.add('searchfield__active');
         searchItem.classList.add('navigation__search-active');
+        searchItem.closest('.container').style = 'overflow: hidden; padding: 11px 0;';
+        setTimeout(() => {searchInput.focus();}, 300);
     });
 
     searchClose.addEventListener('click', () => {
-        formS.reset();
+        formS.classList.remove('searchfield__active');
+        searchItem.classList.remove('navigation__search-active');
+        searchItem.closest('.container').style = 'overflow: initial; padding: 11px 0;';
     });
 
     if (searchItem.hasAttribute('data-search')) {
@@ -92,7 +95,6 @@ $(document).ready(function() {
             };
             cart.addEventListener('click', showTooltip);
             if (cart.hasAttribute('data-cart')) {
-                console.log('1');
                 cart.removeEventListener('click', showTooltip);
             }
         
@@ -103,11 +105,12 @@ $(document).ready(function() {
                 }
             });
         } else {
-            $('[data-menu=catalog]:first').on('click', () => {
-                $('[data-menu=catalog]:eq(1)').fadeToggle('slow');
+            $('[data-menu="catalog"]:first').on('click', () => {
+                $('[data-menu="catalog"]:eq(1)').fadeToggle('slow');
+                console.log($('[data-menu="catalog"]:eq(1)'));
             });
-            $('[data-menu=services]:first').on('click', () => {
-                $('[data-menu=services]:eq(1)').fadeToggle('slow');
+            $('[data-menu="services"]:first').on('click', () => {
+                $('[data-menu="services"]:eq(1)').fadeToggle('slow');
             });
             $('.hamburger').on('click', () => {
                 $('.navigation').addClass('navigation__active');
@@ -125,51 +128,51 @@ $(document).ready(function() {
 
     
     // Popup phones
-    let popupPhoneForm = document.querySelector('.popup__call-phoneblock');
+    $('[data-mask=rus]').mask('+7 (999) 999 99 99');
 
-        popupPhoneForm.addEventListener('click', (e) => {
-            let changeCountry = document.querySelectorAll('.popup__call-wrap'),
-                changePhone = document.querySelectorAll('.popup__call-phone'),
-                popupSvgDown = document.querySelectorAll('.popup__call-svg'),
-                changeCountryName = document.querySelectorAll('.popup__call-country');
-            if (e.target == popupSvgDown[0] || e.target == changeCountryName[0] || e.target.tagName == "path") {
-                    if (changePhone[1].style.visibility == 'visible'){
-                        changePhone[1].style.visibility = 'hidden';
-                    } else {
-                        changePhone[1].style.visibility = 'visible';
-                    }
+        // popupPhoneForm.addEventListener('click', (e) => {
+        //     let changeCountry = document.querySelectorAll('.popup__call-wrap'),
+        //         changePhone = document.querySelectorAll('.popup__call-phone'),
+        //         popupSvgDown = document.querySelectorAll('.popup__call-svg'),
+        //         changeCountryName = document.querySelectorAll('.popup__call-country');
+        //     if (e.target == popupSvgDown[0] || e.target == changeCountryName[0] || e.target.tagName == "path") {
+        //             if (changePhone[1].style.visibility == 'visible'){
+        //                 changePhone[1].style.visibility = 'hidden';
+        //             } else {
+        //                 changePhone[1].style.visibility = 'visible';
+        //             }
         
-                    if(popupSvgDown[0].classList.contains('popup__call-svg-active')) {
-                        popupSvgDown[0].classList.remove('popup__call-svg-active');
-                    } else {
-                        popupSvgDown[0].classList.add('popup__call-svg-active');
-                    }  
-            }
+        //             if(popupSvgDown[0].classList.contains('popup__call-svg-active')) {
+        //                 popupSvgDown[0].classList.remove('popup__call-svg-active');
+        //             } else {
+        //                 popupSvgDown[0].classList.add('popup__call-svg-active');
+        //             }  
+        //     }
 
-            if (e.target == changePhone[1] || e.target == popupSvgDown[1] || e.target == changeCountryName[1] || e.target.classList.contains('secondCountry')) {
-                    let clonePhone = changePhone[0].cloneNode(true);
-                    changePhone[1].classList.remove('popup__call-phone-hidden');
-                    changePhone[1].style.borderBottom = '1px solid black';
-                    changePhone[1].getElementsByTagName('input')[0].classList.remove('secondCountry');
-                    changePhone[1].getElementsByTagName('input')[0].setAttribute('required', 'true');
-                    popupPhoneForm.removeChild(changePhone[0]);
-                    clonePhone.classList.add('popup__call-phone-hidden');
-                    clonePhone.getElementsByTagName('input')[0].classList.add('secondCountry');
-                    clonePhone.getElementsByTagName('input')[0].value = '';
-                    clonePhone.getElementsByTagName('input')[0].removeAttribute('required');
-                    clonePhone.querySelector('.popup__call-svg').style.visibility = 'hidden';
-                    clonePhone.querySelector('.popup__call-svg').classList.remove('popup__call-svg-active');
-                    clonePhone.style.border = 'none';
-                    clonePhone.style.visibility = "hidden";
+        //     if (e.target == changePhone[1] || e.target == popupSvgDown[1] || e.target == changeCountryName[1] || e.target.classList.contains('secondCountry')) {
+        //             let clonePhone = changePhone[0].cloneNode(true);
+        //             changePhone[1].classList.remove('popup__call-phone-hidden');
+        //             changePhone[1].style.borderBottom = '1px solid black';
+        //             changePhone[1].getElementsByTagName('input')[0].classList.remove('secondCountry');
+        //             changePhone[1].getElementsByTagName('input')[0].setAttribute('required', 'true');
+        //             popupPhoneForm.removeChild(changePhone[0]);
+        //             clonePhone.classList.add('popup__call-phone-hidden');
+        //             clonePhone.getElementsByTagName('input')[0].classList.add('secondCountry');
+        //             clonePhone.getElementsByTagName('input')[0].value = '';
+        //             clonePhone.getElementsByTagName('input')[0].removeAttribute('required');
+        //             clonePhone.querySelector('.popup__call-svg').style.visibility = 'hidden';
+        //             clonePhone.querySelector('.popup__call-svg').classList.remove('popup__call-svg-active');
+        //             clonePhone.style.border = 'none';
+        //             clonePhone.style.visibility = "hidden";
                 
-                    popupPhoneForm.append(clonePhone);
-                    popupSvgDown[0].classList.remove('popup__call-svg-active');
-                    popupSvgDown[1].style.visibility = 'visible';
+        //             popupPhoneForm.append(clonePhone);
+        //             popupSvgDown[0].classList.remove('popup__call-svg-active');
+        //             popupSvgDown[1].style.visibility = 'visible';
 
-            }
-            $('[data-mask=rus]').mask('+7 (999) 999 99 99');
-            $('[data-mask=bel]').mask('+375 (99) 999 99 99');
-        });
+        //     }
+        //     $('[data-mask=rus]').mask('+7 (999) 999 99 99');
+        //     $('[data-mask=bel]').mask('+375 (99) 999 99 99');
+        // });
     } catch(e) {}
 
     try {
@@ -182,13 +185,22 @@ $(document).ready(function() {
                 });
                 // document.querySelector(`.${modal}`).style.display = 'block';
                 $(`.${modal}`).fadeIn('slow');
+                $(`.${modal}`).find('input').focus();
             });
             let close = $(`.${modal}`).find('.close');
             close.on('click', () => {
                 $(`.${modal}`).fadeOut();
                 $('.overlay').fadeOut();
             });
-        }
+            document.querySelector('.overlay').addEventListener('click', (e) => {
+                if(e.target.classList.contains('overlay')) {
+                    console.log(e.target);
+                    $(`.${modal}`).fadeOut();
+                    $('.overlay').fadeOut();
+                }
+            });
+            
+        };
         showModal('callme', 'popup__call');
     } catch(e){}
 
@@ -292,22 +304,35 @@ $(document).ready(function() {
         });
     } catch(e){}
 
-    $('.toggle').on('click', function() {
+    $('.catalogpage__checkbox, label').on('click', function(e) {
+        e.stopPropagation();
+    });
+    $('.catalogpage__sorttitle, .toggleprof').on('click', function() {
         if($(this).hasClass('disabled')) {
             return false;
         }
-        if ($(this).text() == '-') {
-            $(this).text('+');
-        } else {
-            $(this).text('-');
+        $(this).parent().find('.toggle').toggleClass('toggle-active');
+        $(this).parent().find('.catalogpage__slidelist').slideToggle();
+    });
+    $('.toggle').on('click', function(e) {
+        e.stopPropagation();
+        if($(this).hasClass('disabled')) {
+            return false;
         }
+        $(this).toggleClass('toggle-active');
         $(this).next('.catalogpage__slidelist').slideToggle();
     });
+
 
     $('.catalogpage__question').on('click', function() {
         $(this).next('.tooltip__filter').fadeToggle();
     });
 
+    document.body.addEventListener('click', (e) => {
+        if (!e.target.classList.contains('tooltip__filter') && !e.target.classList.contains('catalogpage__question')) {
+            $('.tooltip__filter').fadeOut();
+        }
+    });
     try {
         let cartItem = document.querySelectorAll('.cart__item'),
             cartTotalPrice = document.querySelector('.cart__total > span'),
@@ -373,7 +398,6 @@ $(document).ready(function() {
                 
                 if (e.target.classList.contains('cart__item-clear')) {
                     e.target.parentNode.remove();
-                    console.log(cartItem.length)
                     if (cartItem.length === 0) {
                         cartField.innerHTML = 'Ваша корзина пока пуста';
                     }
@@ -480,7 +504,23 @@ $(document).ready(function() {
                         <svg class="arrow__right" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M2 1.74902L10 10.8723L2 19.9956" stroke="black" stroke-opacity="0.9" stroke-width="4"/>
                         </svg>                        
-                    </button>`
+                    </button>`,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+            ]
         });
 
     $('#trigger').on('click', function(){
@@ -527,10 +567,19 @@ $(document).ready(function() {
         });
     } catch(e){}
 
-    $("a").click(function () {
+    $(".pageup").click(function () {
         let elementClick = $(this).attr("href"),
             destination = $(elementClick).offset().top;
         $("html").animate({scrollTop: destination}, 800);
         return false;
     });
+    $(window).scroll(function(event){
+        if($(this).scrollTop()>1650){
+          $(".pageup").fadeIn();
+          return false;
+        }
+        else {
+          $(".pageup").fadeOut();
+        }
+        });
 });

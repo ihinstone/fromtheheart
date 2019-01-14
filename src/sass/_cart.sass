@@ -1,113 +1,200 @@
 .cart 
-    padding: 68px 0 64px 0
-    background-color: #e5e5e5
-    margin-top: 25px
-    &__title 
-        font-size: 21px
-        text-transform: uppercase
-    &__count, &__total 
-        display: flex 
-        align-items: center
-        justify-content: center
-        font-size: 12px
-        text-align: center
-        text-transform: uppercase
-        color: #767676
-        span 
-            margin-left: 20px
-            font-size: 24px
-            text-transform: uppercase
-            font-weight: bold
-            color: #000000
-    &__clear 
-        display: flex
-        align-items: center
-        font-size: 11px
-        text-transform: uppercase
-        color: #767676
-        cursor: pointer
-        transform: translateX(-12px)
-        img 
-            margin-right: 8px
-            transform: translateY(-2px)
-    &__field 
-        padding-top: 30px
-        display: flex 
-        justify-content: flex-end
-        flex-wrap: wrap
-    &__item 
-        margin-top: 50px
-        width: 1060px
-        height: 185px
-        padding: 39px 41px 39px 50px   
-        display: flex 
-        justify-content: space-between 
-        align-items: center
-        background: rgba(255, 255, 255, 0.95)
-        box-shadow: 5px 5px 30px rgba(0,0,0,.1)
-        &-photo 
-            img 
-                width: 105px
-                height: 105px
-        &-name 
-            width: 150px
-            font-size: 18px
-            text-transform: uppercase
-            font-weight: 300
-            line-height: 20px
-        &-priceblock, &-edition, &-total 
-            display: flex 
-            flex-direction: column
-            align-items: center
-            height: 80%
-            justify-content: space-around
-        &-total
-            width: 80px
-        &-pricetitle, &-editiontitle, &-totaltitle 
-            font-size: 12px
-            text-align: center
-            letter-spacing: 0.5px
-            text-transform: uppercase
-            color: #767676
-            font-weight: 300
-        &-price, &-totalprice
-            font-weight: bold
-            line-height: 20px
-            font-size: 14px
-            text-transform: uppercase
-            text-align: center
-        &-clear 
-            cursor: pointer
-            transform: translateX(-8px)
-    .button 
-        margin-top: 52px
+	padding: 68px 0 64px 0
+	background-color: #e5e5e5
+	margin-top: 25px
+	&__title 
+		font-size: 21px
+		text-transform: uppercase
+	&__count, &__total 
+		display: flex 
+		align-items: center
+		justify-content: center
+		font-size: 12px
+		text-align: center
+		text-transform: uppercase
+		color: #767676
+		span 
+			margin-left: 20px
+			font-size: 24px
+			text-transform: uppercase
+			font-weight: bold
+			color: #000000
+	&__clear 
+		display: flex
+		align-items: center
+		font-size: 11px
+		text-transform: uppercase
+		color: #767676
+		cursor: pointer
+		transform: translateX(-12px)
+		img 
+			width: 24px
+			height: 24px
+			margin-right: 8px
+			transform: translateY(-2px)
+	&__field 
+		padding-top: 30px
+		display: flex 
+		justify-content: flex-end
+		flex-wrap: wrap
+	&__item 
+		margin-top: 50px
+		width: 1060px
+		height: 185px
+		padding: 39px 41px 39px 50px   
+		display: flex 
+		justify-content: space-between 
+		align-items: center
+		background: rgba(255, 255, 255, 0.95)
+		box-shadow: 5px 5px 30px rgba(0,0,0,.1)
+		&-photo 
+			img 
+				width: 105px
+				height: 105px
+		&-name 
+			width: 150px
+			font-size: 18px
+			text-transform: uppercase
+			font-weight: 300
+			line-height: 20px
+		&-priceblock, &-edition, &-total 
+			display: flex 
+			flex-direction: column
+			align-items: center
+			height: 80%
+			justify-content: space-around
+		&-edition
+			margin-top: 12px
+		&-total
+			width: 80px
+		&-pricetitle, &-editiontitle, &-totaltitle 
+			font-size: 12px
+			text-align: center
+			letter-spacing: 0.5px
+			text-transform: uppercase
+			color: #767676
+			font-weight: 300
+		&-price, &-totalprice
+			font-weight: bold
+			line-height: 20px
+			font-size: 14px
+			text-transform: uppercase
+			text-align: center
+		&-clear 
+			cursor: pointer
+			transform: translateX(-8px)
+	.button 
+		margin-top: 52px
 
 .edition 
-    display: flex
-    align-items: center
-    justify-content: space-between
-    width: 230px
-    input[type='number']
-        -moz-appearance: textfield
-    &__count
-        width: 77px
-        height: 43px
-        border: 1px solid black
-        font-weight: bold
-        line-height: 20px
-        font-size: 16px
-        text-align: center
-        letter-spacing: 0.5px
-        text-transform: uppercase
-        padding: 0 5px
-        &::-webkit-outer-spin-button, &::-webkit-inner-spin-button
-            -webkit-appearance: none
-            margin: 0
+	display: flex
+	align-items: center
+	justify-content: space-between
+	width: 230px
+	input[type='number']
+		-moz-appearance: textfield
+	&__count
+		width: 77px
+		height: 43px
+		border: 1px solid black
+		font-weight: bold
+		line-height: 20px
+		font-size: 16px
+		text-align: center
+		letter-spacing: 0.5px
+		text-transform: uppercase
+		padding: 0 5px
+		&::-webkit-outer-spin-button, &::-webkit-inner-spin-button
+			-webkit-appearance: none
+			margin: 0
 .minus, .plus 
-    width: 20px
-    font-size: 30px
-    font-weight: 100
-    margin: 0 28px
-    cursor: pointer
+	width: 20px
+	font-size: 30px
+	font-weight: 100
+	margin: 0 28px
+	cursor: pointer
 .minus 
-    font-size: 20px
+	font-size: 20px
+
+@media (max-width: 992px)
+	.cart
+		&__item 
+			padding: 25px 35px
+			flex-wrap: wrap
+			height: initial
+			position: relative
+			&-photo 
+				width: 50%
+				img 
+					margin: 0 auto
+					display: block
+					width: 150px
+					height: 150px
+			&-name 
+				width: 50%
+				text-align: center
+				font-size: 18px
+			&-priceblock, &-edition, &-total 
+				height: initial
+				margin-top: 25px
+			&-total, &-priceblock
+				width: 120px
+			&-clear 
+				position: absolute
+				top: 15px
+				right: 10px
+			&-price, &-totalprice
+				font-size: 16px 
+				line-height: 25px
+			&-pricetitle, &-editiontitle, &-totaltitle 
+				font-size: 14px
+			&-editiontitle
+				margin-top: 23px
+				margin-bottom: 5px
+@media (max-width: 768px)
+	.cart 
+		padding: 30px 0
+		&__field 
+			padding-top: 0
+		&__title
+			text-align: center
+		&__count, &__total 
+			margin-top: 30px
+		&__clear 
+			justify-content: center
+			margin-top: 30px
+		&__item 
+			margin-top: 30px
+			&-total, &-priceblock
+				width: initial
+			&-total
+				width: 100px
+		.button
+			margin-top: 30px
+@media (width: 768px)
+	.cart
+		&__count, &__total 
+			margin-top: 0px
+		&__clear 
+			justify-content: center
+			margin-top: 0px
+@media (max-width: 576px)
+	.cart 
+		&__count, &__total 
+			margin-top: 20px
+		&__clear 
+			margin-top: 20px
+		&__item
+			width: 290px
+			margin: 0 auto
+			margin-top: 30px
+			&-name, &-photo, &-edition, &-total, &-priceblock
+				width: 100%
+			&-name, &-priceblock 
+				margin-top: 20px
+			&-clear 
+				right: 7px
+			&-editiontitle 
+				margin-top: 0
+			&-edition, &-total 
+				margin-top: 20px

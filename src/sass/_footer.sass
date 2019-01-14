@@ -11,18 +11,18 @@
         list-style-type: none
         li 
             font-size: 12px
-            font-weight: 300
+            font-weight: 100
             margin-bottom: 10px
             letter-spacing: 0.5px
     &__numbers 
         font-weight: bold
         line-height: 25px
-        font-size: 21px
+        font-size: 18px
         margin-left: 20px
         margin-bottom: 11px
         text-align: right
     &__contacts 
-        margin-top: 45px
+        margin-top: 84px
         text-align: right
         a 
             display: block
@@ -34,7 +34,7 @@
         .vertline 
             display: inline-block 
             margin-right: 10px
-            margin-top: 10px
+            margin-top: 9px
             vertical-align: top
             width: 1px
             height: 15px
@@ -52,11 +52,19 @@
         color: #5A5A5A
         a 
             margin-right: 20px
+.tt30 
+    transform: translateX(30px)
+.tt60
+    transform: translateX(60px)
 
 @media (max-width: 1200px)
     .footer 
         &__numbers 
             font-size: 16px
+    .tt30 
+        transform: translateX(0px)
+    .tt60
+        transform: translateX(0px)
 @media (max-width: 992px)
     .footer 
         &__links 
@@ -93,8 +101,10 @@
 @media (max-width: 768px)
     .footer 
         &__addictional 
-            margin-left: 35px
+            margin: 0 auto
             margin-top: 20px
+            a 
+                margin: 0
         &__links 
             li 
                 font-size: 12px

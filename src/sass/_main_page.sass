@@ -1,274 +1,276 @@
 .promo 
-    padding: 45px 0
-    &__block
-        width: 100%
-        display: flex 
-        justify-content: space-between
-        img
-            width: 100%
-            z-index: -1
-        a 
-            display: flex
-    &__min 
-        display: flex 
-        flex-direction: column 
-        align-items: center
-        justify-content: space-between
-        margin-right: 25px
-        a 
-            margin-bottom: 21px
+	padding: 35px 0 45px 0
+	&__block
+		width: 100%
+		display: flex 
+		justify-content: space-between
+		img
+			width: 100%
+			z-index: -1
+		a 
+			display: flex
+	&__min 
+		display: flex 
+		flex-direction: column 
+		align-items: center
+		justify-content: space-between
+		margin-right: 25px
+		a 
+			margin-bottom: 21px
 .goods 
-    padding: 25px 0
-    &__item
-        &-photo 
-            width: 264px
-            height: 259px
-            object-fit: cover
-            position: relative
-            img
-                width: 264px
-                height: 259px
-                object-fit: cover
-                transition: 0.4s all 
-                
-            &-changed
-                img:nth-child(2)
-                    opacity: 0
-                    position: absolute
-                    top: 0
-                &:hover 
-                    img:nth-child(1)
-                        opacity: 0
-                    img:nth-child(2)
-                        opacity: 1 
-        &-descr 
-            margin-top: 14px
-            line-height: 20px
-            font-size: 12px
-            text-transform: uppercase
-        &-price 
-            margin-top: 04px
-            line-height: 20px
-            font-size: 14px
-            font-weight: bold
+	padding: 25px 0
+	&__item
+		&-photo 
+			width: 264px
+			height: 259px
+			object-fit: cover
+			position: relative
+			img
+				width: 264px
+				height: 259px
+				object-fit: cover
+				transition: 0.4s all 
+				
+			&-changed
+				img:nth-child(2)
+					opacity: 0
+					position: absolute
+					top: 0
+					left: 0
+				&:hover 
+					img:nth-child(1)
+						opacity: 0
+					img:nth-child(2)
+						opacity: 1 
+		&-descr 
+			margin-top: 14px
+			line-height: 20px
+			font-size: 12px
+			text-transform: uppercase
+		&-price 
+			margin-top: 04px
+			line-height: 20px
+			font-size: 14px
+			font-weight: bold
+	.button 
+		margin-top: 60px
 .catalog 
-    padding: 80px 0
-    &__item 
-        &-photo 
-            position: relative
-            img
-                width: 100%
-        &-descr 
-            position: absolute
-            width: 260px 
-            min-height: 82px
-            top: 50%
-            left: 50%
-            transform: translateY(-50%) translateX(-50%)
-            background-color: #fff 
-            padding: 10px
-            display: flex 
-            justify-content: center
-            align-items: center
-            font-size: 14px
-            text-align: center
-            text-transform: uppercase
-            font-weight: 300
-    &__pdf 
-        display: block
-        width: 90px
-        text-align: center
-        margin: 0 auto
-        margin-top: 25px
-        line-height: 20px
-        font-size: 14px 
-        padding-bottom: 3px
-        border-bottom: 1px dashed #000
-        font-weight: 300
-        &:hover 
-            color: #CFAF3E
-            border-bottom: 1px dashed #CFAF3E
+	padding: 80px 0
+	&__item 
+		&-photo 
+			position: relative
+			img
+				width: 100%
+		&-descr 
+			position: absolute
+			width: 260px 
+			min-height: 82px
+			top: 50%
+			left: 50%
+			transform: translateY(-50%) translateX(-50%)
+			background-color: #fff 
+			padding: 10px
+			display: flex 
+			justify-content: center
+			align-items: center
+			font-size: 14px
+			text-align: center
+			text-transform: uppercase
+			font-weight: 300
+	&__pdf 
+		display: block
+		width: 90px
+		text-align: center
+		margin: 0 auto
+		margin-top: 25px
+		line-height: 20px
+		font-size: 14px 
+		padding-bottom: 3px
+		border-bottom: 1px dashed #000
+		font-weight: 300
+		&:hover 
+			color: #CFAF3E
+			border-bottom: 1px dashed #CFAF3E
 
 .mainorder
-    &__title
-        text-align: center
-        line-height: 35px
-        font-size: 22px
-        text-align: center
-        letter-spacing: 0.5px
-        span
-            display: block
-            font-size: 35px
-    form 
-        margin-top: 100px
-    &__info 
-        display: flex   
-        justify-content: space-between
-        align-items: center
-        input 
-            display: block
-            width: 260px
-            height: 30px
-            padding-bottom: 3px 
-            border: none
-            border-bottom: 1px solid black
-            line-height: 20px
-            font-size: 14px 
-            font-weight: 300
-            &::placeholder
-                color: #000
-    textarea 
-        margin-top: 50px
-        width: 100%
-        min-height: 160px
-        resize: none
-        padding: 22px 25px
-        font-size: 14px
-        font-weight: 300
-        line-height: 18px
-        border: 1px solid black
+	&__title
+		text-align: center
+		line-height: 35px
+		font-size: 22px
+		text-align: center
+		letter-spacing: 0.5px
+		span
+			display: block
+			font-size: 35px
+	form 
+		margin-top: 100px
+	&__info 
+		display: flex   
+		justify-content: space-between
+		align-items: center
+		input 
+			display: block
+			width: 260px
+			height: 30px
+			padding-bottom: 3px 
+			border: none
+			border-bottom: 1px solid black
+			line-height: 20px
+			font-size: 14px 
+			font-weight: 300
+			&::placeholder
+				color: #000
+	textarea 
+		margin-top: 50px
+		width: 100%
+		height: 115px
+		resize: none
+		padding: 22px 25px
+		font-size: 14px
+		font-weight: 300
+		line-height: 18px
+		border: 1px solid black
 .advantages
-    padding: 0px 0 40px 0
-    &__item 
-        margin-bottom: 40px
-        &-title 
-            display: flex 
-            justify-content: flex-start
-            align-items: flex-end
-            min-height: 50px
-            font-size: 16px
-            font-weight: 500
-            letter-spacing: 0.6px
-            svg 
-                margin-right: 15px
-        &-descr 
-            margin-top: 15px
-            padding-right: 30px
-            line-height: 25px
-            font-size: 14px
-            letter-spacing: 0.6px
-            font-weight: 300
+	padding: 0px 0 40px 0
+	&__item 
+		margin-bottom: 40px
+		&-title 
+			display: flex 
+			justify-content: flex-start
+			align-items: flex-end
+			min-height: 50px
+			font-size: 16px
+			font-weight: 500
+			letter-spacing: 0.6px
+			svg 
+				margin-right: 15px
+		&-descr 
+			margin-top: 15px
+			padding-right: 30px
+			line-height: 25px
+			font-size: 14px
+			letter-spacing: 0.6px
+			font-weight: 400
 .about 
-    &__title 
-        margin-left: 50px
-        margin-top: 20px
-        line-height: 31px
-        font-size: 21px
-        text-align: center
-        font-weight: bold
-    &__descr 
-        margin-left: 50px
-        margin-top: 30px
-        font-weight: 300
-        line-height: 21px
-        font-size: 14px
+	&__title 
+		margin-left: 50px
+		margin-top: 20px
+		line-height: 31px
+		font-size: 21px
+		text-align: center
+		font-weight: bold
+	&__descr 
+		margin-left: 50px
+		margin-top: 30px
+		font-weight: 400
+		line-height: 21px
+		font-size: 14px
 .mainslider
-    position: relative
-    padding: 90px 0
-    width: 1140px
-    margin: 0 auto
-    img 
-        width: 100%
-        height: 100%
-    &__slide
-        display: flex
-        position: relative
-        margin-bottom: 30px
-    &__photos
-        width: 776px
-        // height: 600px
-        
-        .slick-dots
-            position: absolute
-            bottom: 25px
-            left: 50%
-            transform: translateX(-50%)
-            list-style-type: none
-            display: flex
-            justify-content: space-around
-            min-width: 100px
-            color: #fff
-            .slick-active
-                button 
-                    opacity: 1
-            li 
-                cursor: pointer
-                button 
-                    cursor: pointer
-                    color: #fff
-                    border-radius: 100%
-                    width: 13px 
-                    height: 13px
-                    opacity: .5
-                    border: none
-                    background-color: #fff
-            
-    &__item 
-        &-colored 
-            width: 340px
-            background-color: rgba(124, 6, 15, 0.9)
-            padding: 108px 30px 46px 30px
-        &-img 
-            width: 793px
-            height: 100%
-            img 
-                object-fit: cover
-        &-title 
-            font-size: 21px
-            color: #fff
-            font-weight: bold
-            line-height: 24px
-        &-subtitle
-            font-size: 16px
-            font-weight: 500
-            margin-top: 25px
-            color: #fff
-        &-descr 
-            font-weight: 100
-            margin-top: 5px
-            color: #fff
-            line-height: 20px
-            font-size: 14px
-            
-        &-inline 
-            display: inline-block
-    .slick-list, .slick-track
-        height: 100%
-    .slick-prev
-        position: absolute 
-        border: none
-        cursor: pointer
-        top: 50%
-        left: -45px
-        transform: translateY(-50%)
-        z-index: 20
-        box-shadow: none
-        background-color: transparent
-        border: none
-    .slick-next
-        position: absolute 
-        border: none
-        cursor: pointer
-        top: 50%
-        right: -45px
-        transform: translateY(-50%)
-        z-index: 20
-        box-shadow: none 
-        background-color: transparent
-        border: none
+	position: relative
+	padding: 90px 0
+	width: 1140px
+	margin: 0 auto
+	img 
+		// width: 100%
+		// height: 100%
+	&__slide
+		display: flex
+		position: relative
+		// margin-bottom: 30px
+	&__photos
+		width: 720px
+		// height: 600px
+		min-height: 494px
+	   
+		.slick-dots
+			position: absolute
+			bottom: 25px
+			left: 50%
+			transform: translateX(-50%)
+			list-style-type: none
+			display: flex
+			justify-content: space-around
+			min-width: 100px
+			color: #fff
+			.slick-active
+				button 
+					opacity: 1
+			li 
+				cursor: pointer
+				button 
+					cursor: pointer
+					color: #fff
+					border-radius: 100%
+					width: 13px 
+					height: 13px
+					opacity: .5
+					border: none
+					background-color: #fff
+			
+	&__item 
+		&-colored 
+			width: 410px
+			background-color: #EFEFEF
+			padding: 35px 32px
+		&-img 
+			height: 100%
+			img 
+				width: 100%
+				height: 100%
+				object-fit: cover
+		&-title 
+			font-size: 21px
+			font-weight: bold
+			line-height: 24px
+		&-subtitle
+			font-size: 16px
+			font-weight: 500
+			margin-top: 17px
+		&-descr 
+			font-weight: 300
+			margin-top: 5px
+			line-height: 20px
+			font-size: 14px
+			
+		&-inline 
+			display: inline-block
+	.slick-list, .slick-track
+		height: 100%
+	.prev
+		position: absolute 
+		border: none
+		cursor: pointer
+		top: 50%
+		left: -45px
+		transform: translateY(-50%)
+		z-index: 20
+		box-shadow: none
+		background-color: transparent
+		border: none
+	.next
+		position: absolute 
+		border: none
+		cursor: pointer
+		top: 50%
+		right: -45px
+		transform: translateY(-50%)
+		z-index: 20
+		box-shadow: none 
+		background-color: transparent
+		border: none
 .trust
-    width: 100%
-    background-color: #EFEFEF
-    margin-bottom: 55px
-    img 
-        width: 100%
+	width: 100%
+	background-color: #EFEFEF
+	margin-bottom: 55px
+	img 
+		width: 100%
 .describe 
 	padding: 45px 0
 	&__text 
 		line-height: 20px
 		font-size: 14px
 		letter-spacing: 0.5px
-		font-weight: 100
+		font-weight: 300
 		&-pb50 
 			padding-bottom: 50px
 		
@@ -276,12 +278,15 @@
 		border: 2px solid #E1C76E
 		padding: 45px 30px 30px 30px
 		position: absolute
-		top: 0
+		// top: 0
+		bottom: 0
 		left: 30px
 		width: 340px
+		transition: 0.5s all
 		&-active 
-			top: initial 
+			// top: initial 
 			bottom: 0
+			transition: 0.5s all
 		
 		&-title 
 			line-height: 30px
@@ -313,9 +318,9 @@
 			&:hover 
 				color: #e1c76e
 .describe__form input 
-    font-weight: 100
+	font-weight: 100
 .describe__form button 
-    background-color: #fff
+	background-color: #fff
 .describe__text
 	line-height: 20px
 	font-size: 14px
@@ -326,372 +331,374 @@
 		font-weight: 500
 		margin: 20px 0
 @media (max-width: 1368px)
-    .mainslider 
-        .slick-prev
-            left: -15px
-        .slick-next
-            right: -15px
+	.mainslider 
+		.slick-prev
+			left: -15px
+		.slick-next
+			right: -15px
 
 @media (max-width: 1199px)
-    .promo 
-        padding: 40px 0
-    .goods
-        &__item 
-            width: 200px
-            height: 200px
-            &-photo 
-                width: 200px
-                height: 200px
-                img 
-                    width: 200px
-                    height: 200px
-            &-descr 
-                font-size: 11px
-    .catalog 
-        padding: 40px 0
-    .mainorder
-        padding-top: 20px
-        form 
-            margin-top: 45px
-        &__info 
-            input 
-                width: 220px
-        textarea 
-            height: 120px
-    .about 
-        img 
-            width: 100%
-        &__title, &__descr 
-            margin-left: 0
-        &__title 
-            margin-top: 0
-            font-size: 20px
-    .mainslider 
-        padding: 45px 0
-        width: 940px
-        margin: 0 auto
-        .slick-prev
-            left: -15px
-        .slick-next
-            right: -15px
-        &__photos 
-            width: 600px
-        &__item
-            &-colored 
-                padding-top: 55px
-    .describe
-        &__text 
-            margin-top: 0
-            &:first-child 
-                margin-top: 0
-        &__form 
-            padding: 30px
-            &-title 
-                font-size: 18px
+	.promo 
+		padding: 40px 0
+	.goods
+		&__item 
+			width: 200px
+			height: 200px
+			&-photo 
+				width: 200px
+				height: 200px
+				img 
+					width: 200px
+					height: 200px
+			&-descr 
+				font-size: 11px
+	.catalog 
+		padding: 40px 0
+	.mainorder
+		padding-top: 20px
+		form 
+			margin-top: 45px
+		&__info 
+			input 
+				width: 220px
+		textarea 
+			height: 120px
+	.about 
+		img 
+			width: 100%
+		&__title, &__descr 
+			margin-left: 0
+		&__title 
+			margin-top: 0
+			font-size: 20px
+	.mainslider 
+		padding: 45px 0
+		width: 940px
+		margin: 0 auto
+		.prev
+			left: -25px
+		.next
+			right: -25px
+		&__photos 
+			width: 600px
+		&__item
+			&-colored 
+				padding-top: 55px
+	.describe
+		&__text 
+			margin-top: 0
+			&:first-child 
+				margin-top: 0
+		&__form 
+			padding: 30px
+			left: 0
+			width: initial
+			margin: 0 auto
+			position: relative
+			&-title 
+				font-size: 18px
 @media (max-width: 992px)
-    .promo
-        &__block 
-            flex-wrap: wrap
-        &__min 
-            width: 100%
-            margin-right: 0
-            flex-direction: row
-            justify-content: space-between
-            a 
-                width: 340px
-                height: 220px
-                img 
-                    object-fit: cover
-    .goods
-        &__item 
-            width: 160px
-            height: 160px
-            &-photo 
-                width: 160px
-                height: 160px
-                img 
-                    width: 160px
-                    height: 160px
-                &-changed
-                    img 
-                        &:nth-child(2)
-                            display: none
-    .catalog
-        &__item
-            &-descr 
-                width: 160px
-                min-height: 60px
-                font-size: 12px
-                line-height: 16px   
-        &__pdf 
-            &:hover
-                color: #000
-                border-bottom: 1px dashed #000
-    .mainorder
-        padding-top: 20px
-        form 
-            margin-top: 45px
-        &__info 
-            input 
-                width: 170px
-    .advantages 
-        padding: 45px 0
-        &__item 
-            margin-bottom: 30px
-            &-descr
-                line-height: 20px
-            &-title 
-                align-items: center
-                min-height: 35px
-    .about 
-        &__title
-            font-size: 22px
-            margin-top: 25px
-        &__descr 
-            margin-bottom: 30px
-    .mainslider 
-        padding: 45px 0
-        width: 720px
-        margin: 0 auto
-        .slick-prev
-            left: -10px
-        .slick-next
-            right: -10px
-        &__photos 
-            width: 100%
-            height: 460px
-            .slick-dots 
-                bottom: -10px
-        &__item
-            &-colored 
-                padding-top: 55px 
-                width: 100%
-                padding: 35px 30px
-                br 
-                    display: none
-        &__slide 
-            flex-wrap: wrap 
-    .describe
-        padding: 35px 0
-        &__form 
-            padding: 15px
-            &-title 
-                font-size: 14px
-                line-height: 22px
-                br 
-                    display: none
+	.promo
+		&__block 
+			flex-wrap: wrap
+		&__min 
+			width: 100%
+			margin-right: 0
+			flex-direction: row
+			justify-content: space-between
+			a 
+				width: 340px
+				height: 220px
+				img 
+					object-fit: cover
+	.goods
+		&__item 
+			width: 160px
+			height: 160px
+			&-photo 
+				width: 160px
+				height: 160px
+				img 
+					width: 160px
+					height: 160px
+				&-changed
+					img 
+						&:nth-child(2)
+							display: none
+					&:hover 
+						img:nth-child(1)
+							opacity: 1
+						img:nth-child(2)
+							opacity: 0 
+	.catalog
+		&__item
+			&-descr 
+				width: 160px
+				min-height: 60px
+				font-size: 12px
+				line-height: 16px   
+		&__pdf 
+			&:hover
+				color: #000
+				border-bottom: 1px dashed #000
+	.mainorder
+		padding-top: 20px
+		form 
+			margin-top: 45px
+		&__info 
+			input 
+				width: 170px
+	.advantages 
+		padding: 45px 0
+		&__item 
+			margin-bottom: 30px
+			&-descr
+				line-height: 20px
+			&-title 
+				align-items: center
+				min-height: 35px
+	.about 
+		&__title
+			font-size: 22px
+			margin-top: 25px
+		&__descr 
+			margin-bottom: 30px
+	.mainslider 
+		padding: 45px 0
+		width: 720px
+		margin: 0 auto
+		.prev
+			display: none
+		.next
+			display: none
+		&__photos 
+			width: 100%
+			height: 460px
+		&__item
+			&-colored 
+				padding-top: 55px 
+				width: 100%
+				padding: 35px 30px
+				br 
+					display: none
+		&__slide 
+			flex-wrap: wrap 
+	.describe
+		padding: 35px 0
+		&__form 
+			padding: 15px
+			&-title 
+				font-size: 14px
+				line-height: 22px
+				br 
+					display: none
 @media (width: 992px)
-    .promo
-        &__min 
-            justify-content: space-around
-        &__full
-            display: block 
-            margin: 0 auto
-            margin-top: 20px
+	.promo
+		&__min 
+			justify-content: space-around
+		&__full
+			display: block 
+			margin: 0 auto
+			margin-top: 20px
 
 @media (max-width: 767px)
-    .promo
-        &__full
-            width: 100%
-            a 
-                width: 100%
-                height: 360px
-                img 
-                    object-fit: cover
-        &__min 
-            a 
-                width: 245px
-                height: 165px
-    .goods
-        &__item 
-            display: block
-            width: 100%
-            height: auto
-            margin-bottom: 20px
-            &-photo 
-                margin: 0 auto
-                width: 300px
-                height: 290px
-                img 
-                    object-fit: cover
-                    width: 300px
-                    height: 290px
-                &:hover 
-                    img:nth-child(1)
-                        opacity: 1
-                    img:nth-child(2)
-                        opacity: 0 
-            &-descr 
-                text-align: center
-                margin-top: 20px
-                font-size: 14px
-            &-price 
-                text-align: center
-    .catalog
-        padding-bottom: 0
-        &__item 
-            margin-bottom: 35px
-            &-photo 
-                width: 80%
-                margin: 0 auto
-            &-descr 
-                width: 280px
-                min-height: 75px
-                font-size: 16px
-                line-height: 21px
-    .mainorder
-        padding-top: 20px
-        form 
-            margin-top: 45px
-        &__info 
-            input 
-                width: 150px
-    .advantages
-        padding-bottom: 10px
-        &__item 
-            &-title 
-                div 
-                    text-align: center
-                    max-width: 90px
-                    line-height: 18px
-                svg 
-                    margin-right: 10px
-            &-descr 
-                padding: 0
-    .mainslider 
-        padding: 25px 0
-        width: 540px
-        margin: 0 auto
-        .slick-prev
-            top: 20%
-            left: -5px
-        .slick-next
-            top: 20%
-            right: -5px
-        &__photos 
-            width: 100%
-            height: 460px
-            .slick-dots 
-                bottom: 20px
-        &__item
-            &-colored 
-                padding-top: 55px 
-                width: 100%
-                padding: 35px 30px
-                br 
-                    display: none
-            &-img 
-                height: 460px
-        &__slide 
-            flex-wrap: wrap 
-    .describe
-        padding: 35px 0
-        &__text 
-            br 
-                display: none
-        &__form 
-            margin-top: 35px
-            padding: 20px
-            &-title 
-                font-size: 14px
-                line-height: 22px
-                br 
-                    display: none
+	.promo
+		&__full
+			width: 100%
+			a 
+				width: 100%
+				height: 360px
+				img 
+					object-fit: cover
+		&__min 
+			a 
+				width: 245px
+				height: 165px
+	.goods
+		&__item 
+			display: block
+			width: 100%
+			height: auto
+			margin-bottom: 20px
+			&-photo 
+				margin: 0 auto
+				width: 300px
+				height: 290px
+				img 
+					object-fit: cover
+					width: 300px
+					height: 290px
+				&:hover 
+					img:nth-child(1)
+						opacity: 1
+					img:nth-child(2)
+						opacity: 0 
+			&-descr 
+				text-align: center
+				margin-top: 20px
+				font-size: 14px
+			&-price 
+				text-align: center
+	.catalog
+		padding-bottom: 0
+		&__item 
+			margin-bottom: 35px
+			&-photo 
+				width: 80%
+				margin: 0 auto
+			&-descr 
+				width: 280px
+				min-height: 75px
+				font-size: 16px
+				line-height: 21px
+	.mainorder
+		padding-top: 20px
+		form 
+			margin-top: 45px
+		&__info 
+			input 
+				width: 150px
+	.advantages
+		padding-bottom: 10px
+		&__item 
+			&-title 
+				div 
+					text-align: center
+					max-width: 90px
+					line-height: 18px
+				svg 
+					margin-right: 10px
+			&-descr 
+				padding: 0
+	.mainslider 
+		padding: 25px 0
+		width: 540px
+		margin: 0 auto
+		.prev
+			top: 20%
+			left: -5px
+		.next
+			top: 20%
+			right: -5px
+		&__photos 
+			width: 100%
+			height: 460px
+			min-height: initial
+			.slick-dots 
+				bottom: 20px
+		&__item
+			&-colored 
+				padding-top: 55px 
+				width: 100%
+				padding: 35px 30px
+				br 
+					display: none
+			&-img 
+				height: 460px
+		&__slide 
+			flex-wrap: wrap 
+	.describe
+		padding: 35px 0
+		&__text 
+			br 
+				display: none
+			&-pb50 
+				padding-bottom: 30px
+		&__form 
+			margin-top: 35px
+			padding: 20px
+			&-title 
+				font-size: 14px
+				line-height: 22px
+				br 
+					display: none
 @media (max-width: 576px)
-    .promo
-        &__full
-            width: 100%
-            a 
-                width: 290px
-                height: 200px
-                margin: 0 auto
-                img 
-                    object-fit: cover
-        &__min 
-            flex-wrap: wrap
-            a 
-                width: 290px
-                height: 200px
-                margin: 0 auto
-                margin-bottom: 25px
-    .goods
-        &__item 
-            &-photo 
-                margin: 0 auto
-                width: 260px
-                height: 260px
-                img 
-                    object-fit: cover
-                    width: 260px
-                    height: 260px
-    .mainorder
-        padding-top: 20px
-        &__title 
-            font-size: 19px
-            line-height: 30px
-            span 
-                font-size: 25px
-        form 
-            margin-top: 30px
-        textarea 
-            margin-top: 30px
-        &__info 
-            flex-wrap: wrap
-            input 
-                width: 250px
-                margin: 0 auto
-                margin-bottom: 20px
-    .advantages
-        padding-bottom: 10px
-        &__item 
-            &-title 
-                justify-content: flex-start
-                margin: 0 auto
-                div 
-                    text-align: center
-                    max-width: 400px
-                    width: 100%
-                    line-height: 18px
-                    font-weight: bold
-                    font-size: 18px
-                svg 
-                    display: none
-            &-descr 
-                padding: 0
-                text-align: center
-    .mainslider 
-        padding: 25px 0
-        width: 100%
-        margin: 0 auto
-        .slick-prev
-            top: 23%
-            left: 22px
-            svg 
-                filter: invert(100%)
-        .slick-next
-            top: 23%
-            right: 22px
-            svg 
-                filter: invert(100%)
-        &__photos 
-            width: 100%
-            height: 300px
-            .slick-dots 
-                bottom: 20px
-        &__item
-            &-img 
-                height: 300px
-            &-colored 
-                padding-top: 55px 
-                width: 100%
-                padding: 35px 30px
-                br 
-                    display: none
-        &__slide 
-            flex-wrap: wrap 
-    .trust
-        margin-bottom: 35px
-    .describe
-        &__text
-            ul 
-                padding-left: 17px
+	.promo
+		&__full
+			width: 100%
+			a 
+				width: 290px
+				height: 200px
+				margin: 0 auto
+				img 
+					object-fit: cover
+		&__min 
+			flex-wrap: wrap
+			a 
+				width: 290px
+				height: 200px
+				margin: 0 auto
+				margin-bottom: 25px
+	.goods
+		&__item 
+			&-photo 
+				margin: 0 auto
+				width: 260px
+				height: 260px
+				img 
+					object-fit: cover
+					width: 260px
+					height: 260px
+	.mainorder
+		padding-top: 20px
+		&__title 
+			font-size: 19px
+			line-height: 30px
+			span 
+				font-size: 25px
+		form 
+			margin-top: 30px
+		textarea 
+			margin-top: 30px
+		&__info 
+			flex-wrap: wrap
+			input 
+				width: 250px
+				margin: 0 auto
+				margin-bottom: 20px
+	.advantages
+		padding-bottom: 10px
+		&__item 
+			&-title 
+				justify-content: flex-start
+				margin: 0 auto
+				div 
+					text-align: center
+					max-width: 400px
+					width: 100%
+					line-height: 18px
+					font-weight: bold
+					font-size: 18px
+				svg 
+					display: none
+			&-descr 
+				padding: 0
+				text-align: center
+	.mainslider 
+		padding: 25px 0
+		width: 100%
+		margin: 0 auto
+		.prev
+			top: 23%
+			left: 22px
+		.next
+			top: 23%
+			right: 22px
+		&__photos 
+			width: 100%
+			height: 300px
+			.slick-dots 
+				bottom: 20px
+		&__item
+			&-img 
+				height: 300px
+			&-colored 
+				padding-top: 55px 
+				width: 100%
+				padding: 35px 30px
+				br 
+					display: none
+		&__slide 
+			flex-wrap: wrap 
+	.trust
+		margin-bottom: 35px
