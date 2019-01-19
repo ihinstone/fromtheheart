@@ -1,0 +1,232 @@
+.aboutus 
+	padding: 67px 0 55px 0
+	h1, h2 
+		text-align: center
+	h1
+		line-height: 31px
+		font-size: 21px
+		text-align: center
+		text-transform: uppercase
+	h2
+		margin-top: 15px
+		line-height: 22px
+		font-size: 16px
+		font-weight: 400
+	&__photos
+		margin-top: 70px
+		width: 105%
+		&-item 
+			margin-right: 20px
+			margin-top: 6px
+		&-text
+			margin-top: 6px
+			font-size: 14px
+			line-height: 20px
+			span 
+				font-weight: bold
+		&-wrap 
+			display: flex 
+			justify-content: center
+			margin-top: 13px
+		&-multiple 
+			width: 362px
+			display: flex
+			flex-wrap: wrap
+	&__mission
+		margin-top: 75px
+		&-title 
+			font-size: 14px
+			font-weight: bold
+		&-text 
+			line-height: 21px
+			font-size: 14px
+			font-weight: 400
+			margin-top: 22px
+			a 
+				font-weight: bold
+				display: inline-block
+				border-bottom: 1px dashed black
+				margin-left: 8px
+	&__numbers
+		display: flex
+		justify-content: space-between
+		&-title 
+			margin-top: 75px
+			font-size: 21px
+			text-align: center
+			text-transform: uppercase
+			font-weight: bold
+		&-item
+			margin-top: 55px 
+			text-align: center
+		&-count 
+			font-size: 56px
+			font-weight: bold
+		&-descr 
+			margin-top: 18px
+			font-size: 14px
+			line-height: 20px
+	&__history
+		&-title
+			margin-top: 108px
+			font-size: 21px
+			text-transform: uppercase
+			font-weight: bold
+			position: relative
+			&:before
+				content: ''
+				display: block
+				position: absolute
+				top: -25px 
+				left: -72px
+				width: 312px
+				height: 94px	
+				background-color: #E1C76E
+				z-index: -1
+		&-text 
+			line-height: 20px
+			font-size: 14px
+			margin-top: 30px
+		&-gold 
+			margin-top: 162px
+			color: #CFAF3E
+			line-height: 20px
+			font-size: 17px
+			font-weight: bold
+	&__princips
+		margin-top: 82px
+		background-color: #EFEFEF
+		padding: 51px 0 41px 0
+		&-title
+			font-size: 21px;
+			text-transform: uppercase
+			font-weight: bold
+		&-item 
+			margin-top: 60px
+		&-subtitle
+			font-weight: bold
+			font-size: 18px
+		&-text 
+			margin-top: 20px
+			font-size: 14px
+			line-height: 20px
+	&__contact
+		display: flex
+		justify-content: center
+		margin-top: 55px
+		&-item 
+			margin-right: 92px
+			display: flex 
+			align-items: center
+			img 
+				margin-right: 24px
+		&-text 
+			line-height: 19px
+			font-size: 14px
+			margin-top: 2px
+			a 
+				font-weight: bold
+@media (max-width: 1200px)
+	.aboutus
+		&__photos 
+			width: 100%
+			&-wrap 
+				flex-wrap: wrap
+			&-multiple
+				width: initial
+@media (max-width: 992px)
+	.aboutus
+		padding: 30px 0
+		&__photos 
+			width: 100%
+			margin-top: 30px
+			&-wrap 
+				flex-wrap: wrap
+			&-item 
+				width: 45%
+				img 
+					width: 100%
+			&-multiple 
+				justify-content: space-around
+				.aboutus__photos-item
+					width: initial
+					img 
+						height: 230px
+						width: initial
+		&__numbers
+			flex-wrap: wrap 
+			justify-content: space-around 
+			&-descr 
+				font-size: 18px
+			&-item 
+				min-width: 180px
+		&__history 
+			&-title 
+				margin-top: 80px
+			&-gold 
+				margin-top: 40px
+		&__princips 
+			margin-top: 40px
+			&-item 
+				margin-top: 40px
+			&-subtitle 
+				min-height: 36px
+			&-text 
+				margin-top: 0
+		&__contact
+			&-item 
+				margin-right: 30px
+@media (max-width: 768px)
+	.aboutus 
+		&__photos
+			&-multiple 
+				.aboutus__photos-item
+					img 
+						height: initial 
+						width: 220px
+		&__mission 
+			margin-top: 40px
+		&__numbers 
+			&-title 
+				margin-top: 40px
+			&-count 
+				font-size: 40px
+			&-descr 
+				margin-top: 10px
+			&-item 
+				margin-top: 35px
+		&__contact 
+			flex-wrap: wrap 
+			margin-top: 10px
+			&-item 
+				width: 100%
+				justify-content: flex-start
+				margin: 20px 0 0 120px 
+@media (max-width: 576px)
+	.aboutus
+		h1 
+			padding: 0 10px
+			font-size: 16px
+			line-height: 25px
+			br 
+				display: none
+		h2 
+			padding: 0 10px
+		&__photos
+			margin-top: 20px
+			&-item 
+				margin-right: 0
+				width: 80%
+			&-multiple 
+				.aboutus__photos-item
+					width: 80%
+					img 
+						display: block
+						width: 100%
+						margin: 0 auto
+		&__contact 
+			&-item 
+				margin: 20px 0 0 15px 
+				padding-right: 15px
+				br 
+					display: none

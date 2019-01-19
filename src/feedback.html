@@ -37,13 +37,13 @@
         <div class="menu">
             <div class="container" >
                 <div class="row">
-                    <div class="col-md-3 col-sm-7  menu__item">
+                    <div class="col-md-4 col-sm-7 col-xl-3 menu__item">
                         <a href="#">
                             <img src="logo/main_logo.svg" alt="концепция">
                             <div>Корпоративные подарки<br>дизайн и упаковка</div>
                         </a>
                     </div>
-                    <div class="col-md-3 col-sm-5 offset-md-1 col-xl-2 offset-xl-2 menu__item">
+                    <div class="col-md-3 col-sm-5 offset-md-0 col-xl-2 offset-xl-2 menu__item">
                         <div>Доставка<br> по России и СНГ</div>
                         <img src="icons/shipped.svg" alt="shipped">
                     </div>
@@ -313,7 +313,7 @@
                     </div>
                 </div>
             </div>
-            <div class="button">оставить отзыв</div>
+            <div class="button" id="feedbackform">оставить отзыв</div>
             <form action='#' class="feedback__form">
                 <div class="feedback__form-wrap">
                     <input type="text" placeholder="Имя" required>
@@ -328,12 +328,11 @@
                         <path d="M14 10C11.7875 10 10 11.7875 10 14C10 16.2125 11.7875 18 14 18C16.2125 18 18 16.2125 18 14C18 11.7875 16.2125 10 14 10Z" fill="#757575"/>
                         </svg>
                     </span>
-                    <mark>Файл не выбран</mark>
                     <input multiple type="file">
                 </label>
                 <div class="feedback__form-right">
-                    <input type="reset" placeholder="Отмена">
-                    <button>опубликовать</button>
+                    <button class="feedback__form-right-reset" type="reset">Отмена</button>
+                    <button class="feedback__form-right-ok">опубликовать</button>
                 </div>
             </form>
             <div class="catalogpage__pages">

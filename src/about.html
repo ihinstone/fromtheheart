@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Персональные подарки</title>
-    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="css/font.css">
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Отзывы</title>
+        <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+        <link rel="stylesheet" href="css/font.css">
+        <link rel="stylesheet" href="css/slick.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css" />
+        <link rel="stylesheet" href="css/style.css">
+    </head>
 <body>
-    
     <header>
         <div id='up' class="topmenu">
             <div class="container">
@@ -71,7 +71,7 @@
                                         </ul>
                                     </div>
                                 </li>
-                                <li data-menu="services" class="nohovermob"><a class="navigation__item navigation__item-active" href="#" >услуги</a>
+                                <li data-menu="services" class="nohovermob"><a class="navigation__item" href="#" >услуги</a>
                                     <div class="tooltip tooltip__submenu" data-menu="services">
                                         <ul>
                                             <li><a href="#">Нанесение логотипа</a></li>
@@ -113,171 +113,186 @@
         </div>
     </header>
 
-    <div class="personal">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-2 col-lg-3">
-                    <h1 class="drawing__title">услуги</h1>
-                </div>
-                <div class="col-md-10 col-lg-9">
-                    <div class="drawing__nav">
-                        <a class="drawing__nav-item" href="#">нанесение логотипа</a>
-                        <a class="drawing__nav-item" href="#">разработка</a>
-                        <a class="drawing__nav-item " href="#">оформление</a>
-                        <a class="drawing__nav-item drawing__nav-active" href="#">персональные подарки</a>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-11 col-lg-10">
-                    <div class="drawing__text">
-                            У каждой компании регулярно возникают моменты, когда необходимо преподнести приятные подарки своим партнерам,<br>
-                            клиентам и сотрудникам. Мы прекрасно знаем, что несмотря на широкий выбор вариантов на рынке, действительно<br>
-                            интересных из них единицы.
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-10">
-                    <div class="drawing__subtitle">
-                        Что мы предлагаем?
-                    </div>
-                    <div class="drawing__text">
-                        Разработать эксклюзивные подарки специально для вашей компании, которые можно будет дарить в течение года:
-                    </div>
-                    <ul class="personal__list">
-                        <li>На все официальные и профессиональные праздники</li>
-                        <li>На все внутрифирменные праздники (юбилеи, дни рождения и пр.)</li>
-                        <li>На встречах и мероприятиях</li>
-                        <li>В качестве приятных сюрпризов, бонусов и комплиментов вашим заказчикам, партнерам, поставщикам</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="personal__title">преимущества персональных подарков</div>
-            <div class="row">
-                <div class="col-sm-6 col-md-3">
-                    <div class="personal__item">Уникальные подарки,<br> которые производятся только<br> для вашей компании</div>
-                    <div class="personal__count">1</div>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                    <div class="personal__item">Экономия времени на поиск<br> подарков</div>
-                    <div class="personal__count">2</div>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                    <div class="personal__item">Поставка<br> в кратчайшие сроки</div>
-                    <div class="personal__count">3</div>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                    <div class="personal__item">Фиксированная стоимость<br> подарков без наценки<br> в горячий сезон</div>
-                    <div class="personal__count">4</div>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                    <div class="personal__item">Льготные условия<br> оплаты</div>
-                    <div class="personal__count">5</div>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                    <div class="personal__item">Вы всегда можете получить <br>нужное количество подарков</div>
-                    <div class="personal__count">6</div>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                    <div class="personal__item">Заранее разработанное<br> брендирование</div>
-                    <div class="personal__count">7</div>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                    <div class="personal__item">Довольные клиенты,<br> сотрудники, партнеры</div>
-                    <div class="personal__count">8</div>
-                </div>
-            </div>
-            
-        </div>
-    </div>
-
-    <div class="container personal__bottompadding">
-        <div class="row">
-            <div class="col-md-10">
-                <div class="drawing__subtitle">
-                    Какие сроки исполнения заказа?
-                </div>
-                <ul class="personal__list">
-                    <li>Минимальный срок поставки - 1 день</li>
-                    <li>Среднее время поставки - 3-4 дня</li>
-                </ul>
-                <div class="drawing__subtitle">
-                    Какая будет стоимость подарков?
-                </div>
-                <div class="drawing__text">
-                    В зависимости от количества предполагаемых подарков вы получаете <span class="drawing__text-bold gold">персональную скидку</span> 
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="howitworks">
-        <div class="container">
-            <h2 class="personal__title">как это работает?</h2>
-            <div class="row ">
-                <div class="col-md-12 col-lg-10 offset-lg-1">
-                    <div class="steps__wrap">
-                        <div class="steps__left">
-                            <div class="steps__text">
-                                Мы создаем каталог ваших персональных подарков.
-                                <br>Разрабатываем подарки с учётом всех пожеланий.
+    <div class="aboutus">
+        <h1>Мы - компания по производству подарков<br> полного цикла.</h1>
+        <h2>Сами придумываем, производим и брендируем.</h2>
+        <div class="container ">
+            <div class="row no-gutters">
+                <div class="col-12">
+                    <div class="aboutus__photos">
+                        <div class="aboutus__photos-wrap">
+                            <div class="aboutus__photos-item">
+                                <img src="img/aboutUs/about.jpg" alt="Юлия">
+                                <div class="aboutus__photos-text">
+                                    <span>Юлия</span> - генеральный директор
+                                </div>
                             </div>
-                            <div class="steps__circle">
-                                <img src="icons/personal/personal_1.svg" alt="eps">
-                            </div>
-                            <div class="steps__text">
-                                В любое время вы заказываете набор из своего каталога.<br>
-                                Мы гарантируем поставку нужного количества<br>
-                                в кратчайшие сроки.
-                            </div>
+                             <div class="aboutus__photos-item">
+                                 <img src="img/aboutUs/about_1.jpg" alt="Команда from the heart">
+                             </div>
+                             <div class="aboutus__photos-multiple">
+                                <div class="aboutus__photos-item">
+                                    <img src="img/aboutUs/about_2.jpg" alt="Анна">
+                                    <div class="aboutus__photos-text">
+                                        <span>Анна</span> - куратор производства
+                                    </div>
+                                </div>
+                                <div class="aboutus__photos-item">
+                                    <img src="img/aboutUs/about_3.jpg" alt="Екатерина">
+                                    <div class="aboutus__photos-text">
+                                        <span>Екатерина</span> - маркетолог
+                                    </div>
+                                </div>
+                                <div class="aboutus__photos-item">
+                                    <img src="img/aboutUs/about_4.jpg" alt="Команда from the heart">
+                                    <div class="aboutus__photos-text">
+                                        <span>Вероника</span> - дизайнер
+                                    </div>
+                                </div>
+                             </div>
                         </div>
-                        <div class="steps__center">
-                            <div class="steps__center-circle">1</div>
-                            <div class="steps__center-line"></div>
-                            <div class="steps__center-circle">2</div>
-                            <div class="steps__center-line"></div>
-                            <div class="steps__center-circle">3</div>
-                        </div>
-                        <div class="steps__right">
-                            <div class="steps__circle">
-                                <img src="icons/personal/personal_2.svg" alt="picture">
+                        <div class="aboutus__photos-wrap">
+                            <div class="aboutus__photos-item">
+                                <img src="img/aboutUs/about_5.jpg" alt="Лилия">
+                                <div class="aboutus__photos-text">
+                                    <span>Лилия</span> - менеджер клиентского<br> отдела
+                                </div>
                             </div>
-                            <div class="steps__text">
-                                Продумываем брендирование. При последующих заказах <br> Вам не нужно будет тратить время на согласование.
+                            <div class="aboutus__photos-item">
+                                <img src="img/aboutUs/about_6.jpg" alt="Марина">
+                                <div class="aboutus__photos-text">
+                                    <span>Марина</span> - менеджер по закупкам
+                                </div>
                             </div>
-                            <div class="steps__circle">
-                                <img src="icons/personal/personal_3.svg" alt="picture">
+                            <div class="aboutus__photos-item">
+                                <img src="img/aboutUs/about_7.jpg" alt="Дарья">
+                                <div class="aboutus__photos-text">
+                                    <span>Дарья</span> - креативный директор
+                                </div>
+                            </div>
+                            <div class="aboutus__photos-item">
+                                <img src="img/aboutUs/about_8.jpg" alt="Анастасия">
+                                <div class="aboutus__photos-text">
+                                    <span>Анастасия</span> - менеджер клиентского отдела
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-lg-10 col-xl-7">
+                    <div class="aboutus__mission">
+                        <div class="aboutus__mission-title">Миссия</div>
+                        <div class="aboutus__mission-text">
+                                Мы понимаем, что бизнес – это в первую очередь люди. 
+                                Поэтому работаем для того, чтобы наши подарки помогали укреплять отношения и делали рабочие будни чуть теплее.
+                        </div>
+                        <div class="aboutus__mission-text">
+                            Хотите заказывать индивидуальные подарки?
+                            <a href="#">From The Heart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="aboutus__numbers-title">мы в цифрах</div>
+                    <div class="aboutus__numbers">
+                        <div class="aboutus__numbers-item">
+                            <div class="aboutus__numbers-count">6</div>
+                            <div class="aboutus__numbers-descr">лет на рынке</div>
+                        </div>
+                        <div class="aboutus__numbers-item">
+                            <div class="aboutus__numbers-count">7000+</div>
+                            <div class="aboutus__numbers-descr">выполненных заказов</div>
+                        </div>
+                        <div class="aboutus__numbers-item">
+                            <div class="aboutus__numbers-count">5</div>
+                            <div class="aboutus__numbers-descr">дней - средний срок <br>
+                            выполнения заказа</div>
+                        </div>
+                        <div class="aboutus__numbers-item">
+                            <div class="aboutus__numbers-count">800+</div>
+                            <div class="aboutus__numbers-descr">подарков мы разработали<br>
+                             специально для клиентов</div>
+                        </div>
+                        <div class="aboutus__numbers-item">
+                            <div class="aboutus__numbers-count">13</div>
+                            <div class="aboutus__numbers-descr">из 54 видов упаковки<br>
+                            производятся эксклюзивно для нас</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="aboutus__history-title">История</div>
+                    <div class="aboutus__history-text">
+                        Наша история началась в 2013 году. За это время из небольшой мастерской мы выросли в крупную компанию с собственным производством и дизайн-студией. Сейчас в нашем ассортименте более 200 позиций. Среди них подарочные наборы со сладостями, чаем, элитными напитками, сувенирами, цветами и не только.
+                        <br><br>
+                        Нам повезло каждый день работать с тем, что символизирует праздник. Надеемся, вы почувствуете, с какой заботой мы относимся к каждому подарку!
+                    </div>
+                </div>
+                <div class="col-lg-4 col-xl-3 offset-xl-1">
+                    <div class="aboutus__history-gold">
+                        Каждый сезон мы выпускаем серию новых подарков, поэтому вы всегда найдете что-то новое.
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+
+            </div>
+        </div>
+        <div class="aboutus__princips">
+            <div class="container">
+                <div class="aboutus__princips-title">Принципы работы</div>
+                <div class="row">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="aboutus__princips-item">
+                            <div class="aboutus__princips-subtitle">Идея</div>
+                            <div class="aboutus__princips-text">Наш бизнес начался с простой идеи — помогать людям делать подарки. Каждый раз, получая благодарность и улыбки наших клиентов, мы осознаем значимость и пользу своего дела.</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="aboutus__princips-item">
+                            <div class="aboutus__princips-subtitle">Синергия</div>
+                            <div class="aboutus__princips-text">Мы вместе преодолеваем сложности и вместе радуемся успехам. Только в синергии достигаются самые высокие результаты.</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="aboutus__princips-item">
+                            <div class="aboutus__princips-subtitle">Этика </div>
+                            <div class="aboutus__princips-text">Мы приверженцы честной конкурентной борьбы. Уважаем своих оппонентов и всегда играем по правилам.</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="aboutus__princips-item">
+                            <div class="aboutus__princips-subtitle">Ответственность </div>
+                            <div class="aboutus__princips-text">Мы ответственны за свою деятельность перед клиентами, партнерами, государством и природой. Выполняем обязательства, платим налоги и печатаем на бумаге с двух сторон.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="aboutus__contact">
+            <div class="aboutus__contact-item">
+                <img src="icons/idea.svg" alt="idea">
+                <div class="aboutus__contact-text">
+                        Хотите стать частью нашей команды?<br>
+                        Присылайте резюме на <a href="mailto:rabota@conception.su">rabota@conception.su</a>
+                </div>
+            </div>
+            <div class="aboutus__contact-item">
+                <img src="icons/box.svg" alt="box">
+                <div class="aboutus__contact-text">
+                        Во вопросам сотрудничества<br>
+                        пишите на <a href="mailto:supply@conception.su">supply@conception.su</a>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="container personal__bottompadding">
-        <div class="row">
-            <div class="col-md-12 ">
-                <div class="development__trigger">
-                    Хотите обсудить персональные подарки?<br>
-                    Звоните, пишите или <span id='trigger' class='gold'>оставьте заявку</span>
-                </div>
-            </div>
-            <div class="col-md-10 offset-md-1">
-                <form id="triggerForm" action="#">
-                    <div class="mainorder__info">
-                        <input required type="text" name="name" placeholder="Имя">
-                        <input required type="email" name="email" placeholder="Email">
-                        <input required type="number" name="phone" placeholder="Контактный телефон">
-                    </div>
-                    <textarea name="description" id="mainorderDescription" cols="30" rows="10" placeholder="Опишите, какие подарки Вам нужны. Укажите тираж и примерную стоимость одного подарка."></textarea>
-                <button data-hover='4' class="button">Отправить</button>
-                </form>
-            </div>
-        </div>
-    </div>
-            
     <footer class="footer">
         <div class="container">
             <div class="row">

@@ -102,6 +102,7 @@
         margin: 0 auto
         margin-top: 45px
         padding: 36px
+        display: none
         &-wrap 
             display: flex
             justify-content: space-between 
@@ -154,5 +155,70 @@
             cursor: pointer
             top: 0
             opacity: 0   
-            height: 90px   
-        
+            height: 90px  
+        &-right
+            display: flex 
+            justify-content: flex-end
+            margin-top: 23px
+            &-reset 
+                font-size: 14px
+                font-weight: 300
+                margin-right: 22px
+                text-transform: uppercase
+                border: none
+                cursor: pointer
+                background-color: #fff
+            &-ok 
+                font-size: 14px
+                font-weight: 300
+                text-transform: uppercase
+                border: none
+                color: #767676
+                cursor: pointer
+                background-color: #fff
+@media (max-width: 1200px)
+    .feedback
+        &__item
+            &-header
+                justify-content: flex-start
+            &-info 
+                width: initial
+            &-name, &-company
+                margin-left: 20px
+@media (max-width: 992px)
+    .feedback
+        padding: 30px 0
+        &__item 
+            padding: 25px
+            &-info 
+                width: 260px
+        &__title
+            margin-bottom: 10px
+        &__date 
+            top: 15px
+        &__text 
+            margin-top: 25px
+        .button
+            margin-top: 30px
+@media (max-width: 768px)
+    .feedback
+        &__form 
+            width: 100%
+            &-wrap 
+                input 
+                    width: 200px
+@media (max-width: 576px)
+    .feedback
+        .button
+            margin-bottom: 30px
+        &__form 
+            height: initial
+            padding: 20px
+            margin-bottom: 30px
+            textarea
+                height: 140px
+            &-wrap 
+                flex-wrap: wrap
+                input 
+                    width: 100%
+                    margin-top: 10px

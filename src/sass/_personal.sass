@@ -1,61 +1,139 @@
 .personal
-    padding-top: 70px
-    margin-bottom: 40px
-    &__title
-        margin-top: 90px
-        line-height: 29px
-        font-size: 21px
-        text-align: center
-        text-transform: uppercase
-        font-weight: bold
-    &__item 
-        position: relative
-        margin-top: 60px
-        text-align: center
-        font-size: 14px
-        font-weight: 300
-        line-height: 20px
-    &__count 
-        position: absolute
-        top: 39px
-        left: 50%
-        transform: translateX(-50%)
-        font-size: 56px
-        color: rgba(228, 193, 67, 0.5)
-        font-weight: bold
-        z-index: -1
-    &__bottompadding 
-        padding-bottom: 80px
-    .drawing__subtitle
-        margin-top: 57px
-    &__list 
-        margin-top: 30px
-        list-style-type: disc
-        line-height: 21px
-        font-size: 14px
-        font-weight: 300
-        padding-left: 15px
+	padding-top: 70px
+	margin-bottom: 40px
+	&__title
+		margin-top: 70px
+		line-height: 29px
+		font-size: 21px
+		text-align: center
+		text-transform: uppercase
+		font-weight: bold
+	&__item 
+		position: relative
+		margin-top: 60px
+		text-align: center
+		font-size: 14px
+		font-weight: 300
+		line-height: 20px
+	&__count 
+		position: absolute
+		top: 39px
+		left: 50%
+		transform: translateX(-50%)
+		font-size: 56px
+		color: rgba(228, 193, 67, 0.5)
+		font-weight: bold
+		z-index: -1
+	&__bottompadding 
+		padding-bottom: 80px
+	.drawing__subtitle
+		margin-top: 57px
+	&__list 
+		margin-top: 30px
+		list-style-type: disc
+		line-height: 21px
+		font-size: 14px
+		font-weight: 300
+		padding-left: 15px
 .howitworks
-    background: #ECF0F1
-    padding: 50px 0 55px 0
-    .personal__title
-        margin-top: 0
-    .steps__wrap 
-        margin-top: 36px
-    .steps__left
-        margin-right: 49px
-        margin-left: 55px
-        .steps__text
-            margin-right: 0
-            margin-top: 58px
-            &:first-child
-                margin-top: 40px
-    .steps__right
-        margin-left: 50px
-        .steps__circle
-            margin-left: 0
-            margin-top: 51px
-            &:first-child
-                margin-top: 0
-        .steps__text
-            margin-top: 32px
+	background: #ECF0F1
+	padding: 50px 0 55px 0
+	.personal__title
+		margin-top: 0
+	.steps__wrap 
+		margin-top: 36px
+	.steps__left
+		margin-right: 49px
+		margin-left: 55px
+		.steps__text
+			margin-right: 0
+			margin-top: 58px
+			&:first-child
+				margin-top: 40px
+		.steps__circle 
+			margin-top: 45px
+	.steps__right
+		margin-left: 50px
+		.steps__circle
+			margin-left: 0
+			margin-top: 51px
+			&:first-child
+				margin-top: 0
+		.steps__text
+			margin-top: 32px
+@media (max-width: 1200px)
+	.howitworks
+		.steps__left
+			margin-right: 55px
+			.steps__circle 
+				margin-top: 25px
+			.steps__text
+				&:first-child
+					margin-top: 25px
+@media (max-width: 992px)
+	.personal 
+		padding: 30px 0
+		margin-bottom: 0
+		&__item 
+			font-size: 12px
+			br 
+				display: none
+		&__bottompadding
+			padding-bottom: 55px
+		.drawing__subtitle
+			margin-top: 30px
+		&__title 
+			margin-top: 50px
+		&__count 
+			color: rgba(228,193,67,.2)
+			top: 45px
+	.howitworks
+		.steps__center
+			padding-top: 45px
+		.steps__left
+			margin-right: 20px
+		.steps__right
+			.steps__circle
+				margin: 0 auto
+				margin-top: 51px
+@media (max-width: 768px)
+	.personal
+		&__bottompadding
+			padding-bottom: 30px
+	.howitworks
+		.steps__center
+			padding-top: 35px
+		.steps__left
+			margin-left: 40px
+			.steps__text
+				&:first-child
+					margin-top: 15px
+		.steps__right
+			.steps__text
+				margin-top: 20px
+@media (max-width: 576px)
+	.personal
+		&__item 
+			font-size: 14px
+			margin-top: 50px
+		&__title 
+			font-size: 18px
+		&__count 
+			top: 35px
+	.howitworks
+		.steps__left
+			margin: 0
+			.steps__text
+				margin-left: 0
+				&:first-child
+					margin-top: 0px
+			.steps__circle
+				margin-top: 0px
+		.steps__right
+			margin: 0
+			.steps__circle
+				margin-top: 20px
+			.steps__text
+				margin-top: 45px
+		.steps__text
+			min-height: 150px 

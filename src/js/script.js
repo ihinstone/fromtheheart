@@ -14,12 +14,22 @@ $(document).ready(function() {
         slidesToScroll: 1, 
         arrows: false
     });
-    $('.next').on('click', function() {
-        $('.mainslider__photos').slick('slickNext');
+    $('.next').each(function(i){
+        $(this).on('click', function() {
+            $('.mainslider__photos').eq(i).slick('slickNext');
+        });
     });
-    $('.prev').on('click', function() {
-        $('.mainslider__photos').slick('slickPrev');
+    $('.prev').each(function(i){
+        $(this).on('click', function() {
+            $('.mainslider__photos').eq(i).slick('slickPrev');
+        });
     });
+    // $('.next').on('click', function() {
+    //     $('.mainslider__photos').slick('slickNext');
+    // });
+    // $('.prev').on('click', function() {
+    //     $('.mainslider__photos').slick('slickPrev');
+    // });
 
     // SeoText Main
     $('.describe__text').eq(1).hide();
@@ -31,15 +41,15 @@ $(document).ready(function() {
             $('.describe__text').eq(1).slideToggle('slow');
             $('.describe__text').eq(0).toggleClass('describe__text-pb50');
             $('.describe__text > ul > li >span').css('opacity',  '1');
-            $('.describe__text > ul > li >span').html('стиле<br> организации.');
-            $('.describe__text > ul ').css({'list-style-type':'disc', 'padding-left':'13px'});
+            $('.describe__text > ul > li >span').html('.');
+            $('.describe__text > ul ').css({'list-style-type':'disc', 'padding-left':'16px'});
             opened = !opened;
         } else {
             $('.describe__form').toggleClass('describe__form-active');
             $('.describe__text').eq(1).slideToggle('slow');
             $('.describe__text').eq(0).toggleClass('describe__text-pb50');
             $('.describe__text > ul > li >span').css('opacity',  '.7');
-            $('.describe__text > ul > li >span').html('стиле<br> организации...читать все');
+            $('.describe__text > ul > li >span').html('...читать все');
             $('.describe__text > ul ').css({'list-style-type':'none', 'padding-left':'0px'});
             opened = !opened;
         }
@@ -73,6 +83,7 @@ $(document).ready(function() {
         if (formS.classList.contains('searchfield__active') && e.target != formS && e.target != formS.getElementsByTagName('input')[0] && e.target != searchClose && e.target != searchItem && e.target != searchItem.getElementsByTagName('img')[0] ) {
             formS.classList.remove('searchfield__active');
             searchItem.classList.remove('navigation__search-active');
+            searchItem.closest('.container').style = 'overflow: initial; padding: 11px 0;';
         }
     });
 
@@ -269,18 +280,14 @@ $(document).ready(function() {
     });
 
    try {
-    let questionInfoIcon = document.querySelectorAll('.giftinfo__descr-question'),
-        questionTooltip = document.querySelectorAll('.tooltip__item');
+    $('.giftinfo__descr-question').on('click', function() {
+        $(this).next('.tooltip__item').fadeToggle();
+    });
 
-    questionInfoIcon.forEach((item, i) => {
-        item.addEventListener('click', () => {
-            console.log(1);
-            if (questionTooltip[i].style.display == 'block') {
-                questionTooltip[i].style.display = 'none';
-            } else {
-                questionTooltip[i].style.display = 'block';
-            }
-        });
+    document.body.addEventListener('click', (e) => {
+        if (!e.target.classList.contains('tooltip__item') && !e.target.classList.contains('giftinfo__descr-question') && !e.target.parentNode.classList.contains('giftinfo__descr-question')) {
+            $('.tooltip__item').fadeOut();
+        }
     });
    } catch(e) {}
 
@@ -567,6 +574,16 @@ $(document).ready(function() {
         });
     } catch(e){}
 
+    //Feedback form
+    $('#feedbackform').on('click', function(){
+        $(this).hide();
+        $('.feedback__form').slideDown('slow');
+    });
+    $('.feedback__form-right-reset').on('click', function() {
+        $('.feedback__form').slideUp('slow');
+        $('#feedbackform').fadeIn('slow');
+    });
+
     $(".pageup").click(function () {
         let elementClick = $(this).attr("href"),
             destination = $(elementClick).offset().top;
@@ -575,11 +592,12 @@ $(document).ready(function() {
     });
     $(window).scroll(function(event){
         if($(this).scrollTop()>1650){
-          $(".pageup").fadeIn();
-          return false;
+            $(".pageup").fadeIn();
+            } else {
+            $(".pageup").fadeOut();
         }
-        else {
-          $(".pageup").fadeOut();
+        if ($(this).scrollTop()+$(this).height()>=$(this).height()) {
+            console.log('1212');
         }
-        });
+    });
 });
