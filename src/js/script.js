@@ -342,10 +342,13 @@ $(document).ready(function() {
     });
     try {
         let cartItem = document.querySelectorAll('.cart__item'),
+            cartTotal = document.querySelector('.cart__total'),
             cartTotalPrice = document.querySelector('.cart__total > span'),
+            cartCount = document.querySelector('.cart__count'),
             cartTotalEdition = document.querySelector('.cart__count > span'),
             clearCart = document.querySelector('.cart__clear'),
-            cartField = document.querySelector('.cart__field');
+            cartField = document.querySelector('.cart__field'),
+            cartBtn = document.querySelector('.cart .button');
 
         let changeTotal = function() {
             let allEditions = document.querySelectorAll('.edition__count'),
@@ -365,7 +368,12 @@ $(document).ready(function() {
             for (let i = 0; i < cartItem.length; i++) {
                 cartItem[i].remove();
             }
-            // cartField.innerHTML = 'Ваша корзина пока пуста';
+            cartField.classList.add('cart__field-deleted');
+            cartField.innerHTML = 'Ваша корзина пока пуста';
+            cartBtn.remove();
+            cartCount.remove();
+            cartTotal.remove();
+            clearCart.remove();
             changeTotal();
         });
 
@@ -405,15 +413,27 @@ $(document).ready(function() {
                 
                 if (e.target.classList.contains('cart__item-clear')) {
                     e.target.parentNode.remove();
-                    if (cartItem.length === 0) {
+                    let items = document.querySelectorAll('.cart__item');
+                    if (items.length === 0) {
+                        cartField.classList.add('cart__field-deleted');
                         cartField.innerHTML = 'Ваша корзина пока пуста';
+                        cartBtn.remove();
+                        cartCount.remove();
+                        cartTotal.remove();
+                        clearCart.remove();
                     }
                     changeTotal();
                 }
                 if (e.target.parentNode.classList.contains('cart__item-clear')) {
                     e.target.parentNode.parentNode.remove();
-                    if (cartItem.length === 0) {
+                    let items = document.querySelectorAll('.cart__item');
+                    if (items.length === 0) {
+                        cartField.classList.add('cart__field-deleted');
                         cartField.innerHTML = 'Ваша корзина пока пуста';
+                        cartBtn.remove();
+                        cartCount.remove();
+                        cartTotal.remove();
+                        clearCart.remove();
                     }
                     changeTotal();
                 }
@@ -596,7 +616,9 @@ $(document).ready(function() {
             } else {
             $(".pageup").fadeOut();
         }
-        if ($(this).scrollTop()+$(this).height()>=$(this).height()) {
+    });
+    $(document).scroll(function(e){
+        if (this.scrollTop+this.clientHeight >= this.offsetHeight) {
             console.log('1212');
         }
     });
