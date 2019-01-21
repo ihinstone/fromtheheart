@@ -28,10 +28,10 @@
 			font-weight: 300
 			border: none
 			&:hover 
-				color: #000
+				color: #000 !important
 		&-active
 			border: 2px solid #E1C76E
-			color: #000
+			color: #000 !important
 			font-weight: 500
 			margin-top: -4px
 	&__items 
@@ -103,7 +103,7 @@
 		img 
 			display: inline-block
 			position: absolute
-			left: 66%
+			left: 75%
 			top: 15%
 			cursor: pointer
 	&__slidelist 
@@ -143,6 +143,7 @@
 		opacity: 0
 		margin: 10px 0 0 20px
 	&__checkbox-sq + label 
+		display: block
 		position: relative
 		padding: 0 0 0 24px
 		cursor: pointer
@@ -245,8 +246,12 @@
 		&__items 
 			margin-top: 90px
 		&__checkitem
+			&-slide 
+				font-size: 12px
 			img
 				display: none
+		&__checkbox + label, &__checkbox-sq + label  
+			font-size: 12px
 		.goods__item 
 			width: 220px
 			height: auto

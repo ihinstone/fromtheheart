@@ -82,6 +82,8 @@
 		font-size: 14px
 		letter-spacing: 0.6px
 		font-weight: 400
+		&-full 
+			display: none
 		span 
 			display: inline-block 
 			color: #767676
@@ -199,7 +201,6 @@
 	width: 18px
 	height: 18px
 	transform: rotateX(90deg)
-	// box-shadow: 4px -2px 4px rgba(0, 0, 0, 0.07)
 	z-index: 1
 	opacity: .8
 	polygon 
@@ -220,10 +221,23 @@
 		justify-content: space-around
 	&__item 
 		display: block
+		position: relative
 		img 
 			width: 180px
 			height: 180px
 			object-fit: cover 
+			transition: 0.4s all 
+		&-changed
+			img:nth-child(2)
+				opacity: 0
+				position: absolute
+				top: 0
+				left: 0
+			&:hover 
+				img:nth-child(1)
+					opacity: 0
+				img:nth-child(2)
+					opacity: 1 
 
 @media (max-width: 1200px)
 	.giftset

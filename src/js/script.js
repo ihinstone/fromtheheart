@@ -24,15 +24,12 @@ $(document).ready(function() {
             $('.mainslider__photos').eq(i).slick('slickPrev');
         });
     });
-    // $('.next').on('click', function() {
-    //     $('.mainslider__photos').slick('slickNext');
-    // });
-    // $('.prev').on('click', function() {
-    //     $('.mainslider__photos').slick('slickPrev');
-    // });
 
     // SeoText Main
-    $('.describe__text').eq(1).hide();
+    const describeText = document.querySelectorAll('.describe__text');
+
+    describeText[1].style.display = 'none';
+    // $('.describe__text').eq(1).hide();
     $('.describe__text:first-child > ul ').css('list-style-type',  'none');
     let opened = false;
     $('.describe__text').on('click', () => { 
@@ -282,6 +279,13 @@ $(document).ready(function() {
    try {
     $('.giftinfo__descr-question').on('click', function() {
         $(this).next('.tooltip__item').fadeToggle();
+    });
+
+    const itemDescrTrigger = document.querySelector('.giftset__descr > span'),
+          itemDescrFull = document.querySelector('.giftset__descr-full');
+    itemDescrTrigger.addEventListener('click', function() {
+        this.remove();
+        itemDescrFull.style.display = 'block';
     });
 
     document.body.addEventListener('click', (e) => {
@@ -616,10 +620,11 @@ $(document).ready(function() {
             } else {
             $(".pageup").fadeOut();
         }
-    });
-    $(document).scroll(function(e){
-        if (this.scrollTop+this.clientHeight >= this.offsetHeight) {
-            console.log('1212');
+        let bodyItem = document.documentElement;
+        if (bodyItem.clientHeight + bodyItem.scrollTop === bodyItem.scrollHeight) {
+            $('.pageup').addClass('pageup-active');
+        } else {
+            $('.pageup').removeClass('pageup-active');
         }
     });
 });
