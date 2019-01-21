@@ -6,7 +6,6 @@ $(document).ready(function() {
 
     // Main page slider
 
-    
     $('.mainslider__photos').slick({
         dots: true, 
         infinite: true,
@@ -24,38 +23,39 @@ $(document).ready(function() {
             $('.mainslider__photos').eq(i).slick('slickPrev');
         });
     });
-
-    // SeoText Main
-    const describeText = document.querySelectorAll('.describe__text');
+    try {
+            // SeoText Main
+    const describeText = document.querySelectorAll('.describe__text'),
+    describeForm = document.querySelector('.describe__form');
 
     describeText[1].style.display = 'none';
-    // $('.describe__text').eq(1).hide();
-    $('.describe__text:first-child > ul ').css('list-style-type',  'none');
+    document.querySelector('.describe__text:first-child > ul ').style.listStyleType = 'none';
     let opened = false;
-    $('.describe__text').on('click', () => { 
-        if (!opened) {
-            $('.describe__form').toggleClass('describe__form-active');
-            $('.describe__text').eq(1).slideToggle('slow');
-            $('.describe__text').eq(0).toggleClass('describe__text-pb50');
-            $('.describe__text > ul > li >span').css('opacity',  '1');
-            $('.describe__text > ul > li >span').html('.');
-            $('.describe__text > ul ').css({'list-style-type':'disc', 'padding-left':'16px'});
-            opened = !opened;
-        } else {
-            $('.describe__form').toggleClass('describe__form-active');
-            $('.describe__text').eq(1).slideToggle('slow');
-            $('.describe__text').eq(0).toggleClass('describe__text-pb50');
-            $('.describe__text > ul > li >span').css('opacity',  '.7');
-            $('.describe__text > ul > li >span').html('...читать все');
-            $('.describe__text > ul ').css({'list-style-type':'none', 'padding-left':'0px'});
-            opened = !opened;
-        }
+    describeText.forEach(item => {
+        item.addEventListener('click', () => {
+            if (!opened) {
+                describeForm.classList.toggle('describe__form-active');
+                $('.describe__text').eq(1).slideToggle('slow');
+                describeText[0].classList.toggle('describe__text-pb50');
+                document.querySelector('.describe__text > ul > li >span').style.opacity = '1';
+                document.querySelector('.describe__text > ul > li >span').innerHTML = '.';
+                $('.describe__text > ul ').css({'list-style-type':'disc', 'padding-left':'16px'});
+                opened = !opened;
+            } else {
+                describeForm.classList.toggle('describe__form-active');
+                $('.describe__text').eq(1).slideToggle('slow');
+                describeText[0].classList.toggle('describe__text-pb50');
+                document.querySelector('.describe__text > ul > li >span').style.opacity = '.7';
+                document.querySelector('.describe__text > ul > li >span').innerHTML = '...читать все';
+                $('.describe__text > ul ').css({'list-style-type':'none', 'padding-left':'0px'});
+                opened = !opened;
+            }
+        });
     });
-    // $('.describe__text').on('click', () => {
-    //     $('.describe__text').eq(1).slideToggle('slow');
-    // });
+    }catch(e) {}
+
     // Search Menu
-    let formS = document.querySelector('.searchfield'),
+    const formS = document.querySelector('.searchfield'),
         searchItem = document.querySelector('.navigation__search'),
         searchClose = document.querySelector('.searchfield__close'),
         searchInput = document.querySelector('.searchfield input');
@@ -86,8 +86,6 @@ $(document).ready(function() {
 
     //Menu tooltip
     try {
-        let catalogMenu = document.querySelectorAll('[data-menu=catalog]'),
-        servicesMenu = document.querySelectorAll('[data-menu=services]');
 
         if (srcWidth > 768) {
         
@@ -115,94 +113,51 @@ $(document).ready(function() {
         } else {
             $('[data-menu="catalog"]:first').on('click', () => {
                 $('[data-menu="catalog"]:eq(1)').fadeToggle('slow');
-                console.log($('[data-menu="catalog"]:eq(1)'));
             });
             $('[data-menu="services"]:first').on('click', () => {
                 $('[data-menu="services"]:eq(1)').fadeToggle('slow');
             });
-            $('.hamburger').on('click', () => {
-                $('.navigation').addClass('navigation__active');
-            });
-            $('.navigation__close').on('click', () => {
-                $('.navigation').removeClass('navigation__active');
-            });
-            $('.open__filters').on('click', () => {
-                $('.filter').addClass('filter__active');
-            });
-            $('.filter__close').on('click', () => {
-                $('.filter').removeClass('filter__active');
-            });
+            const activateMenu = (trigger, target, classToAdd) => {
+                document.querySelector(`${trigger}`).addEventListener('click', () => {
+                    document.querySelector(`${target}`).classList.add(`${classToAdd}`);
+                });
+            };
+            const deactivateMenu = (trigger, target, classToRemove) => {
+                document.querySelector(`${trigger}`).addEventListener('click', () => {
+                    document.querySelector(`${target}`).classList.remove(`${classToRemove}`);
+                });
+            };
+
+            activateMenu('.hamburger', '.navigation', 'navigation__active');
+            deactivateMenu('.navigation__close', '.navigation', 'navigation__active');
+            activateMenu('.open__filters', '.filter', 'filter__active');
+            deactivateMenu('.filter__close', '.filter', 'filter__active');
         }
 
-    
+    } catch(e) {}
+
     // Popup phones
     $('[data-mask=rus]').mask('+7 (999) 999 99 99');
 
-        // popupPhoneForm.addEventListener('click', (e) => {
-        //     let changeCountry = document.querySelectorAll('.popup__call-wrap'),
-        //         changePhone = document.querySelectorAll('.popup__call-phone'),
-        //         popupSvgDown = document.querySelectorAll('.popup__call-svg'),
-        //         changeCountryName = document.querySelectorAll('.popup__call-country');
-        //     if (e.target == popupSvgDown[0] || e.target == changeCountryName[0] || e.target.tagName == "path") {
-        //             if (changePhone[1].style.visibility == 'visible'){
-        //                 changePhone[1].style.visibility = 'hidden';
-        //             } else {
-        //                 changePhone[1].style.visibility = 'visible';
-        //             }
-        
-        //             if(popupSvgDown[0].classList.contains('popup__call-svg-active')) {
-        //                 popupSvgDown[0].classList.remove('popup__call-svg-active');
-        //             } else {
-        //                 popupSvgDown[0].classList.add('popup__call-svg-active');
-        //             }  
-        //     }
-
-        //     if (e.target == changePhone[1] || e.target == popupSvgDown[1] || e.target == changeCountryName[1] || e.target.classList.contains('secondCountry')) {
-        //             let clonePhone = changePhone[0].cloneNode(true);
-        //             changePhone[1].classList.remove('popup__call-phone-hidden');
-        //             changePhone[1].style.borderBottom = '1px solid black';
-        //             changePhone[1].getElementsByTagName('input')[0].classList.remove('secondCountry');
-        //             changePhone[1].getElementsByTagName('input')[0].setAttribute('required', 'true');
-        //             popupPhoneForm.removeChild(changePhone[0]);
-        //             clonePhone.classList.add('popup__call-phone-hidden');
-        //             clonePhone.getElementsByTagName('input')[0].classList.add('secondCountry');
-        //             clonePhone.getElementsByTagName('input')[0].value = '';
-        //             clonePhone.getElementsByTagName('input')[0].removeAttribute('required');
-        //             clonePhone.querySelector('.popup__call-svg').style.visibility = 'hidden';
-        //             clonePhone.querySelector('.popup__call-svg').classList.remove('popup__call-svg-active');
-        //             clonePhone.style.border = 'none';
-        //             clonePhone.style.visibility = "hidden";
-                
-        //             popupPhoneForm.append(clonePhone);
-        //             popupSvgDown[0].classList.remove('popup__call-svg-active');
-        //             popupSvgDown[1].style.visibility = 'visible';
-
-        //     }
-        //     $('[data-mask=rus]').mask('+7 (999) 999 99 99');
-        //     $('[data-mask=bel]').mask('+375 (99) 999 99 99');
-        // });
-    } catch(e) {}
-
     try {
-        let showModal = function(trigger, modal) {
-            let clicked = document.querySelector(`.${trigger}`);
+        const showModal = function(trigger, modal) {
+            const clicked = document.querySelector(`.${trigger}`);
             clicked.addEventListener('click', function() {
                 document.querySelector('.overlay').style.display = 'block';
                 document.querySelectorAll('.popup').forEach((item)=>{
                     item.style.display = 'none';
                 });
-                // document.querySelector(`.${modal}`).style.display = 'block';
                 $(`.${modal}`).fadeIn('slow');
                 $(`.${modal}`).find('input').focus();
             });
-            let close = $(`.${modal}`).find('.close');
+            const close = $(`.${modal}`).find('.close');
             close.on('click', () => {
                 $(`.${modal}`).fadeOut();
                 $('.overlay').fadeOut();
             });
             document.querySelector('.overlay').addEventListener('click', (e) => {
                 if(e.target.classList.contains('overlay')) {
-                    console.log(e.target);
+
                     $(`.${modal}`).fadeOut();
                     $('.overlay').fadeOut();
                 }
@@ -213,34 +168,34 @@ $(document).ready(function() {
     } catch(e){}
 
     try {
-        let goldHover = document.querySelectorAll('[data-hover]');
-        for (let i = 0; i < goldHover.length; i++) {
-            goldHover[i].addEventListener('mouseenter', () => {
-                switch (goldHover[i].getAttribute('data-hover')) {
+        const goldHover = document.querySelectorAll('[data-hover]');
+        goldHover.forEach((item, i) => {
+            item.addEventListener('mouseenter', () => {
+                switch (item.getAttribute('data-hover')) {
                     case '1':
-                    goldHover[i].style.background = 'url("img/btn_hover_1.jpg") center center no-repeat';
-                    goldHover[i].style.backgroundSize = 'cover';
+                    item.style.background = 'url("img/btn_hover_1.jpg") center center no-repeat';
+                    item.style.backgroundSize = 'cover';
                     break;
                     case '2':
-                    goldHover[i].style.background = 'url("img/btn_hover_2.jpg") center center no-repeat';
-                    goldHover[i].style.backgroundSize = 'cover';
+                    item.style.background = 'url("img/btn_hover_2.jpg") center center no-repeat';
+                    item.style.backgroundSize = 'cover';
                     break;
                     case '3':
-                    goldHover[i].style.background = 'url("img/btn_hover_3.jpg") center center no-repeat';
-                    goldHover[i].style.backgroundSize = 'cover';
+                    item.style.background = 'url("img/btn_hover_3.jpg") center center no-repeat';
+                    item.style.backgroundSize = 'cover';
                     break;
                     case '4':
-                    goldHover[i].style.background = 'url("img/btn_hover_4.jpg") center center no-repeat';
-                    goldHover[i].style.backgroundSize = 'cover';
+                    item.style.background = 'url("img/btn_hover_4.jpg") center center no-repeat';
+                    item.style.backgroundSize = 'cover';
                     break;
                 }
             });
-            goldHover[i].addEventListener('mouseleave', () => {
-                goldHover[i].style.backgroundColor = '#000';
-                goldHover[i].style.backgroundImage = 'none';
+            item.addEventListener('mouseleave', () => {
+                item.style.backgroundColor = '#000';
+                item.style.backgroundImage = 'none';
             });
-            
-        }
+        });
+
     } catch(e) {}
 
     $('.giftset__preview').slick({
@@ -344,8 +299,9 @@ $(document).ready(function() {
             $('.tooltip__filter').fadeOut();
         }
     });
+
     try {
-        let cartItem = document.querySelectorAll('.cart__item'),
+        const cartItem = document.querySelectorAll('.cart__item'),
             cartTotal = document.querySelector('.cart__total'),
             cartTotalPrice = document.querySelector('.cart__total > span'),
             cartCount = document.querySelector('.cart__count'),
@@ -354,7 +310,7 @@ $(document).ready(function() {
             cartField = document.querySelector('.cart__field'),
             cartBtn = document.querySelector('.cart .button');
 
-        let changeTotal = function() {
+        const changeTotal = function() {
             let allEditions = document.querySelectorAll('.edition__count'),
                 allPrices = document.querySelectorAll('.cart__item-totalprice'),
                 a = 0,
@@ -383,7 +339,7 @@ $(document).ready(function() {
 
         cartItem.forEach(function(item){
             item.addEventListener('click', function(e){
-                let itemPrice = item.querySelector('.cart__item-price'),
+                const itemPrice = item.querySelector('.cart__item-price'),
                     plus = item.querySelector('.plus'),
                     minus = item.querySelector('.minus'),
                     editionCount = item.querySelector('.edition__count'),
@@ -450,9 +406,9 @@ $(document).ready(function() {
 
     // Count in item page
     try {
-        let giftSetForm = document.querySelector('.giftset__form');
+        const giftSetForm = document.querySelector('.giftset__form');
         giftSetForm.addEventListener('click', function(e){
-            let plus = document.querySelector('.plus'),
+            const plus = document.querySelector('.plus'),
                 minus = document.querySelector('.minus'),
                 editionCount = giftSetForm.querySelector('input');
             
@@ -480,7 +436,7 @@ $(document).ready(function() {
 
     //Maps 
     try {
-        let addressItem = document.querySelectorAll('.address__item'),
+        const addressItem = document.querySelectorAll('.address__item'),
             addressMap = document.querySelectorAll('.address__maps-item');
 
         addressItem.forEach(function(item, i) {
@@ -553,17 +509,19 @@ $(document).ready(function() {
             }
             ]
         });
-
-    $('#trigger').on('click', function(){
-        $('#triggerForm').slideToggle();
-    });
+    try {
+        document.getElementById('trigger').addEventListener('click', () => {
+            $('#triggerForm').slideToggle();
+        });
+    } catch(e) {}
+    
 
     try {
-        let tab = document.querySelectorAll('.giftinfo__nav-item'),
+        const tab = document.querySelectorAll('.giftinfo__nav-item'),
             info = document.querySelector('.giftinfo__nav'),
             tabContent = document.querySelectorAll('.giftinfo__descr-item');
 
-        let hideTabContent = function(a) {
+        const hideTabContent = function(a) {
                 for (let i = a; i < tabContent.length; i++) {
                     tabContent[i].classList.remove('showtab');
                     tabContent[i].classList.add('hidetab');
@@ -572,7 +530,7 @@ $(document).ready(function() {
          
         hideTabContent(1);
         
-        let showTabContent = function(b) {
+        const showTabContent = function(b) {
                 if (tabContent[b].classList.contains('hidetab')) {
                     tabContent[b].classList.remove('hidetab');
                     tabContent[b].classList.add('showtab');
@@ -584,7 +542,7 @@ $(document).ready(function() {
             };
         
         info.addEventListener('click', function(event) {
-            let target = event.target;
+            const target = event.target;
             if (target && target.classList.contains('giftinfo__nav-item')) {
                 for(let i = 0; i < tab.length; i++) {
                     if (target == tab[i]) {
@@ -614,17 +572,62 @@ $(document).ready(function() {
         $("html").animate({scrollTop: destination}, 800);
         return false;
     });
+
     $(window).scroll(function(event){
         if($(this).scrollTop()>1650){
             $(".pageup").fadeIn();
             } else {
             $(".pageup").fadeOut();
         }
-        let bodyItem = document.documentElement;
-        if (bodyItem.clientHeight + bodyItem.scrollTop === bodyItem.scrollHeight) {
-            $('.pageup').addClass('pageup-active');
-        } else {
-            $('.pageup').removeClass('pageup-active');
-        }
     });
+
+    try {
+        const elements = document.documentElement,
+            body = document.body,
+            link = document.querySelector('.pageup');
+        function calcScroll() {
+            link.addEventListener('click', function(event) {
+            let scrollTop = Math.round(body.scrollTop || elements.scrollTop);
+            if (this.hash !== '') {
+                event.preventDefault();
+                let hashElement = document.getElementById(this.hash.substring(1)),
+                    hashElementTop = 0;
+                while (hashElement.offsetParent) {
+                    hashElementTop += hashElement.offsetTop;
+                    hashElement = hashElement.offsetParent;
+                }
+                hashElementTop = Math.round(hashElementTop);
+                smoothScroll(scrollTop, hashElementTop, this.hash);
+            }
+            });
+        }
+        calcScroll();
+
+        let timeInterval = 1, 
+            prevScrollTop,
+            speed;
+
+        function smoothScroll(from, to, hash) {
+            if (to > from) {
+                speed = 10;
+            } else {
+                speed = -10;
+            }
+        let move = setInterval(function() {
+            let scrollTop = Math.round(body.scrollTop || elements.scrollTop);
+                if (
+                prevScrollTop === scrollTop ||
+                (to > from && scrollTop >= to) ||
+                (to < from && scrollTop <= to)
+                ) {
+                clearInterval(move);
+                history.replaceState(history.state, document.title, location.href.replace(/#.*$/g, '') + hash);
+                } else {
+                body.scrollTop += speed;
+                elements.scrollTop += speed;
+                prevScrollTop = scrollTop;
+                }
+        }, timeInterval);
+        }
+    } catch(e){}
 });
