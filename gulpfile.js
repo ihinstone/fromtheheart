@@ -9,7 +9,7 @@ const   gulp         = require('gulp'),
         cleanCSS     = require('gulp-clean-css'),
         webpack      = require('webpack-stream');
 
-// Запускаем сервер + отслеживаем sass/html файлы
+
 gulp.task('serve', ['sass'], function() {
 
     browserSync.init({
@@ -21,7 +21,7 @@ gulp.task('serve', ['sass'], function() {
     gulp.watch("src/*.html").on('change', browserSync.reload);
 });
 
-// Компилируем sass в CSS, ставим префиксы и сжимаем, вставляем изменения в браузер
+
 gulp.task('sass', ['webpack'], function() {
     return gulp.src("src/sass/**/*.sass")
         .pipe(sass())
@@ -34,7 +34,7 @@ gulp.task('sass', ['webpack'], function() {
 gulp.task('webpack', function() {
     return gulp.src('src/js/index.js')
         .pipe(webpack({
-            mode: 'production',
+            mode: 'development',
             output: {
                 filename: 'script.js'
               },

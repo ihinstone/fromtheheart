@@ -98,8 +98,7 @@
 			margin-left: 20px
 			cursor: pointer
 			font-size: 14px
-			font-weight: 500
-			margin-top: -5px
+			font-weight: 400
 		img 
 			display: inline-block
 			position: absolute
@@ -121,13 +120,13 @@
 		padding: 0 0 0 20px
 		cursor: pointer
 		font-size: 14px
-		font-weight: 500
+		font-weight: 400
 		vertical-align: middle
 	&__checkbox + label:before
 		content: ''
 		position: absolute
 		left: 0px
-		top: 0px
+		top: 3px
 		width: 10px
 		height: 10px
 		display: inline-block 
@@ -148,13 +147,13 @@
 		padding: 0 0 0 24px
 		cursor: pointer
 		font-size: 14px
-		font-weight: 500
+		font-weight: 400
 		vertical-align: bottom
 	&__checkbox-sq + label:before
 		content: ''
 		position: absolute
 		left: 0px
-		top: -4px
+		top: 0px
 		width: 16px
 		height: 16px
 		display: inline-block 
@@ -197,10 +196,13 @@
 .filter__close 
 	display: none
 #slider-range 
-	width: 180px
-	height: 2px
+	margin-left: 10px
+	width: 175px
+	height: 1px
 	border: none
 	background-color: #000
+.ui-slider-horizontal .ui-slider-range
+	height: 200%
 .ui-widget-header
 	background-color: #E1C76E
 	border: none
@@ -252,6 +254,8 @@
 				display: none
 		&__checkbox + label, &__checkbox-sq + label  
 			font-size: 12px
+			br 
+				display: none
 		.goods__item 
 			width: 220px
 			height: auto

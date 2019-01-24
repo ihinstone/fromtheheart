@@ -18,7 +18,9 @@ const seoText = () => {
                 } else {
                     describeForm.classList.toggle('describe__form-active');
                     $('.describe__text').eq(1).slideToggle('slow');
-                    describeText[0].classList.toggle('describe__text-pb50');
+                    setTimeout(() => {
+                        describeText[0].classList.toggle('describe__text-pb50');
+                    }, 300);
                     document.querySelector('.describe__text > ul > li >span').style.opacity = '.7';
                     document.querySelector('.describe__text > ul > li >span').innerHTML = '...читать все';
                     opened = !opened;
