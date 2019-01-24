@@ -91,14 +91,19 @@
 		cursor: pointer
 		&-nm 
 			margin-bottom: 0
+			display: inline-block
+			vertical-align: bottom
 	&__checkitem
-		margin-bottom: 12px
+		margin-bottom: 10px
 		position: relative
 		&-slide
-			margin-left: 20px
+			// margin-left: 20px
 			cursor: pointer
 			font-size: 14px
 			font-weight: 400
+			.toggleprof
+				display: inline-block
+				vertical-align: middle
 		img 
 			display: inline-block
 			position: absolute
@@ -107,7 +112,7 @@
 			cursor: pointer
 	&__slidelist 
 		display: none
-		padding-top: 14px
+		padding-top: 10px
 		&-left  
 			margin-left: 10px
 	&__checkbox
@@ -135,6 +140,9 @@
 		background-color: #fff
 	&__checkbox:checked + label:before
 		background-color: #E1C76E
+		border: none
+	&__checkbox[disabled] + label:before
+		background-color: grey
 		border: none
 	&__checkbox-sq
 		position: absolute
@@ -178,8 +186,12 @@
 			font-size: 14px
 			text-align: center
 			margin-right: 16px
+		.rub
+			font-size: 14px
+			display: inline-block
 .toggle
 	display: inline-block
+	vertical-align: middle
 	img 
 		width: 13px
 		position: relative
@@ -196,8 +208,7 @@
 .filter__close 
 	display: none
 #slider-range 
-	margin-left: 10px
-	width: 175px
+	width: 185px
 	height: 1px
 	border: none
 	background-color: #000
@@ -241,6 +252,13 @@
 		font-size: 14px
 		letter-spacing: 0.5px
 		font-weight: 300
+		cursor: pointer
+		&-open 
+			margin-left: 10px
+			cursor: pointer
+			opacity: .7
+		&-full 
+			display: none
 
 @media (max-width: 1200px)
 	.catalogpage
@@ -266,6 +284,9 @@
 			img 
 				width: 100%
 				height: auto
+		&__amount 
+			.rub 
+				display: none
 	.toggle
 		img 
 			display: inline

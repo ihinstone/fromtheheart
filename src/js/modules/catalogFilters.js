@@ -22,7 +22,7 @@ const catalogFilters = () => {
     $('.catalogpage__checkbox, label').on('click', function(e) {
         e.stopPropagation();
     });
-    $('.catalogpage__sorttitle, .toggleprof').on('click', function() {
+    $('.catalogpage__sorttitle, .toggleprof, .catalogpage__checkitem-slide > label').on('click', function() {
         if($(this).hasClass('disabled')) {
             return false;
         }
@@ -40,6 +40,7 @@ const catalogFilters = () => {
 
 
     $('.catalogpage__question').on('click', function() {
+        $('.tooltip__filter').fadeOut();
         $(this).next('.tooltip__filter').fadeToggle();
     });
 

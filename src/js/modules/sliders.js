@@ -32,7 +32,17 @@ const sliders = () => {
         slidesToScroll: 5,
         asNavFor: '.giftset__preview',
         dots: false,
-        arrows: false,
+        arrows: true,
+        prevArrow: `<button type="button" class="slick-prev">
+                <svg class="arrow__left" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 19.9956L3 10.8723L11 1.74902" stroke="black" stroke-opacity="0.9" stroke-width="4"/>
+                </svg>
+            </button>`,
+        nextArrow: `<button type="button" class="slick-next">
+                <svg class="arrow__right" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 1.74902L10 10.8723L2 19.9956" stroke="black" stroke-opacity="0.9" stroke-width="4"/>
+                </svg>                        
+            </button>`,
         centerMode: true,
         focusOnSelect: true,
         vertical: true,
@@ -41,9 +51,10 @@ const sliders = () => {
         centerPadding: 0,
         responsive: [
             {
-              breakpoint: 1024,
+              breakpoint: 992,
               settings: {
                 vertical: false,
+                arrows: false,
                 slidesToShow: 4,
                 slidesToScroll: 1
               }

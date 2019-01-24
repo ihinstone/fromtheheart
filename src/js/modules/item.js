@@ -1,6 +1,7 @@
 const item = () => {
     try {
         $('.giftinfo__descr-question').on('click', function() {
+            $('.tooltip__item').fadeOut();
             $(this).next('.tooltip__item').fadeToggle();
         });
     
@@ -81,6 +82,7 @@ const item = () => {
 
         // Zoom picture
         $('.zoomed').imagezoomsl({
+            magnifiereffectanimate: 'fadeIn',
             zoomrange: [2, 2]
          });
     } catch(e) {}

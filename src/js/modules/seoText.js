@@ -28,6 +28,20 @@ const seoText = () => {
             });
         });
         }catch(e) {}
+        try {
+            $('.giftsearch__text').on('click', function() {
+                $('.giftsearch__text-open').fadeToggle();
+                $('.giftsearch__text-full').slideToggle();
+            });
+            // $('.giftsearch__text-open').on('click', function(){
+            //     $(this).hide();
+            //     $('.giftsearch__text-full').slideDown();
+            // });
+            // $('.giftsearch__text-full').on('click', function() {
+            //     $(this).slideUp();
+            //     $('.giftsearch__text-open').show();
+            // });
+        }catch(e) {}
 };
 
 export default seoText;

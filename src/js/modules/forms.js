@@ -1,5 +1,18 @@
 const forms = () => {
     try {
+        $('#trigger').on('click', () => {
+            $('#triggerForm').slideToggle();
+        });
+
+            //Feedback form
+        $('#feedbackform').on('click', function(){
+            $(this).hide();
+            $('.feedback__form').slideDown('slow');
+        });
+        $('.feedback__form-right-reset').on('click', function() {
+            $('.feedback__form').slideUp('slow');
+            $('#feedbackform').fadeIn('slow');
+        });
         $( ".delivery__accordion" ).accordion({
             collapsible: true,
             active: false,
@@ -15,20 +28,6 @@ const forms = () => {
             $(this).next().slideToggle();
             $(this).find('img').toggleClass('rotated');
             
-        });
-
-        document.getElementById('trigger').addEventListener('click', () => {
-            $('#triggerForm').slideToggle();
-        });
-
-            //Feedback form
-        $('#feedbackform').on('click', function(){
-            $(this).hide();
-            $('.feedback__form').slideDown('slow');
-        });
-        $('.feedback__form-right-reset').on('click', function() {
-            $('.feedback__form').slideUp('slow');
-            $('#feedbackform').fadeIn('slow');
         });
     } catch(e){}
 };
