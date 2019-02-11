@@ -29,6 +29,18 @@ const goldHover = () => {
         });
 
     } catch(e) {}
+
+    try{
+        const catalogPhoto = document.querySelectorAll('.catalog__item-photo');
+        catalogPhoto.forEach((item, i) => {
+            item.addEventListener('mouseenter', () => {
+                item.nextElementSibling.classList.add('catalog__pdf-hovered');
+            });
+            item.addEventListener('mouseleave', () => {
+                item.nextElementSibling.classList.remove('catalog__pdf-hovered');
+            });
+        });
+    } catch(e){}
 };
 
 export default goldHover;

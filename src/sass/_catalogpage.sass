@@ -142,8 +142,7 @@
 		background-color: #E1C76E
 		border: none
 	&__checkbox[disabled] + label:before
-		background-color: grey
-		border: none
+		border: 1px solid black
 	&__checkbox-sq
 		position: absolute
 		z-index: -1
@@ -187,7 +186,7 @@
 			text-align: center
 			margin-right: 16px
 		.rub
-			font-size: 14px
+			font-size: 12px
 			display: inline-block
 .toggle
 	display: inline-block
@@ -365,7 +364,8 @@
 			margin-bottom: 20px
 			display: inline-block
 			vertical-align: top
-		&__amount 
+		&__amount
+			margin-top: 0 
 			label 
 				margin-right: 8px
 			input 
@@ -373,6 +373,7 @@
 				margin-bottom: 7px
 	#slider-range 
 		width: 173px
+		display: none
 @media (max-width: 576px)
 	.filter 
 		width: 70%
@@ -381,6 +382,9 @@
 		right: 15px
 		position: absolute
 		margin-top: -11px
+		// text-transform: uppercase
+		// font-size: 8px
+		// font-weight: 500
 	.catalogpage
 		padding-bottom: 50px
 		&__amount 

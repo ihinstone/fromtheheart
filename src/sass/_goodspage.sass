@@ -1,5 +1,5 @@
 .magnifier
-	left: 59% !important
+	left: 61% !important
 	img 
 		object-fit: cover
 .giftset
@@ -15,7 +15,7 @@
 			top: -30px
 			left: 50%
 			transform: translateX(-50%) rotate(90deg)
-			z-index: 20
+			z-index: 1
 			box-shadow: none
 			background-color: transparent
 			border: none
@@ -26,7 +26,7 @@
 			top: calc(100% - 15px)
 			right: 50%
 			transform: translateX(50%) rotate(90deg)
-			z-index: 20
+			z-index: 1
 			box-shadow: none 
 			background-color: transparent
 			border: none
@@ -363,10 +363,19 @@
 		&__prices 
 			width: 300px
 		&__form 
+			flex-wrap: wrap
+			.plus
+				margin-left: -50px
+			.minus
+				margin-right: -50px
 			.button 
+				width: 100%
+				margin-top: 15px
 				line-height: 12px
 				padding-top: 2px
-				font-size: 8px
+				font-size: 12px
+		&__min 
+			text-align: center
 	.giftinfo
 		padding: 30px 0
 		&__nav

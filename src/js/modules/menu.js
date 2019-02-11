@@ -71,11 +71,13 @@ const menu = () => {
             const activateMenu = (trigger, target, classToAdd) => {
                 document.querySelector(`${trigger}`).addEventListener('click', () => {
                     document.querySelector(`${target}`).classList.add(`${classToAdd}`);
+                    document.body.style.overflow = "hidden";
                 });
             };
             const deactivateMenu = (trigger, target, classToRemove) => {
                 document.querySelector(`${trigger}`).addEventListener('click', () => {
                     document.querySelector(`${target}`).classList.remove(`${classToRemove}`);
+                    document.body.style.overflow = "initial";
                 });
             };
 
